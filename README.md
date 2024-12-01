@@ -1,7 +1,7 @@
 # README
 
 This is the repository for the website 
-<a href="https://www.gastonsanchez.com/learn-closeread>gastonsanchez.com/learn-closeread</a>
+<a href="https://www.gastonsanchez.com/learn-closeread">gastonsanchez.com/learn-closeread</a>
 
 
 ## About Closeread
