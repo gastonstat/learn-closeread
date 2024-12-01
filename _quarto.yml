@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: ""
+  favicon: "assets/favicon.ico"
+  page-navigation: true
+  navbar:
+    logo: "assets/closeread-logo.png"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: modules/index.qmd
+        text: Modules
+      - href: examples/index.qmd
+        text: Examples
+      - about.qmd
+
+  sidebar:
+    - id: Modules
+      style: "docked"
+      background: light
+      contents:
+        - section: Modules
+          href: modules/index.qmd
+          contents: 
+          - modules/01-setup.qmd
+          - modules/02-introduction.qmd
+          - modules/03-intro-text.qmd
+          - modules/04-intro-images.qmd
+          - modules/05-intro-math.qmd
+          - modules/06-focus-effects.qmd
+          - modules/07-default-layout.qmd
+          - modules/08-layout-options.qmd
+          - modules/09-style-formatting.qmd
+
+  page-footer: 
+    left: 
+      - href: "https://www.gastonsanchez.com"
+        text: "&copy; 2024, Gaston Sanchez"
+    center: 
+      - href: license.qmd
+        text: "CC BY-NC-SA 4.0"
+    right:
+      - href: "https://quarto.org/docs/reference/projects/websites.html"
+        text: "Made with Quarto"
+    background: "dark"
+
+format:
+  html:
+    theme: simplex
+    fontsize: 1em
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,244 @@
+---
+title: "6) Focus Effects"
+---
+
+Now that we've seen various introductory examples, we should take the next step 
+and discuss the so-called __focus effects__.
+
+Simply put, focus effects are what you use to guide your readers' attention to 
+certain aspects of your stickies.
+
+Technically speaking, focus effects are specified together with a trigger:
+__you attach the effect to a trigger__. 
+
+The code below shows an abstract example of a narrative in
+which there is a trigger with no focus effect, followed by another trigger
+that comes with a focus effect.
+
+```{.markdown filename="Abstract Example"}
+Trigger without focus effect @cr-sticky
+
+Trigger with some focus effect [@cr-sticky]{effect="..."}
+```
+
+The reason why an effect is attached to a trigger is because a trigger is what 
+Closeread uses to decide __what to do__ with a sticky. 
+
+The syntax to specify a focus effect is the following:
+
+- You wrap the trigger `@cr-sticky` with brackets: `[@cr-sticky]`
+
+- You append an attribute effect using braces `[@cr-sticky]{effect="..."}`
+
+- Inside the braces, you specify the name of the effect, followed by the
+equals sign `=`, followed by the __value__ of the effect surrounded in quotes `"..."` 
+
+
+### Available Effects in Closeread
+
+As of this writing, Closeread comes with a handful of focus effects. In
+no particular order of importance we have:
+
+- __Scaling__: the `scale-by` effect is used to shrink or enlarge the size of a sticky (e.g. text, equations, images, code).
+
+- __Panning__: the `pan-to` effect is used to move a sticky up-down, and left-right, or if you prefer north-south, east-west (e.g. text, equations, images, code).
+
+- __Zooming__: the `zoom-to` effect is used to zoom-in (or out) into a code block or line of text or math equation.
+
+- __Highlighting__: the `highlight` effect is used to highlight parts of text or code of a sticky.
+
+- *__Scale to fill__: this is an additional effect that you attach to a sticky
+instead of a trigger to stretch the sticky in a way that it fills the viewport.
+
+Let's describe the syntax behind each of these effects.
+
+
+\
+
+
+## Scaling
+
+To shrink or enlarge a sticky element we use the `scale-by` effect. This 
+attribute takes non-negative values. The figure below depicts the
+resulting effect of `scale-by` when used on text and images:
+
+![Figure 6.1 ](images/effect-scale-by.svg){width="80%" fig-align="left"}
+
+The scaling effect works on text (including math equations, and code) and 
+images. Keep in mind that you include this focus effect by attaching it to
+a trigger, for example:
+
+```{.markdown filename="Scaling Effect"}
+Normal scale @cr-sticky
+
+Shrinking effect [@cr-sticky]{scale-by="0.5"}
+
+Enlarging effect [@cr-sticky]{scale-by="2"}
+
+Normal size again @cr-sticky
+```
+
+
+\
+
+
+## Panning
+
+To move a sticky element we use the `pan-to` effect. This attribute takes a 
+pair of `x` and `y` values that control the horizontal and vertical panning,
+respectively. The figure below depicts the resulting effect of `pan-to`---using 
+different units---when applied on an image (but you cal also apply it on text):
+
+
+![Figure 6.2](images/effect-pan-to-simple.svg)
+
+Notice that the value given to `pan-to` consists of two values separated by 
+a comma: e.g. `pan-to="20px,0px"`. The first value is the `x`-value that 
+controls the amount of horizontal movement. The second value is the `y`-value 
+that determines the amount of vertical movement.
+
+`x`-component:
+
+- negative values: west (or left)
+- positive values: east (or right)
+
+`y`-component: 
+
+- negative values: north (or up)
+- positive values: south (or down)
+
+Interestingly, `x` and `y` values can be provided in a variety of units:
+
+- pixels: `pan-to="20px,0px"`
+- percentages: `pan-to="10%,0%"`
+- millimeters: `pan-to="5mm,0mm"`
+- inches: `pan-to="0.5in,0in"`
+- centimeters: `pan-to="2cm,0cm"`
+- characters: `pan-to=5ch,0ch"` 
+- other units of measurement in HTML and CSS such as `em`, `ex`, `rem`
+
+In fact, values of `pan-to` can be any of the options in the analogous 
+[`translate()`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate) CSS function.
+
+Of course, you can give x-and-y values different from zero to simultaneously
+move up-down and left-right, for instance:
+
+![Figure 6.3](images/effect-pan-to-complex.svg)
+
+The panning effect also works on text (including a math equation, and code) and 
+images. Again, you include this focus effect by attaching it to a trigger, for 
+example:
+
+```{.markdown filename="Panning Effect"}
+Normal position @cr-sticky
+
+Panning to the left [@cr-sticky]{pan-to="-10px,0px"}
+
+Panning to the right [@cr-sticky]{pan-to="0px,10px"}
+
+Normal position again @cr-sticky
+```
+
+
+\
+
+
+## Highlighting
+
+To highlight certain lines of text in a sticky element we use the `highlight` 
+effect. The way `highlight` works is by emphasizing certain parts of text
+(e.g. a certain line or certain words) while de-emphasizing the rest of the
+text, as illustrated in the following diagram:
+
+![Figure 6.4](images/effect-highlight-text.svg){width="80%" fig-align="left"}
+
+Since code is also considered to be text, you can also highlight lines of code:
+
+![Figure 6.5](images/effect-highlight-code.svg){width="80%" fig-align="left"}
+
+The scaling effect works on text (including math equations, and code) and 
+images. Keep in mind that you include this focus effect by attaching it to
+a trigger, for example:
+
+```{.markdown filename="Highlighting Effect"}
+Normal text @cr-sticky
+
+Highlighting first line [@cr-sticky]{highlight="1"}
+
+Highlighting lines 2-4 [@cr-sticky]{highlight="2-4"}
+
+Normal text again @cr-sticky
+```
+
+
+### Highlighting certain parts (or words)
+
+When you provide a numeric value to the `highlight` effect, e.g. 
+`[@cr-sticky]{highlight="1"}`, the entire line of text will be highlighted.
+Often, though, we may be interested in highlighting just a single word, or some
+part of a line of text. To obtain this type of highlighting we have to use 
+a special type of sticky referred to as a __named span__ and its corresponding
+__span highlighting__ effect, as shown in the next figure:
+
+![Figure 6.6](images/effect-highlight-word.svg){width="90%" fig-align="left"}
+
+Let's discuss what's going on in this highlighting example. There is one 
+sticky component `#cr-sticky` involving four lines of text; notice that each 
+line of text starts with the vertical bar `|` in order to render the text line 
+by line. Another thing to notice is the __named span__ `[fox]{#cr-fox}` defined
+within the sticky. This is a kind of "sub-sticky" or "inner sticky" that only
+affects the word `fox`. Regarding the triggers, we have a first
+trigger `@cr-sticky` that will make the sticky appear, and then we have a second
+trigger `[@cr-sticky]{highlight="cr-fox"}` which will cause the highlighting 
+effect on the named span which in this case corresponds to the word __fox__.
+
+
+\
+
+
+## Zooming
+
+With stickies consisting of text or code, in addition to all the previous effects, 
+you scan also focus the view on a line number or named span with `zoom-to`
+
+```{.markdown filename="Zooming Effect"}
+Normal text @cr-sticky
+
+Zooming to first line [@cr-sticky]{zoom-to="1"}
+
+Zooming to named span [@cr-sticky]{zoom-to="cr-fox"}
+
+Normal text again @cr-sticky
+```
+
+
+\
+
+
+## Scale to Fill
+
+In addition to the four focus effects previously described, there is an extra
+effect called `scale-to-fill`. The purpose of this effect is to stretch a 
+sticky (e.g. text or image) in a way that fills the entire region containing
+such sticky, as depicted in the next figure.
+
+![Figure 6.7](images/effect-scale-to-fill.svg){width="90%" fig-align="left"}
+
+`scale-to-fill` is a special kind of effect because instead of attaching it
+to a trigger, you attach it as an attribute when defining a sticky, for example:
+
+```{.markdown filename="Scale to fill"}
+Triggering text @cr-sticky
+
+:::{#cr-sticky .scale-to-fill}
+| The quick
+| brown fox
+| jumps over
+| the lazy dog
+:::
+```
+
+While `scale-to-fill` has some resemblance to `scale-by`, they are not the same.
+Unlike `scale_by`, when `scale-to-fill` is triggered, the sticky will fade in 
+and transform such that it fills the viewport.
+

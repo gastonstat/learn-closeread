@@ -1,0 +1,71 @@
+---
+title: "Example 3"
+format: 
+  closeread-html:
+    theme: cosmo
+    fontsize: 1.2em
+    css: ../../styles.css
+---
+
+This is a scrollytelling story containing some math equations written with LaTeX.
+
+::::{.cr-section}
+
+Suppose you have some amount of money $P$, 
+and you'll invest it for $n$ 
+years, obtaining an annual return $r$.
+
+How much money will you have $n$ years from now?
+
+To find the answer you have to calculate the __Future Value__ 
+given by the following formula: @cr-fv
+
+:::{#cr-fv}
+$$
+FV = P \times (1 + r)^n
+$$
+:::
+
+$FV$ is the Future Value
+
+$P$ is the Principal, the amount of money you'll invest.
+
+$r$ is the annual interest rate, or rate of return.
+
+$n$ is the number of years.
+
+
+What would be the future value of $10,000 invested for 10 years, 
+assuming an annual return of 7%? @cr-investment
+
+:::{#cr-investment}
+\begin{align*}
+P &= 10,000 \\
+& \\
+r &= 0.07 \\
+& \\
+n &= 10
+\end{align*}
+:::
+
+Let's do the math: @cr-math
+
+:::{#cr-math}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &
+\end{align*}
+:::
+
+The answer is: @cr-answer
+
+:::{#cr-answer}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &= 19,671.51
+\end{align*}
+:::
+
+::::
+
+

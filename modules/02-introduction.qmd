@@ -1,0 +1,151 @@
+---
+title: "2) Introduction"
+---
+
+I would like to use this module to give you an introduction to the main 
+components of the closeread framework. The goal is to help you understand the 
+anatomy of a basic closeread document.
+
+
+## Closeread Components
+
+Because Closeread is a quarto extension, the type of file we need to work 
+with is, surprise-surprise, a quarto document or `qmd` file for short.
+For instance, say we have a `document.qmd` file with a few lines of text,
+as shown in the figure below. 
+
+![Figure 2.1: Quarto document and its rendered HTML document](images/html-format.svg)
+
+When the output format is `html`, rendering this file gives you an output in 
+the form of an HTML document (as in the right hand side of the above figure). 
+There is nothing particularly special about this output. As you can tell there 
+is the title, followed by three paragraphs, followed by a numbered list with 
+three items.
+
+Now, what if we are interested in turning the current document into a 
+scrollytelling story, albeit a very short one?
+
+To make `document.qmd` into a closeread document, we need to make some changes,
+namely:
+
+1) Change the <span style="color:magenta;">__format__</span> output in the yaml 
+header.
+
+2) Specify what part of the content will constitute a closeread 
+<span style="color:red;">__section__</span>.
+
+3) Indicate what elements will become the <span style="color:blue;">__sticky__</span> 
+item (i.e. the component that will get stuck as we scroll through the page).
+
+4) Include a <span style="color:orange;">__trigger__</span> among the narrative to cause the sticky to appear.
+
+Here's an example of what `document.qmd` would look like if we adapt its content
+with the necessary building blocks of a Closeread document. Notice the 
+colored text associated with the four components listed above.
+
+![Figure 2.2](images/closeread-format-unlabeled.svg){width=75% fig-align="left"}
+
+Let's disect all the main components one by one.
+
+
+### YAML header format
+
+The first thing to notice involves the yaml header. To be more precise, the 
+specified `format` of the qmd document must be declared as `closeread-html`.
+As you would expect, this is what allows quarto to render the qmd file as a
+special type of HTML document using the Closeread scrollytelling framework.
+
+![Figure 2.3](images/closeread-format-labeled1.svg){width=75% fig-align="left"}
+
+
+### Closeread Section
+
+The next thing to notice is the __closeread section__. Simply put, 
+a __cr-section__ is what Closeread uses 
+to do its magic. Think of this section as setting the boundaries for the 
+content (e.g. text, code, images) that Closeread will take care of. 
+
+![Figure 2.4](images/closeread-format-labeled2.svg){width=75% fig-align="left"}
+
+As you can tell, a closeread section, or __cr-section__ for short, is started 
+with an opening __div__, in this example `::::{.cr-section}`, and is finished 
+with a closing __div__ of `::::`
+
+By the way, when defining a section you can also use three consecutive colons 
+`:::` instead of four. But because there will be other parts of a closeread
+section that employ other fenced elements, I prefer using `::::` to specify
+the sections.
+
+Every section needs a name, for instance: `{.cr-section1}` or `{.cr-my-section}`
+or `{.cr-introduction}`. The important thing is the use of `{ }`, the prefix 
+`.cr-` and the individual (and unique) name of the section.
+
+
+### Sticky Element
+
+Inside a section you define one or more __sticky__ components, or _stickies_
+in Closeread parlance. They also need to be surrounded by a div of `:::`
+and a label or name such as `{#cr-sticky}` or `{#cr-components}` like in our
+working example.
+
+![Figure 2.5](images/closeread-format-labeled3.svg){width=75% fig-align="left"}
+
+A _sticky_, as the name indicates, is the element (e.g. text, code, image)
+that will get __stuck__ as you scroll through the HTML document.
+
+:::{.callout-important}
+Do not confuse the syntax of a __cr-section__ with the syntax of a __sticky__. 
+
+- This is the syntax of a section: `{.cr-section}`
+
+- This is the syntax of a sticky: `{#cr-sticky}`
+:::
+
+
+### Trigger
+
+The next major component is a closeread __trigger__. This type of component
+is part of the narrative and it is defined with the syntax `@cr-sticky`. 
+In other words, a trigger refers to a sticky by pre-appending `@` to the name 
+of the sticky. Note that the trigger is not wrapped inside curly braces.
+
+![Figure 2.6](images/closeread-format-labeled4.svg){width=75% fig-align="left"}
+
+What is the role of a trigger? A trigger is what Closeread uses to decide 
+what to do with a sticky. In this example, as you scroll through the HTML 
+document, the sticky component will appear the moment you hit the text of the
+trigger. In turn, the sticky will remain stuck until you reach the end of the 
+HTML document or until another trigger calls a different sticky element.
+
+\
+
+To summarize, here's a figure highlighting all the components discussed so far:
+
+![Figure 2.7](images/closeread-format-labeled5.svg){width=75% fig-align="left"}
+
+When we render `document.qmd`, an HTML document will be created with the 
+following appearance (see figure below). As you can tell, the background is
+split into what it seems to be two different areas: white background at the
+top and at the bottom, and gray background in the middle.
+
+![Figure 2.8](images/closeread-output-labeled.svg)
+
+The text that is not part of the <span style="color:red;">section</span>, 
+such as the title and the first paragraph, will appear at the top in the
+white background region.
+
+The area with a gray background is actually formed of two parts which are
+impossible distinguish with the naked eye. What we are able to distinguish,
+though, is some text on the left, and some text on the right.
+
+The lines of text on the left hand side are the 
+<span style="color:orange;">narrative</span> elements. 
+In turn, the area on the right hand side is the area for the 
+<span style="color:blue;">sticky</span> components.
+Recall that both the narrative and the sticky are part of the 
+<span style="color:red;">section</span>.
+As you scroll down the document, the moment you hit the 
+<span style="color:orange;">trigger</span>, the sticky will appear on screen.
+
+
+

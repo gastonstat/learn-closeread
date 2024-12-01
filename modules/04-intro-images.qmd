@@ -1,0 +1,220 @@
+---
+title: "4) Scrollytelling with Images"
+---
+
+In the preceding modules, you got introduced to the main components of a 
+Closeread document using two simple examples containing only text. In this 
+module, we continue our introductory journey with another basic document, this 
+time containing text and images.
+
+:::{.callout-note}
+## Reminder
+
+Recall that you need to have installed the quarto Closeread extension in your 
+working directory. Run the following command in your Terminal:
+
+```{.markdown filename="Terminal"}
+quarto add qmd-lab/closeread
+```
+:::
+
+
+## Working with Images
+
+For our next example, we'll use a couple of images: the Quarto logo, and the
+R logo, shown below.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![Quarto logo](https://quarto.org/quarto.png){fig-align="left"}
+:::
+
+::: {.column width="50%"}
+![R logo](https://www.r-project.org/Rlogo.png){width=26% fig-align="left"}
+:::
+
+::::
+
+The files with the images of the logos are available in the URLs listed below:
+
+- <https://quarto.org/quarto.png>
+
+- <https://www.r-project.org/Rlogo.png>
+
+With the URL of the image, you can insert the logo in a quarto document with the 
+following markdown syntax:
+
+```{.markdown}
+![](https://quarto.org/quarto.png)
+```
+
+Alternatively, you can download the PNG file of the logo into your working
+directory, and insert it into a quarto document with a similar syntax, 
+for example:
+
+```{.markdown}
+![](quarto.png)
+```
+
+__Caption.__ Inside the brackets, you can add an optional caption:
+
+```{.markdown}
+![Some caption](quarto.png)
+```
+
+__Figure Dimensions.__ Likewise, you can modify the size of the image by 
+appending attributes `width` and/or `height` inside curly braces:
+
+```{.markdown}
+![Some caption](quarto.png){width=50%}
+```
+
+__Figure Alignment.__ You can also change the alignment with the attribute `fig-align` which takes
+values `"left"`, `"center"`, and `"right"`
+
+```{.markdown}
+![Some caption](quarto.png){width=50% fig-align="center"}
+```
+
+:::{.callout-tip}
+## Images in Quarto docs
+
+To know more about figures in Quarto documents, take a look at:
+<a href="https://quarto.org/docs/authoring/figures.html" target="_blank">https://quarto.org/docs/authoring/figures.html</a>
+:::
+
+
+## Example
+
+Below is an example of a qmd file with some content. Copy and paste it into a
+qmd document so that you can preview it or render it in all its Closeread glory.
+
+```{.markdown filename="example2.qmd"}
+---
+title: My second closeread document
+format: closeread-html
+---
+
+::::{.cr-section}
+
+What is __Quarto__? What is __R__?
+
+:::{#cr-quarto}
+![](https://quarto.org/quarto.png)
+:::
+
+Quarto is an open-source scientific and 
+technical publishing system. @cr-quarto
+
+Quarto lets you author documents using 
+plain text markdown in your favorite editor.
+
+You can use quarto documents with R. @cr-rlogo
+
+
+:::{#cr-rlogo}
+![](https://www.r-project.org/Rlogo.png)
+:::
+
+R is a free software environment for 
+statistical computing and graphics. 
+
+R is available on Unix, MacOS, and Windows.
+
+::::
+```
+
+
+## What's going on?
+
+Let's review the content of `example2.qmd` describing the primary Closeread 
+components:
+
+- yaml header format
+
+- closeread section
+
+- sticky element
+
+- trigger action
+
+
+
+#### YAML header format
+
+As you know, in the yaml header we specify the `format` of the qmd document 
+to `closeread-html`.
+
+```yaml
+---
+title: My second closeread document
+format: closeread-html
+---
+```
+
+
+#### Closeread Section
+
+The next thing to notice is the __closeread section__ defined by the four
+consecutive colons, and the curly braces containing the id `.cr-section`.
+
+```{.markdown highlight="1"}
+::::{.cr-section}
+
+::::
+```
+
+
+#### Sticky Elements
+
+Inside the cr-section we are defining two __sticky__ components. Remember 
+that every sticky is surrounded by a div `:::` and a label or name.
+
+The first sticky, `#cr-quarto`, is dedicated to the quarto logo. To be more
+specific, this sticky corresponds to the markdown element that inserts the `png`
+image of Quarto's logo.
+
+```{.markdown}
+:::{#cr-quarto}
+![](https://quarto.org/quarto.png)
+:::
+```
+
+The second sticky, `#cr-rlogo`, is dedicated to the R logo.
+
+```{.markdown}
+:::{#cr-rlogo}
+![](https://www.r-project.org/Rlogo.png)
+:::
+```
+
+
+#### Narrative and Triggers
+
+Having established the cr-section as well as the stickies, the next step
+involves specifying the __narrative__ and the triggers to launch the stickies.
+
+In this example we have 2 triggers, one for each sticky. 
+
+The first trigger, `@cr-quarto`, is the one that will make the Quarto logo to
+get stuck until the next trigger gets activated. This first trigger is located
+at the end of the second paragraph:
+
+```{.markdown}
+Quarto is an open-source scientific and 
+technical publishing system. @cr-quarto
+```
+
+The second trigger, `@cr-rlogo`, is the one that will make the R logo to
+get stuck. This trigger is located at the end of the fourth paragraph:
+
+```{.markdown}
+You can use quarto documents with R. @cr-rlogo
+```
+
+
+### Take a look
+
+You can take a look at this first example 
+<a href="../examples/example2/index.html" target="_blank">here</a>.

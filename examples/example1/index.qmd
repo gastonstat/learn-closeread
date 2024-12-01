@@ -1,0 +1,26 @@
+---
+title: "Example 1"
+format: 
+  closeread-html:
+    theme: cosmo
+    fontsize: 1.2em
+    css: ../../styles.css
+    #debug-mode: true
+---
+
+:::{.cr-section}
+
+Section of text to be handled by closeread.
+
+:::{#cr-sticky}
+Text that will be treated as the sticky element.
+
+This text will be _stuck_ as you scroll up and down.
+:::
+
+Text that triggers the sticky element. @cr-sticky
+
+More text that will appear as you scroll down.
+
+Last sentence that will show up next to the sticky element.
+:::

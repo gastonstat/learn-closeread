@@ -1,0 +1,15 @@
+---
+title: "Modules"
+listing:
+  - id: modules-listings
+    sort-ui: false
+    filter-ui: false
+    sort: "title"
+    type: table
+    fields: [title]
+    field-display-names:
+      title: "Table of Contents"
+---
+
+:::{#modules-listings}
+:::

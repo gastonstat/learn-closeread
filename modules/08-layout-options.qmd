@@ -1,0 +1,110 @@
+---
+title: "8) Layout Options"
+---
+
+In this module you'll learn about the various layout options available in 
+Closeread.
+
+There are five layout options:
+
+- sidebar-left
+- sidebar-right
+- overlay-left
+- overlay-center
+- overlay-right
+
+
+## Specifying a layout
+
+How do you specify a layout? This is done in 2+1 ways:
+
+- In the yaml header, with the field `layout:` under the `cr-section` key:
+
+```yaml
+format:
+  closeread-html:
+    cr-section:
+      layout: "sidebar-right"
+```
+
+- At the __cr-section__ level
+
+```{.markdown}
+:::{.cr-section layout="sidebar-right"}
+< Content of the section, including stickies and narrative blocks >
+:::
+```
+
+- At both the yaml and cr-section levels:
+
+```{.markdown}
+---
+format:
+  closeread-html:
+    cr-section:
+      layout: "overlay-left"
+---
+
+:::{.cr-section1}
+< first section using overlay-left >
+:::
+
+
+:::{.cr-section2 layout="overlay-center"}
+< second section using overlay-center >
+:::
+
+:::{.cr-section3 layout="overlay-right"}
+< third section using overlay-right >
+:::
+```
+
+
+
+## Sidebar Layouts
+
+Closeread provides two flavors of sidebar layout: sidebar left and sidebar
+right. As a matter of fact, the default layout is the sidebar left.
+
+The following diagram shows the appearance of both types of sidebar layouts. 
+For sake of clarity I've added a couple of auxiliary boxes (in sky-blue and
+mint-green) to indicate the narrative texts, as well as a dashed line that 
+marks the separation of the sidebar from the section of the sticky components.
+Keep in mind that these auxiliary visuals won't show up in the actual rendered
+HTML document.
+
+![Figure 8.1](images/layout-sidebars.svg)
+
+
+
+## Overlay Layouts
+
+In addition to the sidebar layout, Closeread also gives you three flavors of
+__overlay layouts__: overlay left, overlay center, and overlay right.
+
+The following diagram shows the appearance of the 3 types of overlay layouts. 
+Observe that the narrative elements appear inside their own boxes, with a 
+darker background---and some transparency---and text in white font.
+
+![Figure 8.2) Overlay layouts](images/layout-overlays.svg)
+
+
+## Header Space
+
+Closeread also gives you the option to remove the header space, that is, the
+space at the top of the document for the title block. To remove this space you
+use the `remove-header-space` option in the document yaml header
+
+```yaml
+---
+format:
+  closeread-html:
+    remove-header-space: true
+---
+```
+
+Removing the header space is often a good idea if your entire document is
+one large Closeread section. If that is the case, you may also be interested
+in disabling the Quarto sidebar.
+
+

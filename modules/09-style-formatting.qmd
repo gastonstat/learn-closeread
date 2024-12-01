@@ -1,0 +1,118 @@
+---
+title: "9) Style Formatting"
+---
+
+In this module, you'll learn about the __style formatting__ or guidelines that
+dictate how a Closeread document should look. The goal is to describe the 
+different formatting options available in Closeread to customize the visual 
+appearance of elements such as the background of a cr-section, the font of the 
+text in stickies, as well as the format of the narrative elements.
+
+
+## Introduction
+
+As you know, Closeread documents come with default settings that give them 
+a rudimentary look. Personally, I find the default format to be quite limited,
+and I don't think I would ever create a Closeread document without tuning 
+its overall look.
+
+The good news is that you can customize various aspects of the main components
+in a Closeread document. I should say that the catalog of customization 
+styles is rather narrow, but the provided options can take you very far if you 
+understand their roles and the values they can take.
+
+Currently, there is about a dozen of formatting options available in Closeread,
+and most of them have to do with styling of narrative components, which in
+turn depend on the type of layout (e.g. sidebar or overlay).
+
+One important thing to keep in mind is that a Closeread document will generally
+follow the <a href="https://quarto.org/docs/output-formats/html-themes.html" target="_blank">Quarto theme</a> you use. 
+If you don't specify a theme, then the <a href="https://bootswatch.com/default/" target="_blank">default theme</a> will be used. To further customize your 
+Closeread document, you can always add your own CSS or SCSS stylesheets.
+
+
+### How to customize formatting styles
+
+Customizing formatting options is a fairly straightforward process. All you have
+to do is specify the desired option in the `cr-style` key, in the yaml header
+(or frontmatter). 
+
+For example, say we are using a sidebar layout (default layout) 
+and we want to change the background color of the sidebar to black, and also
+set the color of the narrative text to white---expressed in hexadecimal notation
+`#ffffff`. This is done as follows:
+
+```yaml
+---
+title: "Hello Closeread"
+format:
+  closeread-html:
+    cr-style:
+      narrative-background-color-sidebar: black
+      narrative-text-color-sidebar: "#ffffff"
+---
+```
+
+
+
+I've found it easy to describe the different formatting options depending on 
+what type of layout you are using: sidebar -vs- overlay. This is why I've 
+decided to describe them in their own sections---see sections below---based on
+the chosen layout.
+
+
+## Styling Sidebar Layouts
+
+The following figure illustrates the appearance of a rendered document using
+__sidebar layout__. I've superimposed the different formatting options to indicate
+what elements can be affected by them.
+
+![Figure 9.1](images/style-sidebar.svg){width="75%"}
+
+
+- `narrative-background-color-sidebar`: the background color used for the narrative column (in sidebar layouts).
+
+- `narrative-text-color-sidebar`: the color of narrative text (in sidebar layouts).
+
+- `narrative-sidebar-width`: the width of the sidebar. Defaults to `1fr`: the sticky content is `2fr` in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different `fr` value, a fixed value, or a combination of the two using [`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax).
+
+- `narrative-font-family`: the font(s) used for narrative content (regardless of the chosen layout).
+
+- `narrative-font-size`: the font size used for narrative content (regardless of the chosen layout).
+
+- `poem-font-family`: the font(s) used for lineblock poems (i.e. in sticky elements).
+
+- `section-background-color`: the background color used for Closeread sections.
+
+
+## Styling Overlay Layouts
+
+The following figure illustrates the appearance of a rendered document using
+__overlay layout__. I've superimposed the different formatting options to indicate
+what elements can be affected by them.
+
+![Figure 9.2](images/style-overlay.svg){width="67%"}
+
+
+
+- `narrative-background-color-overlay`: the background color used for narrative text blocks (in overlay layouts).
+
+- `narrative-text-color-overlay`: the color of narrative text (in overlay layouts).
+
+- `narrative-border-radius`: the border radius of narrative text blocks (in overlay layouts).
+
+- `narrative-overlay-max-width`: the maximum width of narrative text blocks (in overlay layouts).
+
+- `narrative-overlay-min-width`: the minimum width of narrative text blocks (in 
+overlay layouts). The recommendation is to leave this one alone because setting 
+it can cause mobile layout issues.
+
+- `narrative-outer-margin`: the margin pushing narrative content in from the left (on overlay-left layouts) or right edge (on overlay-right)
+
+- `narrative-font-size`: the font size used for narrative content (regardless of the chosen layout).
+
+- `poem-font-family`: the font(s) used for lineblock poems (i.e. in sticky elements).
+
+- `section-background-color`: the background color used for Closeread sections.
+
+

@@ -1,0 +1,178 @@
+---
+title: "3) Scrollytelling with Text"
+---
+
+In the preceding module, you got introduced to the main components of a 
+Closeread document using a minimalist example. In this module, we provide 
+another basic example of a text-only scrollytelling story. 
+
+:::{.callout-note}
+## Reminder
+
+Recall that you need to have installed the quarto Closeread extension in your 
+working directory. Run the following command in your Terminal:
+
+```{.markdown filename="Terminal"}
+quarto add qmd-lab/closeread
+```
+:::
+
+
+## Example
+
+Below is an example of a qmd file with some content. Copy and paste it into a
+qmd document so that you can preview it or render it in all its Closeread glory.
+
+```{.markdown filename="example1.qmd"}
+---
+title: My first closeread document
+format: closeread-html
+---
+
+::::{.cr-section}
+
+Section with content to be handled by closeread.
+
+:::{#cr-sticky}
+Text that will be treated as the sticky element.
+
+This text will be _stuck_ as you scroll up and down.
+:::
+
+Text that triggers the sticky element. @cr-sticky
+
+More text that will appear next to the sticky element 
+as you scroll down.
+
+Last sentence that will show up next to the sticky element.
+
+::::
+```
+
+\
+
+To render the document of `example1.qmd`, type the following command in your
+__Terminal__:
+
+```{.markdown filename="Terminal"}
+quarto render
+```
+
+Alternatively, you can preview the output by running the following command 
+in your terminal:
+
+```{.markdown filename="Terminal"}
+quarto preview
+```
+
+Assuming that you are using RStudio, you can also click the `Render` button
+(see figure below).
+
+![](images/render-button.png){width=60%}
+
+
+
+
+## What's going on?
+
+Let's review the content of `example1.qmd` to gain a basic understanding of 
+the primary Closeread components. Specifically, we are going to describe the
+following parts:
+
+- yaml header format
+
+- closeread section
+
+- sticky element
+
+- trigger action
+
+
+
+#### YAML header format
+
+The first thing to notice involves the yaml header. To be more precise, the 
+specified `format` of the qmd document must be declared as `closeread-html`.
+As you would expect, this is what allows quarto to render the qmd file as a
+special type of HTML document using the Closeread scrollytelling framework.
+
+```yaml
+---
+title: My first closeread document
+format: closeread-html
+---
+```
+
+
+#### Closeread Section
+
+The next thing to notice is the __closeread section__ defined by the four
+consecutive colons, and the curly braces containing the id `.cr-section`.
+
+```{.markdown highlight="1"}
+::::{.cr-section}
+
+::::
+```
+
+Simply put, a __cr-section__ is what Closeread uses 
+to do its magic. Think of this section as setting the boundaries for the 
+content (e.g. text, code, images) that Closeread will take care of. 
+
+As you can tell, a closeread section, or __cr-section__ for short, is started 
+with an opening __div__, in this example `::::{.cr-section}`, and is finished 
+with a closing __div__ of `::::`
+
+Every section needs a name, for instance: `{.cr-section1}` or `{.cr-my-section}`
+or `{.cr-introduction}`. The important thing is the use of `{ }`, the prefix 
+`.cr-` and the individual (and unique) name of the section.
+
+
+#### Sticky Element
+
+Inside a section you define one or more __sticky__ components, or _stickies_
+in Closeread parlance. They also need to be surrounded by a div of `:::`
+and a label or name `{#cr-sticky}`
+
+```{.markdown}
+:::{#cr-sticky}
+Text that will be treated as the sticky element.
+
+This text will be _stucked_ as you scroll up and down.
+:::
+```
+
+A _sticky_, as the name indicates, is the element (e.g. text, code, image)
+that will get __stucked__ as you scroll up and down the HTML document.
+
+:::{.callout-important}
+Do not confuse the syntax of a __cr-section__ with the syntax of a __sticky__. 
+
+- This is the syntax of a section: `{.cr-section}`
+
+- This is the syntax of a sticky: `{#cr-sticky}`
+:::
+
+
+#### Trigger
+
+The third major component is a closeread __trigger__. This type of component
+is defined with the syntax `@cr-sticky`. In other words, a trigger refers to
+a sticky by pre-appending `@` to the name of the sticky. Note that the trigger
+is not wrapped inside curly braces.
+
+```{.markdown}
+Text that triggers the sticky element. @cr-sticky
+```
+
+What is the role of a trigger? A trigger is what Closeread uses to display 
+a sticky. As you scroll through the HTML document, the sticky component will
+be displayed the moment you hit the text of the trigger. In turn, the sticky 
+will remain stuck until you reach the end of the HTML document or until another 
+trigger calls a different sticky element.
+
+
+### Take a look
+
+You can take a look at this example 
+<a href="../examples/example1/index.html" target="_blank">here</a>.

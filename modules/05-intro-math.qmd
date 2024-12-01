@@ -1,0 +1,100 @@
+---
+title: "5) Scrollytelling with Equations"
+---
+
+So far we've introduced a couple of basic Closeread documents. Our first
+example used only text. Our second example involved text and images. But
+what about including some code in our scrollytelling story? In this module, 
+we show you a third basic example that involves text and some R code.
+
+:::{.callout-note}
+## Reminder
+
+Recall that you need to have installed the quarto Closeread extension in your 
+working directory. Run the following command in your Terminal:
+
+```{.markdown filename="Terminal"}
+quarto add qmd-lab/closeread
+```
+:::
+
+
+## Example
+
+Below is an example of a qmd file with some content. Copy and paste it into a
+qmd document so that you can preview it or render it in all its Closeread glory.
+
+```{.markdown filename="example4.qmd"}
+---
+title: My first closeread document
+format: closeread-html
+---
+
+This is a scrollytelling story containing 
+some math equations written with LaTeX.
+
+::::{.cr-section}
+
+Suppose you have some amount of money $P$, 
+and you'll invest it for $n$ 
+years, obtaining an annual return $r$.
+
+How much money will you have $n$ years from now?
+
+To find the answer you have to calculate the __Future Value__ 
+given by the following formula: @cr-fv
+
+:::{#cr-fv}
+$$
+FV = P \times (1 + r)^n
+$$
+:::
+
+$FV$ is the Future Value
+
+$P$ is the Principal, the amount of money you'll invest.
+
+$r$ is the annual interest rate, or rate of return.
+
+$n$ is the number of years.
+
+
+What would be the future value of $10,000 invested for 10 years, 
+assuming an annual return of 7%? @cr-investment
+
+:::{#cr-investment}
+\begin{align*}
+P &= 10,000 \\
+& \\
+r &= 0.07 \\
+& \\
+n &= 10
+\end{align*}
+:::
+
+Let's do the math: @cr-math
+
+:::{#cr-math}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &
+\end{align*}
+:::
+
+The answer is: @cr-answer
+
+:::{#cr-answer}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &= 19,671.51
+\end{align*}
+:::
+
+::::
+```
+
+
+### Take a look
+
+You can take a look at this example 
+<a href="../examples/example4/index.html" target="_blank">here</a>.

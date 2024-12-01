@@ -1,0 +1,85 @@
+---
+title: "7) Default Layout"
+---
+
+In this module you'll learn about the structure of the default layout used by
+Closeread. Because the preceding module was fairly long, I've decided to keep
+the current module short in order to give you a preamble of the other layout 
+options discussed in the next module.
+
+
+## Introduction
+
+Consider a simple quarto document `example.qmd` with the following content:
+
+```{.markdown filename="example.qmd"}
+---
+title: Hello Closeread
+format: closeread-html
+---
+
+::::{.cr-section}
+
+This is a short demo.
+
+Introductory text with no trigger.
+
+Triggering text @cr-sticky
+
+:::{#cr-sticky}
+| The quick
+| brown fox
+| jumps over
+| the lazy dog
+:::
+
+::::
+```
+
+When you render `example.qmd`, you'll get an HTML document
+with the following appearance (see figure below):
+
+![Figure 7.1) Rendered document with default layout  "sidebar-left"](images/layout-sections-invisible.svg)
+
+By default, Closeread uses a layout called `"sidebar-left"` which, as its
+name indicates, places the narrative components on the __left hand-side__ of 
+the screen, while the sticky components are displayed on the right hand side. 
+To the naked eye, however, it's impossible to see where
+exactly all the sections begin and end.
+
+
+## Visualizing Layout Sections
+
+Although it's impossible to see the exact areas of the narrative and the 
+stickies, the good news is that it is possible to visualize them by turning on 
+the __debug mode__ by adding the `debug-mode` option in the yaml header:
+
+```yaml
+---
+title: Hello Closeread!
+format: closeread-html
+debug-mode: true
+---
+```
+
+When you activate debugging mode, and re-render the quarto document, you'll
+discover the various parts in which the HTML document is integrated. 
+Specifically, you'll see the individual narrative sections, as well as a dotted 
+horizontal line spanning the entire width of the screen, as depicted in the
+diagram shown below:
+
+![Figure 7.2) Layout displayed in debug-mode](images/layout-sections-visible.svg)
+
+As you can tell, there is a rectangular section with a sky-blue background.
+This is the box of the first narrative text that has no trigger. Right below
+this section there is another box with a mint-green background; this
+is the region of the second narrative text which has a trigger. What about the
+dotted horizontal line? That's the threshold line that marks when a narrative
+component (and possibly an associated sticky) should become active. As you 
+scroll down the document, the moment the mint-green section crosses the dotted 
+line, the second narrative text and the sticky component appear on the screen.
+
+As I said, the default layout in Closeread is `"sidebar-left"`, but there 
+are other layout options. Read on to learn about the rest of the layout
+flavors in the next module.
+

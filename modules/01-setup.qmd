@@ -1,0 +1,177 @@
+---
+title: "1) Setup"
+---
+
+In order to use Closeread you need to make sure you have the following
+tools:
+
+- Text Editor
+
+- Quarto
+
+- Closeread
+
+Let's review each of these items.
+
+\
+
+## Text Editor or IDE
+
+You'll benefit the most from Closeread if you use a robust text editor or
+some integrated development environment (IDE). At the time of this writing,
+perhaps one of the most popular text editors is __Visual Studio Code__, or 
+_VS Code_ for short. Occasionally, I use VS Code but my tool of preference is 
+Posit's IDE __RStudio__. Alternatively, there is another interesting IDE called 
+__Positron__ which is also being developed by Posit. Last but not least, there
+is also __Jupyter__.
+
+This list of editors and IDEs is not extensive by any 
+means, but it's the tools that I recommend. Below are the links to these tools
+in case you want to learn more about them and/or download them.
+
+- [VS Code](https://code.visualstudio.com/)
+
+- [RStudio](https://posit.co/products/open-source/rstudio/)
+
+- [Positron](https://positron.posit.co/)
+
+- [Jupyter](https://jupyter.org/install)
+
+Given that most of my students use either _RStudio_, _Jupyter_ or _VS Code_,
+this is what I will also assume about you and the rest of the readers of this 
+website. In particular, for those examples that involve R code, I rely on the
+assumption that you are using RStudio.
+
+
+## Quarto
+
+The second tool that you need is __Quarto__. Simply put, Quarto is an 
+open-source scientific and technical publishing system. In case you are curious, 
+its development is supported by Posit, which is also behind the development of
+RStudio and Positron.
+
+If you are using RStudio, you are all set to go. However, if you are only using
+VS Code, then you will need to install Quarto. The installation is fairly
+straightforward, and the software can be installed from the following link:
+
+<https://quarto.org/docs/get-started/>
+
+:::{.callout-important}
+I'm assuming that you are familiar with Markdown, and the use of quarto
+documents and `.qmd` files. 
+
+It that is not the case, then take a look at the section 
+__"Markdown Basics"__ for how to author quarto documents.
+
+<https://quarto.org/docs/authoring/markdown-basics.html>
+:::
+
+
+## Closeread
+
+Assuming that you have Quarto installed in your computer, or that you are using
+RStudio, the last setup step you need is to install Closeread.
+
+Keep in mind that Closeread is a Quarto __extension__. What is a quarto extension?
+Extensions are to Quarto what _packages_ are to R, LaTeX, or Python.
+
+Extensions are a powerful and convenient way to modify and extend the behavior 
+of Quarto. And as you can imagine, you can create your own quarto extensions. If
+this is something you are interested in, check this link:
+<https://quarto.org/docs/extensions/creating.html>.
+
+
+### How to install closeread
+
+Installing Closeread is painless and super simple. All you need to do is run
+the following command---via the Terminal---in the directory you wish to use it:
+
+```{.markdown filename="Terminal"}
+quarto add qmd-lab/closeread
+```
+
+What's going on in this command? We are telling quarto to `add` or install---in
+the current directory---the extension `closeread` which is hosted in github's
+`qmd-lab` repository.
+
+
+#### Installation Example
+
+For instance, say I'm working on a small project---perhaps some presentation
+or a demo---for which I'm planning to use Closeread. To make things less
+abstract, assume that I'm working with RStudio, and that my working directory
+is set to the `presentation` directory containing a quarto markdown file 
+`demo.qmd`. The figure below depicts the file structure of this directory.
+Notice that the figure also shows the __Terminal__ tab, and the working directory
+is `presentation/`.
+
+![File structure of a small presentation project.](images/closeread-install-step0.png){width=50% fig-align="left"}
+
+\
+
+__Step 1)__ To install Closeread, I need to type the following command
+in RStudio's __Terminal__:
+
+```bash
+quarto add qmd-lab/closeread
+```
+
+![Command to install closeread extension.](images/closeread-install-step1.png){width=60% fig-align="left"}
+
+\
+
+__Step 2)__ After executing this command, I'm prompted with the following question:
+
+```bash
+? Do you trust the authors of this extension (Y/n) › 
+```
+
+Type `Y` or `y` and hit return. This downloads Closeread,
+with the following messages displayed on the terminal:
+
+```bash
+? Do you trust the authors of this extension (Y/n) › Yes
+[✓] Downloading
+[✓] Unzipping
+    Found 1 extension.
+```
+
+\
+
+__Step 3)__ Then I'm prompted again to confirm the changes:
+
+```bash
+The following changes will be made:
+closeread   [Install]   1.0.1 (format)
+? Would you like to continue (Y/n) › 
+```
+
+Type `Y` or `y` again, and press the return key.
+
+```bash
+The following changes will be made:
+closeread   [Install]   1.0.1 (format)
+? Would you like to continue (Y/n) › Yes
+
+[✓] Copying
+[✓] Extension installation complete
+```
+
+\
+
+__Step 4)__ The last question is whether I want to view the documentation using
+my default browser. This is purely optional, and I usually say yes.
+
+
+```bash
+? View documentation using default browser? (Y/n) › 
+```
+
+\
+
+Once the installation is completed, a new folder with the name `_extensions`
+appears in my working directory, as shown in the figure below:
+
+![Project with folder _extensions containing closeread.](images/closeread-install-step2.png){width=50% fig-align="left"}
+
+That's it! 😃 My `presentation/` project is now equipped with the quarto Closeread extension.

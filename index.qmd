@@ -1,0 +1,116 @@
+---
+title: "Scrollytelling with Quarto Closeread"
+subtitle: "Learn how to enable scrollytelling features for your HTML documents."
+format:
+  closeread-html:
+    theme: simplex
+    fontsize: 1em
+    css: styles.css
+    cr-style:
+      narrative-background-color-overlay: "#111111d9"
+      narrative-border-radius: 10px
+      # if you refer to other css variables, escape the double-hyphen
+      section-background-color: "var(\\-\\-bs-light)"
+      narrative-text-color-overlay: "var(\\-\\-bs-light)"
+---
+
+## Welcome
+
+My goal with this website is to help you learn about __Closeread__, a 
+[Quarto](https://quarto.org) extension to create scrollytelling stories with 
+your HTML documents. I've organized the content into 2 major sections:
+
+- [Modules](modules): a series of topics and discussions about the large number
+of things you can do with Closeread.
+
+- [Examples](examples): live demos of the examples discussed in the modules.
+
+To stay up to date with the latest and greatest features of Closeread, and/or 
+to know more about technical details not covered in this website, please visit
+Closerad's official website: <a href="https://closeread.dev/" target="_blank">closeread.dev</a>
+
+
+## A few words about scrollytelling
+
+The word _scrollytelling_ is a modification of the term _storytelling_. 
+It is basically a mix of the words "scrolling" and "storytelling".
+
+A quick search of scrollytelling on google gives the following AI answer:
+
+> Scrollytelling is a web design technique that uses visual and 
+> textual elements to tell a story as the reader scrolls through a page.
+
+Here's how it works.
+As you scroll through a webpage, elements such as text, images, video, or audio
+appear, move, disappear, or change. This gives you a sense of discovery and 
+exploration, often with an element of surprise and awe.
+
+Scrollytelling can help readers focus on a certain part or element of your story.
+It lets you present information in chunks, so that it is more digestible
+to your audience. It also allows you to set the pace from one bit of information
+to the next one.
+
+
+## Demo
+
+You know the old saying, _"the proof of the pudding is in the eating"_. So here's
+an appetizer of Closeread with this personal example in which I 
+illustrate the difference between theory and practice when carrying out a 
+Data Analysis Process:
+
+
+::::{.cr-section layout="overlay-center" style="font-size: 1.5em;"}
+
+@cr-dap1
+| How to carry out a data analysis process?
+
+@cr-dap2
+| This is the way the mythical gods do it. 
+
+@cr-dap3
+| What about the rest of us mere mortals?
+
+@cr-dap4
+| This is the way ...
+
+@cr-dap5
+| ... the rest of us ...
+
+@cr-dap6
+| ... struggles to do it.
+
+
+:::{#cr-dap1}
+![](assets/cr-data-analysis-process1.png)
+:::
+
+:::{#cr-dap2}
+![](assets/cr-data-analysis-process2.png)
+:::
+
+:::{#cr-dap3}
+![](assets/cr-data-analysis-process3.png)
+:::
+
+:::{#cr-dap4}
+![](assets/cr-data-analysis-process4.png)
+:::
+
+
+:::{#cr-dap5}
+![](assets/cr-data-analysis-process5.png)
+:::
+
+
+:::{#cr-dap6}
+![](assets/cr-data-analysis-process6.png)
+:::
+
+:::{style="height: 20dvh; visibility: hidden"}
+:::
+
+{{< spacer 20svh >}}
+
+
+::::
+

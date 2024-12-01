@@ -1,0 +1,15 @@
+---
+title: "Examples"
+listing:
+  - id: examples-listings
+    sort-ui: false
+    filter-ui: false
+    sort: "title"
+    type: table
+    fields: [title]
+    field-display-names:
+      title: "Feature"
+---
+
+:::{#examples-listings}
+:::

@@ -1,0 +1,33 @@
+---
+title: "Example 2"
+format: 
+  closeread-html:
+    theme: cosmo
+    fontsize: 1.2em
+    css: ../../styles.css
+---
+
+::::{.cr-section}
+
+What is __Quarto__? What is __R__?
+
+:::{#cr-quarto}
+![](https://quarto.org/quarto.png)
+:::
+
+Quarto is an open-source scientific and technical publishing system. @cr-quarto
+
+Quarto lets you author documents using plain text markdown in your favorite editor.
+
+You can use quarto documents with R. @cr-rlogo
+
+
+:::{#cr-rlogo}
+![](https://www.r-project.org/Rlogo.png)
+:::
+
+R is a free software environment for statistical computing and graphics. 
+
+R is available on Unix, MacOS, and Windows.
+
+::::
