@@ -27,7 +27,7 @@ of things you can do with Closeread.
 
 To stay up to date with the latest and greatest features of Closeread, and/or 
 to know more about technical details not covered in this website, please visit
-Closerad's official website: <a href="https://closeread.dev/" target="_blank">closeread.dev</a>
+Closeread's official website: <a href="https://closeread.dev/" target="_blank">closeread.dev</a>
 
 
 ## A few words about scrollytelling
