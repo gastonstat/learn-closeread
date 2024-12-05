@@ -24,6 +24,9 @@ Trigger with some focus effect [@cr-sticky]{effect="..."}
 The reason why an effect is attached to a trigger is because a trigger is what 
 Closeread uses to decide __what to do__ with a sticky. 
 
+
+### Syntax to Specify Focus Effects
+
 The syntax to specify a focus effect is the following:
 
 - You wrap the trigger `@cr-sticky` with brackets: `[@cr-sticky]`
@@ -58,7 +61,7 @@ Let's describe the syntax behind each of these effects.
 
 ## Scaling
 
-To shrink or enlarge a sticky element we use the `scale-by` effect. This 
+To shrink or enlarge a sticky element you use the `scale-by` effect. This 
 attribute takes non-negative values. The figure below depicts the
 resulting effect of `scale-by` when used on text and images:
 
@@ -84,7 +87,7 @@ Normal size again @cr-sticky
 
 ## Panning
 
-To move a sticky element we use the `pan-to` effect. This attribute takes a 
+To move a sticky element you use the `pan-to` effect. This attribute takes a 
 pair of `x` and `y` values that control the horizontal and vertical panning,
 respectively. The figure below depicts the resulting effect of `pan-to`---using 
 different units---when applied on an image (but you cal also apply it on text):
@@ -145,7 +148,7 @@ Normal position again @cr-sticky
 
 ## Highlighting
 
-To highlight certain lines of text in a sticky element we use the `highlight` 
+To highlight certain lines of text in a sticky element you use the `highlight` 
 effect. The way `highlight` works is by emphasizing certain parts of text
 (e.g. a certain line or certain words) while de-emphasizing the rest of the
 text, as illustrated in the following diagram:
@@ -175,8 +178,8 @@ Normal text again @cr-sticky
 
 When you provide a numeric value to the `highlight` effect, e.g. 
 `[@cr-sticky]{highlight="1"}`, the entire line of text will be highlighted.
-Often, though, we may be interested in highlighting just a single word, or some
-part of a line of text. To obtain this type of highlighting we have to use 
+Often, though, you may be interested in highlighting just a single word, or some
+part of a line of text. To obtain this type of highlighting you have to use 
 a special type of sticky referred to as a __named span__ and its corresponding
 __span highlighting__ effect, as shown in the next figure:
 

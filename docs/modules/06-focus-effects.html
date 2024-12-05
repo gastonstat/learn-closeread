@@ -239,7 +239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#available-effects-in-closeread" id="toc-available-effects-in-closeread" class="nav-link active" data-scroll-target="#available-effects-in-closeread">Available Effects in Closeread</a></li>
+  <li><a href="#syntax-to-specify-focus-effects" id="toc-syntax-to-specify-focus-effects" class="nav-link active" data-scroll-target="#syntax-to-specify-focus-effects">Syntax to Specify Focus Effects</a></li>
+  <li><a href="#available-effects-in-closeread" id="toc-available-effects-in-closeread" class="nav-link" data-scroll-target="#available-effects-in-closeread">Available Effects in Closeread</a></li>
   <li><a href="#scaling" id="toc-scaling" class="nav-link" data-scroll-target="#scaling">Scaling</a></li>
   <li><a href="#panning" id="toc-panning" class="nav-link" data-scroll-target="#panning">Panning</a></li>
   <li><a href="#highlighting" id="toc-highlighting" class="nav-link" data-scroll-target="#highlighting">Highlighting</a>
@@ -286,12 +287,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Trigger with some focus effect <span class="co">[</span><span class="ot">@cr-sticky</span><span class="co">]</span>{effect="..."}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The reason why an effect is attached to a trigger is because a trigger is what Closeread uses to decide <strong>what to do</strong> with a sticky.</p>
+<section id="syntax-to-specify-focus-effects" class="level3">
+<h3 class="anchored" data-anchor-id="syntax-to-specify-focus-effects">Syntax to Specify Focus Effects</h3>
 <p>The syntax to specify a focus effect is the following:</p>
 <ul>
 <li><p>You wrap the trigger <code>@cr-sticky</code> with brackets: <code>[@cr-sticky]</code></p></li>
 <li><p>You append an attribute effect using braces <code>[@cr-sticky]{effect="..."}</code></p></li>
 <li><p>Inside the braces, you specify the name of the effect, followed by the equals sign <code>=</code>, followed by the <strong>value</strong> of the effect surrounded in quotes <code>"..."</code></p></li>
 </ul>
+</section>
 <section id="available-effects-in-closeread" class="level3">
 <h3 class="anchored" data-anchor-id="available-effects-in-closeread">Available Effects in Closeread</h3>
 <p>As of this writing, Closeread comes with a handful of focus effects. In no particular order of importance we have:</p>
@@ -308,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="scaling" class="level2">
 <h2 class="anchored" data-anchor-id="scaling">Scaling</h2>
-<p>To shrink or enlarge a sticky element we use the <code>scale-by</code> effect. This attribute takes non-negative values. The figure below depicts the resulting effect of <code>scale-by</code> when used on text and images:</p>
+<p>To shrink or enlarge a sticky element you use the <code>scale-by</code> effect. This attribute takes non-negative values. The figure below depicts the resulting effect of <code>scale-by</code> when used on text and images:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/effect-scale-by.svg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -333,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="panning" class="level2">
 <h2 class="anchored" data-anchor-id="panning">Panning</h2>
-<p>To move a sticky element we use the <code>pan-to</code> effect. This attribute takes a pair of <code>x</code> and <code>y</code> values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of <code>pan-to</code>—using different units—when applied on an image (but you cal also apply it on text):</p>
+<p>To move a sticky element you use the <code>pan-to</code> effect. This attribute takes a pair of <code>x</code> and <code>y</code> values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of <code>pan-to</code>—using different units—when applied on an image (but you cal also apply it on text):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/effect-pan-to-simple.svg" class="img-fluid figure-img"></p>
@@ -387,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="highlighting" class="level2">
 <h2 class="anchored" data-anchor-id="highlighting">Highlighting</h2>
-<p>To highlight certain lines of text in a sticky element we use the <code>highlight</code> effect. The way <code>highlight</code> works is by emphasizing certain parts of text (e.g.&nbsp;a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:</p>
+<p>To highlight certain lines of text in a sticky element you use the <code>highlight</code> effect. The way <code>highlight</code> works is by emphasizing certain parts of text (e.g.&nbsp;a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/effect-highlight-text.svg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -416,7 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="highlighting-certain-parts-or-words" class="level3">
 <h3 class="anchored" data-anchor-id="highlighting-certain-parts-or-words">Highlighting certain parts (or words)</h3>
-<p>When you provide a numeric value to the <code>highlight</code> effect, e.g.&nbsp; <code>[@cr-sticky]{highlight="1"}</code>, the entire line of text will be highlighted. Often, though, we may be interested in highlighting just a single word, or some part of a line of text. To obtain this type of highlighting we have to use a special type of sticky referred to as a <strong>named span</strong> and its corresponding <strong>span highlighting</strong> effect, as shown in the next figure:</p>
+<p>When you provide a numeric value to the <code>highlight</code> effect, e.g.&nbsp; <code>[@cr-sticky]{highlight="1"}</code>, the entire line of text will be highlighted. Often, though, you may be interested in highlighting just a single word, or some part of a line of text. To obtain this type of highlighting you have to use a special type of sticky referred to as a <strong>named span</strong> and its corresponding <strong>span highlighting</strong> effect, as shown in the next figure:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/effect-highlight-word.svg" class="img-fluid figure-img" style="width:90.0%"></p>

@@ -3,8 +3,8 @@ title: "2) Introduction"
 ---
 
 I would like to use this module to give you an introduction to the main 
-components of the closeread framework. The goal is to help you understand the 
-anatomy of a basic closeread document.
+components of the Closeread framework. The goal is to help you understand the 
+anatomy of a basic Closeread document.
 
 
 ## Closeread Components
@@ -145,7 +145,7 @@ In turn, the area on the right hand side is the area for the
 Recall that both the narrative and the sticky are part of the 
 <span style="color:red;">section</span>.
 As you scroll down the document, the moment you hit the 
-<span style="color:orange;">trigger</span>, the sticky will appear on screen.
+<span style="color:orange;">trigger</span>, the sticky will appear on the screen.
 
 
 
