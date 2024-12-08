@@ -1,15 +1,15 @@
 ---
 title: "Examples"
-listing:
-  - id: examples-listings
-    sort-ui: false
-    filter-ui: false
-    sort: "title"
-    type: table
-    fields: [title]
-    field-display-names:
-      title: "Feature"
 ---
 
-:::{#examples-listings}
-:::
+[Example 1: Sample story with just text](example1/)
+
+[Example 2: Sample story with images](example2/)
+
+[Example 3: Sample story with equations](example3/)
+
+[Example 4: The Illustrated Guide to a Ph.D.](example4/)
+
+[Example 5: A Bicycle Like No Other](example5/)
+
+[Example 6: Storms in the North Atlantic](example6/)

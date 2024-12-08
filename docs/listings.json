@@ -1,14 +1,5 @@
 [
   {
-    "listing": "/examples/index.html",
-    "items": [
-      "/examples/example1/index.html",
-      "/examples/example2/index.html",
-      "/examples/example3/index.html",
-      "/examples/example5/index.html"
-    ]
-  },
-  {
     "listing": "/modules/index.html",
     "items": [
       "/modules/01-setup.html",

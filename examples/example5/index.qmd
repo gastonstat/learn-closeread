@@ -1,176 +1,42 @@
 ---
-title: "Storms in the North Atlantic"
+title: "A Bycicle Like No Other"
+subtitle: "by Gaston Sanchez" 
 format: 
   closeread-html:
     theme: cosmo
     css: ../../styles.css
     cr-style:
-      narrative-background-color-sidebar: black
       section-background-color: white
-      narrative-text-color-sidebar: white
-      narrative-font-size: 2em
-      #narrative-font-family: serif
+      narrative-background-color-sidebar: "#f1e0cc"
+      narrative-text-color-sidebar: black
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 1.8rem
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
+:::{.cr-section}
 
-# number of storms per year (1980-2022)
-storms_per_year = storms |>
-  filter(year >= 1980) |> 
-  mutate(id = paste0(name, "-", year)) |> 
-  count(year, id, name = "count") |> 
-  count(year, name = "count")
-```
+On a cloudy 2013 Spring day, in one my of my monthly trips to Paris, I found this eye-catching bicycle parked outside a store in _Ile Saint-Louis_, one of the two islands in the Seine river. @cr-bike
 
-
-::::{.cr-section}
-
-
-How many tropical storms per year have occurred in the North Atlantic between 1980 and 2022? @cr-plot1
-
-:::{#cr-plot1}
-
-```{r barchart1}
-# version 1: start with an "empty" plot
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = "#90909000") +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), 
-                     labels = c("10", "20", "30")) +
-  theme_minimal() +
-  theme(axis.text.y = element_text(color = "#00000000")) +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-
+:::{#cr-bike}
+![](bicycle.JPG){width="90%" fig-align="center"}
 :::
 
+I had never seen a bicycle so colorful, and originally decorated, with a distinctive personality of its own.
 
-This is the distribution of number of tropical storms per year in the 1980's  @cr-plot2
+The shape and size of the <span style="color:#fe964c">__orange__</span> panniers---with their <span style="color:#f8566c">__pink__</span> straps---reminded me of my childhood years and the bags that I used to carry when I was in kindergarten. [@cr-bike]{pan-to="10%,0%" scale-by="1.4"}
 
-:::{#cr-plot2}
-```{r barchart2}
-# version 2: storms in 1980s
-colors1 = c(rep("#136EED", 10), rep("#90909000", 33))
+The frame of the bike is very interesting. Its exposed parts (the chain and seat stays) show the pass of time with rusted areas, and what I assume is its original <span style="color:#4c5d4d">__dark green__</span> color. [@cr-bike]{pan-to="0%,10%" scale-by="1.7"}
 
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors1) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), labels = c("10", "", "")) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
+The rest of the frame is wrapped around various threads of colorful yarns: 
+<br>
+- <span style="color:#ec6a96">__pink__</span> in the section under the saddle, <br>
+- a fluffy <span style="color:#c0a344">__green__</span> surrounding the top tube, <br>
+- a <span style="color:#e1553e">__multicolor__</span> yarn around both the down and the head tubes. 
 
+The handle bar is wrapped in <span style="color:#f48653">__orange__</span>, and the headset section in <span style="color:#17b6c3">__cyan__</span>. It even has a mesh containing more ball of yarns hanging from the right handle. Likewise, it also has a headlight mounted on the front fender. [@cr-bike]{pan-to="-25%,20%" scale-by="1.7"}
 
-The number of tropical storms per year kept increasing in the 1990's. The year 1995 saw a record number of 21 storms. @cr-plot3
+The whole thing is supported on its kickstand. [@cr-bike]{pan-to="0%,-30%" scale-by="1.7"}
 
-:::{#cr-plot3}
-```{r barchart3}
-# version 3: storms in 1990s
-colors2 = c(rep("#bbbbbb", 10), rep("#136EED", 10), rep("#90909000", 23))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors2) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), labels = c("10", "20", "")) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-The increasing trend continued during the 2000s, with a jaw dropping record of 29 storms in 2005. @cr-plot4
-
-:::{#cr-plot4}
-```{r barchart4}
-# version 4: storms in 2000s
-colors3 = c(rep("#bbbbbb", 20), rep("#136EED", 10), rep("#90909000", 13))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors3) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-In the 2010s decade the trend seemed to slow down a bit ...  @cr-plot5
-
-:::{#cr-plot5}
-```{r barchart5}
-# version 5: storms in 2010s
-colors4 = c(rep("#bbbbbb", 30), rep("#136EED", 10), rep("#90909000", 3))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors4) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-Only to reach a new all time high of 30 storms in 2020. @cr-plot6
-
-:::{#cr-plot6}
-```{r barchart6}
-# version 6: storms in 2020-2022
-colors5 = c(rep("#bbbbbb", 40), rep("#136EED", 3))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors5) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-So what was the overall trend between 1980 and 2022? @cr-plot7
-
-:::{#cr-plot7}
-```{r barchart7}
-# version 7: all storms
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = "#bbbbbb") +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-An increasing trend as you can tell. @cr-plot8
-
-:::{#cr-plot8}
-```{r barchart8, message=FALSE}
-# version 8: all storms with fitted line
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = "#bbbbbb") +
-  geom_smooth(se = FALSE, linewidth = 1.4) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
+What a whimsical bicycle and---I would dare to say---a wonderful piece of street art. @cr-bike
 
 ::::
