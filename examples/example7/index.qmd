@@ -4,10 +4,13 @@ format:
   closeread-html:
     theme: cosmo
     css: ../../styles.css
+    cr-section:
+       layout: "overlay-center"
     cr-style:
-      narrative-background-color-sidebar: "#fcf7f0"
       section-background-color: white
-      narrative-text-color-sidebar: black
+      narrative-background-color-overlay: "#7c7c7cdd"
+      narrative-overlay-max-width: 700px
+      narrative-text-color-overlay: white
       narrative-font-size: 2em
 ---
 
@@ -148,7 +151,7 @@ barchart4 +
 :::
 
 
-In the 2010's the trend seemed to slow down a bit with an average number of storms per year of `r storms_per_decade[4,2]` ...  @cr-plot5
+In the 2010's the trend seemed to slow down a bit with an average number of storms per year of `r storms_per_decade[4,2]`  @cr-plot5
 
 :::{#cr-plot5}
 ```{r barchart5}
@@ -166,7 +169,7 @@ storms_per_year |>
 :::
 
 
-... only to go up again @cr-plot6
+Only to go up again @cr-plot6
 
 :::{#cr-plot6}
 ```{r barchart6}

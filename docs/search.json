@@ -205,11 +205,18 @@
     "text": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International\nThis work © 2024 by Gaston Sanchez is licensed under CC BY-NC-SA 4.0\n\nYou are free to:\n\nShare: copy and redistribute the material in any medium or format.\nAdapt: remix, transform, and build upon the material.\nThe licensor cannot revoke these freedoms as long as you follow the license terms.\n\n\n\nUnder the following terms:\n\nAttribution: You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial: You may not use the material for commercial purposes.\nShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions: You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.\n\nFor more information, see CC BY-NC-SA 4.0"
   },
   {
+    "objectID": "examples/example8/index.html",
+    "href": "examples/example8/index.html",
+    "title": "Mapping Storms in the North Atlantic",
+    "section": "",
+    "text": "Tropical Storms in the North Atlantic, 2010 season.\n\n\n\n\nThe season started in June with 1 storm: Alex\n\n\n\n\nThe month of July saw the starting of 2\n\n\n\n\nThe month of August saw the starting of 5 storms\n\n\n\n\nThe month of September saw the starting of 8 storms\n\n\n\n\nThe month of October saw the starting of 5 storms\n\n\n\n\nThe 2010 season saw a total of 21 storms."
+  },
+  {
     "objectID": "examples/example6/index.html",
     "href": "examples/example6/index.html",
     "title": "Storms in the North Atlantic",
     "section": "",
-    "text": "How many tropical storms per year occurred in the North Atlantic between 1980 and 2022?\n\n\n\n\nLet’s take a look decade by decade.\n\n\n\n\nIn the 1980’s the average number of tropical storms per year was 9.\n\n\n\n\nThe number of tropical storms per year kept increasing in the 1990’s with an average of 12.7.\n\n\n\n\nThe year 1995 saw a record number of 21 storms.\n\n\n\n\nThe increasing trend continued during the 2000’s, averaging 16.9 storms per year\n\n\n\n\nWith a jaw dropping record of 29 storms in 2005!\n\n\n\n\nIn the 2010’s the trend seemed to slow down a bit with an average number of storms per year of 16.3 …\n\n\n\n\n… only to go up again\n\n\n\n\nreaching a new all time high of 30 storms in 2020.\n\n\n\n\nSo what was the overall trend between 1980 and 2022?\n\n\n\n\nAn increasing trend as you can tell."
+    "text": "What can the analysis of the dplyr::storms data set reveal about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022?\n\n\n\n\nLet’s take a look decade by decade.\n\n\n\n\nIn the 1980’s the average number of tropical storms per year was 9.\n\n\n\n\nThe number of tropical storms per year kept increasing in the 1990’s with an average of 12.7.\n\n\n\n\nThe year 1995 saw a record number of 21 storms.\n\n\n\n\nThe increasing trend continued during the 2000’s, averaging 16.9 storms per year\n\n\n\n\nWith a jaw dropping record of 29 storms in 2005!\n\n\n\n\nIn the 2010’s the trend seemed to slow down a bit with an average number of storms per year of 16.3 …\n\n\n\n\n… only to go up again\n\n\n\n\nreaching a new all time high of 30 storms in 2020.\n\n\n\n\nSo what was the overall trend between 1980 and 2022?\n\n\n\n\nAn increasing trend as you can tell."
   },
   {
     "objectID": "examples/example3/index.html",
@@ -223,7 +230,7 @@
     "href": "examples/example5/index.html",
     "title": "A Bycicle Like No Other",
     "section": "",
-    "text": "On a cloudy 2013 Spring day, in one my of my monthly trips to Paris, I found this eye-catching bicycle parked outside a store in Ile Saint-Louis, one of the two islands in the Seine river.\n\n\n\n\nI had never seen a bicycle so colorful, and originally decorated, with a distinctive personality of its own.\n\n\n\n\nThe shape and size of the orange panniers—with their pink straps—reminded me of my childhood years and the bags that I used to carry when I was in kindergarten.\n\n\n\n\nThe frame of the bike is very interesting. Its exposed parts (the chain and seat stays) show the pass of time with rusted areas, and what I assume is its original dark green color.\n\n\n\n\nThe rest of the frame is wrapped around various threads of colorful yarns:  - pink in the section under the saddle,  - a fluffy green surrounding the top tube,  - a multicolor yarn around both the down and the head tubes.\n\n\n\n\nThe handle bar is wrapped in orange, and the headset section in cyan. It even has a mesh containing more ball of yarns hanging from the right handle. Likewise, it also has a headlight mounted on the front fender.\n\n\n\n\nThe whole thing is supported on its kickstand.\n\n\n\n\nWhat a whimsical bicycle and—I would dare to say—a wonderful piece of street art."
+    "text": "Between 2013 and 2014 I spent a year in France, doing a postdoc in the northwestern city of Nantes. \n\n\n\n\nOn a cloudy Spring day, in one of my monthly trips to Paris, I found this eye-catching bicycle parked outside a store in Ile Saint-Louis, one of the two islands in the Seine river.\n\n\n\n\nI had never seen a bicycle so colorful, and originally decorated, with a distinctive personality of its own.\n\n\n\n\nThe shape and size of the orange panniers—with their pink straps—reminded me of my childhood years and the leather bags I used to carry when I was in kindergarten.\n\n\n\n\nThe frame of the bike is very interesting. Its exposed parts (the chain and seat stays) show the pass of time with rusted areas, and what I assume is its original dark green color.\n\n\n\n\nThe rest of the frame is wrapped around various threads of colorful yarns:   - pink in the section under the saddle,   - a fluffy green surrounding the top tube,   - a multicolor yarn around both the down and the head tubes.\n\n\n\n\nThe handle bar is wrapped in orange, and the headset section in aquamarine. Hanging from its right handle, it even has a mesh bag containing more ball of yarns. Likewise, it also has a headlight mounted on the front fender.\n\n\n\n\nThe whole thing is supported on its kickstand.\n\n\n\n\nWhat a whimsical bicycle and—I would dare to say—a wonderful piece of street art."
   },
   {
     "objectID": "about.html",
@@ -272,14 +279,14 @@
     "href": "examples/example4/index.html",
     "title": "The Illustrated Guide to a Ph.D.",
     "section": "",
-    "text": "Imagine a circle that contains all of human knowledge.\n\n\n\n\nBy the time you finish elementary school, you know a little.\n\n\n\n\nBy the time you finish high school, you know a bit more.\n\n\n\n\nWith a bachelor’s degree, you gain a specialty.\n\n\n\n\nA master’s degree deepens that specialty.\n\n\n\n\nReading research papers takes you to the edge of human knowledge.\n\n\n\n\nOnce you’re at the boundary, you focus.\n\n\n\n\nYou push at the boundary for a few years.\n\n\n\n\nUntil one day, the boundary gives way.\n\n\n\n\nAnd, that dent you’ve made is called a Ph.D. \n\n\n\n\nOf course, the world looks different to you now.\n\n\n\n\nSo, don’t forget the bigger picture.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOriginal Work: https://matt.might.net/articles/phd-school-in-pictures/\nLicense: CC BY-NC 2.5"
+    "text": "Imagine a circle that contains all of human knowledge.\n\n\n\n\nBy the time you finish elementary school, you know a little.\n\n\n\n\nBy the time you finish high school, you know a bit more.\n\n\n\n\nWith a bachelor’s degree, you gain a specialty.\n\n\n\n\nA master’s degree deepens that specialty.\n\n\n\n\nReading research papers takes you to the edge of human knowledge.\n\n\n\n\nOnce you’re at the boundary, you focus.\n\n\n\n\nYou push at the boundary for a few years.\n\n\n\n\nUntil one day, the boundary gives way.\n\n\n\n\nAnd, that dent you’ve made is called a Ph.D.\n\n\n\n\nOf course, the world looks different to you now.\n\n\n\n\nSo, don’t forget the bigger picture.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOriginal Work: https://matt.might.net/articles/phd-school-in-pictures/\nLicense: CC BY-NC 2.5\nCode: github repo"
   },
   {
     "objectID": "examples/index.html",
     "href": "examples/index.html",
     "title": "Examples",
     "section": "",
-    "text": "Example 1: Sample story with just text\nExample 2: Sample story with images\nExample 3: Sample story with equations\nExample 4: The Illustrated Guide to a Ph.D.\nExample 5: A Bicycle Like No Other\nExample 6: Storms in the North Atlantic"
+    "text": "Minimalist Closeread Documents\nExample 1: Sample story with just text\nExample 2: Sample story with images\nExample 3: Sample story with equations\n\n\nA bit more elaborated Closeread Documents\nExample 4: The Illustrated Guide to a Ph.D.\nExample 5: A Bicycle Like No Other\n\n\nStorms Data Set Stories\nExample 6: Storms in the North Atlantic (layout sidebar left)\nExample 7: Storms in the North Atlantic (layout overlay center)\nExample 8: Mapping Storms in the North Atlantic (layout sidebar left)"
   },
   {
     "objectID": "examples/example1/index.html",
@@ -287,6 +294,13 @@
     "title": "Example 1",
     "section": "",
     "text": "Section of text to be handled by closeread.\n\n\n\n\nText that triggers the sticky element.\n\n\n\n\nMore text that will appear as you scroll down.\n\n\n\n\nLast sentence that will show up next to the sticky element.\n\n\n\n\n\n\nText that will be treated as the sticky element.\nThis text will be stuck as you scroll up and down."
+  },
+  {
+    "objectID": "examples/example7/index.html",
+    "href": "examples/example7/index.html",
+    "title": "Storms in the North Atlantic",
+    "section": "",
+    "text": "What can the analysis of the dplyr::storms data set reveal about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022?\n\n\n\n\nLet’s take a look decade by decade.\n\n\n\n\nIn the 1980’s the average number of tropical storms per year was 9.\n\n\n\n\nThe number of tropical storms per year kept increasing in the 1990’s with an average of 12.7.\n\n\n\n\nThe year 1995 saw a record number of 21 storms.\n\n\n\n\nThe increasing trend continued during the 2000’s, averaging 16.9 storms per year\n\n\n\n\nWith a jaw dropping record of 29 storms in 2005!\n\n\n\n\nIn the 2010’s the trend seemed to slow down a bit with an average number of storms per year of 16.3\n\n\n\n\nOnly to go up again\n\n\n\n\nreaching a new all time high of 30 storms in 2020.\n\n\n\n\nSo what was the overall trend between 1980 and 2022?\n\n\n\n\nAn increasing trend as you can tell."
   },
   {
     "objectID": "modules/06-focus-effects.html",

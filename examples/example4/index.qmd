@@ -65,31 +65,31 @@ Once you're at the boundary, you focus. @cr-phd7
 :::
 
 
-You push at the boundary for a few years. [@cr-phd8]{scale-by="1.5"}
+You push at the boundary for a few years. @cr-phd8
 
 :::{#cr-phd8}
-![](phd_008.jpg)
+![](phd_008.jpg){width="120%" height="120%"}
 :::
 
 
-Until one day, the boundary gives way. [@cr-phd9]{scale-by="1.5"}
+Until one day, the boundary gives way. @cr-phd9
 
 :::{#cr-phd9}
-![](phd_009.jpg)
+![](phd_009.jpg){width="120%" height="120%"}
 :::
 
 
-And, that dent you've made is called a Ph.D. [@cr-phd10]{scale-by="1.5"}
+And, that dent you've made is called a Ph.D. @cr-phd10
 
 :::{#cr-phd10}
-![](phd_010.jpg)
+![](phd_010.jpg){width="120%" height="120%"}
 :::
 
 
-Of course, the world looks different to you now. [@cr-phd11]{scale-by="1.4"}
+Of course, the world looks different to you now. @cr-phd11
 
 :::{#cr-phd11}
-![](phd_011.jpg)
+![](phd_011.jpg){width="120%" height="120%"}
 :::
 
 
@@ -109,3 +109,5 @@ So, don't forget the bigger picture. @cr-phd12
 Original Work: <a href="https://matt.might.net/articles/phd-school-in-pictures/" target="_blank">https://matt.might.net/articles/phd-school-in-pictures/</a>
 
 License: <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank">CC BY-NC 2.5</a>
+
+Code: <a href="https://github.com/gastonstat/learn-closeread/blob/main/examples/example4/index.qmd" target="_blank">github repo</a>

@@ -1,0 +1,232 @@
+---
+title: "Mapping Storms in the North Atlantic"
+format: 
+  closeread-html:
+    theme: cosmo
+    css: ../../styles.css
+    cr-style:
+      narrative-background-color-sidebar: "#fcf7f0"
+      section-background-color: white
+      narrative-text-color-sidebar: black
+      narrative-font-size: 2em
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)     # data wrangling and graphics
+library(lubridate)     # for working with dates
+library(sf)            # simple features
+library(rnaturalearth) # maps data
+
+storms2010 = storms |>
+  filter(year == 2010) |> 
+  mutate(date = as.Date(paste(year,month,day,sep="-"))) |> 
+  select(name, date, month, lat, long, wind)
+
+storms2010_aux = storms2010 |> 
+  group_by(name) |> 
+  summarize(date = first(date),
+            first = str_sub(first(date), 6, 10),
+            last = str_sub(last(date), 6, 10),
+            lat = last(lat),
+            long = last(long),
+            month = month(date)) |> 
+  arrange(first)
+
+storms2010_per_month = storms2010_aux |> 
+  count(month, name = "count")
+
+gg_color_hue <- function(n) {
+  hues = seq(15, 375, length = n + 1)
+  hcl(h = hues, l = 65, c = 100)[1:n]
+}
+
+n = length(unique(storms2010_aux$name))
+
+storms2010_aux$color = gg_color_hue(n)
+
+world_map = ne_countries(returnclass = "sf")
+```
+
+
+
+::::{.cr-section}
+
+Tropical Storms in the North Atlantic, 2010 season. @cr-map1
+
+:::{#cr-map1}
+```{r map1}
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = storms2010, 
+             aes(x = long, y = lat), color = "#99999900") +
+  theme(panel.background = element_blank())
+```
+:::
+
+
+The season started in June with `r storms2010_per_month$count[1]` storm: `r storms2010_aux$name[1]` @cr-storms1
+
+:::{#cr-storms1}
+```{r storms1}
+name_aux = storms2010_aux$name[1]
+
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = filter(storms2010, name == name_aux), 
+             aes(x = long, y = lat), 
+             color = storms2010_aux$color[1]) +
+  geom_path(data = filter(storms2010, name == name_aux), 
+             aes(x = long, y = lat), 
+             color = storms2010_aux$color[1]) +
+  geom_text(data = filter(storms2010_aux, name %in% name_aux),
+            vjust = -0.5,
+            aes(x = long, y = lat, label = name, color = name)) +
+  labs(title = "Storms starting in June") +
+  theme(panel.background = element_blank(),
+        legend.position = "none")
+```
+:::
+
+
+The month of July saw the starting of `r storms2010_per_month$count[2]` @cr-storms2
+
+:::{#cr-storms2}
+```{r storms2}
+name_aux = storms2010_aux |> 
+  filter(month == 7) |> 
+  pull(name)
+
+color_aux = storms2010_aux |> 
+  filter(name %in% name_aux) |> 
+  pull(color)
+
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_path(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_text(data = filter(storms2010_aux, name %in% name_aux),
+            vjust = -0.5,
+            aes(x = long, y = lat, label = name, color = name)) +
+  scale_color_manual(values = color_aux) +
+  labs(title = "Storms starting in July") +
+  theme(panel.background = element_blank(),
+        legend.position = "none")
+```
+:::
+
+
+The month of August saw the starting of `r storms2010_per_month$count[3]` storms @cr-storms3
+
+:::{#cr-storms3}
+```{r storms3}
+name_aux = storms2010_aux |> 
+  filter(month == 8) |> 
+  pull(name)
+
+color_aux = storms2010_aux |> 
+  filter(name %in% name_aux) |> 
+  pull(color)
+
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_path(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_text(data = filter(storms2010_aux, name %in% name_aux),
+            vjust = -0.5,
+            aes(x = long, y = lat, label = name, color = name)) +
+  scale_color_manual(values = color_aux) +
+  labs(title = "Storms starting in August ") +
+  theme(panel.background = element_blank(),
+        legend.position = "none")
+```
+:::
+
+
+The month of September saw the starting of `r storms2010_per_month$count[4]` storms @cr-storms4
+
+:::{#cr-storms4}
+```{r storms4}
+name_aux = storms2010_aux |> 
+  filter(month == 9) |> 
+  pull(name)
+
+color_aux = storms2010_aux |> 
+  filter(name %in% name_aux) |> 
+  pull(color)
+
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_path(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_text(data = filter(storms2010_aux, name %in% name_aux),
+            vjust = -0.5,
+            aes(x = long, y = lat, label = name, color = name)) +
+  scale_color_manual(values = color_aux) +
+  labs(title = "Storms starting in September") +
+  theme(panel.background = element_blank(),
+        legend.position = "none")
+```
+:::
+
+
+The month of October saw the starting of `r storms2010_per_month$count[5]` storms @cr-storms5
+
+:::{#cr-storms5}
+```{r storms5}
+name_aux = storms2010_aux |> 
+  filter(month == 10) |> 
+  pull(name)
+
+color_aux = storms2010_aux |> 
+  filter(name %in% name_aux) |> 
+  pull(color)
+
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_path(data = filter(storms2010, name %in% name_aux), 
+             aes(x = long, y = lat, color = name)) +
+  geom_text(data = filter(storms2010_aux, name %in% name_aux),
+            vjust = -0.5,
+            aes(x = long, y = lat, label = name, color = name)) +
+  scale_color_manual(values = color_aux) +
+  labs(title = "Storms starting in October") +
+  theme(panel.background = element_blank(),
+        legend.position = "none") 
+```
+:::
+
+
+
+The 2010 season saw a total of `r n` storms. @cr-storms
+
+:::{#cr-storms}
+```{r storms}
+ggplot() + 
+  geom_sf(data = world_map) +
+  coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
+  geom_point(data = storms2010, 
+             aes(x = long, y = lat, color = name)) +
+  geom_path(data = storms2010, 
+             aes(x = long, y = lat, color = name)) +
+  labs(title = "Storms starting in 2010") +
+  theme(panel.background = element_blank(),
+        legend.position = "none")
+```
+:::
+
+
+::::
