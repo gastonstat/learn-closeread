@@ -1,5 +1,5 @@
 ---
-title: "A Bycicle Like No Other"
+title: "A Bicycle Like No Other"
 subtitle: "by Gaston Sanchez" 
 format: 
   closeread-html:
