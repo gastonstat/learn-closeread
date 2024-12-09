@@ -16,22 +16,20 @@ format:
 
 :::{.cr-section}
 
-Between 2013 and 2014 I spent a year in France, doing a postdoc in the northwestern city of Nantes.
-@cr-bike
+On a cloudy Spring day of 2013, walking down the narrow streets of _Ile Saint-Louis_ in Paris, I stumbled upon an eye-catching bicycle. It was begging me to take a picture of it. @cr-bike
+
 
 :::{#cr-bike}
 ![](bicycle.JPG){width="70%" fig-align="center"}
 :::
 
-On a cloudy Spring day, in one of my monthly trips to Paris, I found this eye-catching bicycle parked outside a store in _Ile Saint-Louis_, one of the two islands in the Seine river. [@cr-bike]{scale-by="1.1"}
-
-I had never seen a bicycle so colorful, and originally decorated, with a distinctive personality of its own. [@cr-bike]{scale-by="1.4"}
+I had never seen such a colorful bicycle, so originally decorated, with a distinctive personality of its own. [@cr-bike]{scale-by="1.4"}
 
 The shape and size of the <span style="color:#fe964c">__orange__</span> panniers---with their <span style="color:#f8566c">__pink__</span> straps---reminded me of my childhood years and the leather bags I used to carry when I was in kindergarten. [@cr-bike]{pan-to="10%,20%" scale-by="1.8"}
 
-The frame of the bike is very interesting. Its exposed parts (the chain and seat stays) show the pass of time with <span style="color:#a03a08">__rusted__</span> areas, and what I assume is its original <span style="color:#426245">__dark green__</span> color. [@cr-bike]{pan-to="-5%,25%" scale-by="1.9"}
+The frame of the bike was very interesting. Its exposed parts (the chain and seat stays) showed the pass of time with <span style="color:#a03a08">__rusted__</span> areas, and what I assume was its original <span style="color:#426245">__dark green__</span> color. [@cr-bike]{pan-to="-5%,25%" scale-by="1.9"}
 
-The rest of the frame is wrapped around various threads of colorful yarns: 
+The rest of the frame was wrapped around various threads of colorful yarns: 
 <br>
 <br>
 - <span style="color:#ec6a96">__pink__</span> in the section under the saddle,
@@ -43,11 +41,14 @@ The rest of the frame is wrapped around various threads of colorful yarns:
 - a <strong><span style="color:#e1553e">mul</span><span style="color:#e19c85">ti</span><span style="color:#c0293b">co</span><span style="color:#e1553e">lor</span></strong> yarn around both the down and the head tubes. 
 
 
-The handle bar is wrapped in <span style="color:#f48653">__orange__</span>, and the headset section in <span style="color:#17b6c3">__aquamarine__</span>. Hanging from its right handle, it even has a mesh bag containing more ball of yarns. Likewise, it also has a headlight mounted on the front fender. [@cr-bike]{pan-to="-15%,30%" scale-by="1.9"}
+The handle bar was wrapped in <span style="color:#f48653">__orange__</span>, and the headset section in <span style="color:#17b6c3">__aquamarine__</span>. Hanging from its right handle, it even had a <span style="color:#fb6457">__coral__</span> mesh bag containing more ball of yarns.
+<br>
+<br>
+Likewise, it also had a headlight mounted on the front fender. [@cr-bike]{pan-to="-15%,30%" scale-by="2"}
 
-The whole thing is supported on its kickstand. [@cr-bike]{pan-to="0%,-30%" scale-by="1.9"}
+The whole thing was supported on its kickstand. [@cr-bike]{pan-to="0%,-30%" scale-by="1.9"}
 
-What a whimsical bicycle and---I would dare to say---a wonderful piece of street art. [@cr-bike]{scale-by="1.3"}
+What a whimsical bicycle and---in my humble opinion---a wonderful piece of street Parisian art. [@cr-bike]{scale-by="1.3"}
 
 \
 
