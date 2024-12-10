@@ -1,5 +1,8 @@
 ---
 title: "Examples"
+format: 
+  html:
+    toc: false
 ---
 
 ### Minimalist Closeread Documents
@@ -17,11 +20,13 @@ title: "Examples"
 
 [Example 5: A Bicycle Like No Other](example5/)
 
+[Example 6: The Storytelling Animal](example6/)
+
 
 ### Storms Data Set Stories
 
-[Example 6: Storms in the North Atlantic](example6/) (layout sidebar left)
+[Example 7: Storms in the North Atlantic](example7/) (layout sidebar left)
 
-[Example 7: Storms in the North Atlantic](example7/) (layout overlay center)
+[Example 8: Storms in the North Atlantic](example8/) (layout overlay center)
 
-[Example 8: Mapping Storms in the North Atlantic](example8/) (layout sidebar left)
+[Example 9: Mapping Storms in the North Atlantic](example9/) (layout sidebar left)

@@ -1,233 +1,128 @@
 ---
-title: "Storms in the North Atlantic"
+title: "The Storytelling Animal"
 format: 
   closeread-html:
     theme: cosmo
-    css: ../../styles.css
+    #css: ../../styles.css
+    remove-header-space: true
     cr-style:
-      narrative-background-color-sidebar: "#fcf7f0"
       section-background-color: white
-      narrative-text-color-sidebar: black
-      narrative-font-size: 2em
+      narrative-background-color-sidebar: black
+      narrative-text-color-sidebar: white
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 1.8rem
+      poem-font-family: 'Georgia, "Times New Roman", Times, serif'
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
+```{=html}
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-# number of storms per year (1980-2022)
-storms_per_year = storms |>
-  filter(year >= 1980) |> 
-  mutate(id = paste0(name, "-", year)) |> 
-  count(year, id, name = "count") |> 
-  count(year, name = "count")
+  #quarto-document-content h1 {
+    font-family: "Cormorant Garamond", "Times New Roman", Times, serif;
+    font-weight: 500;
+    font-size: 2.3em;
+    line-height: 1.1;
+    margin-top: 0;
+  }
 
-# mean & median number of storms per decade
-storms_per_decade = storms_per_year |>
-  mutate(decade = as.numeric(paste0(str_sub(year, 1, 3), "0"))) |> 
-  group_by(decade) |> 
-  summarize(mean = mean(count),
-            median = median(count),
-            year = which.max(count),
-            max = max(count)) |> 
-  mutate(year = decade + year - 1)
-
-# color palette
-lowcolor = "#dccfb1" # low-light color
-medcolor = "#BD835D" # highlight color per decade
-maxcolor = "#ff9933" # color of maximum
+  .cr-section  .narrative-col  > *:first-child {
+    padding-block-start: 10svh;
+  }
+</style>
 ```
 
 
 ::::{.cr-section}
 
-What can the analysis of the __dplyr::storms__ data set reveal
-about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022? @cr-plot1
-
-Let's take a look decade by decade.
-
-:::{#cr-plot1}
-
-```{r barchart1}
-# version 1: start with an "empty" plot
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = "#90909000") +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), 
-                     labels = c("10", "20", "30")) +
-  theme_minimal() +
-  theme(axis.text.y = element_text(color = "#00000000")) +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-
+:::{focus-on="cr-fluke"}
+# The Storytelling Animal
 :::
 
-
-In the 1980's the average number of tropical storms per year was 
-`r storms_per_decade[1,2]`. @cr-plot2
-
-:::{#cr-plot2}
-```{r barchart2}
-# version 2: storms in 1980s
-colors1 = c(rep(medcolor, 10), rep("#90909000", 33))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors1) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), labels = c("10", "", "")) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
+:::{#cr-fluke}
+![](fluke.jpg){width="40%" fig-align="center"}
 :::
 
+In his book __Fluke__, chapter-7 "The Storytelling Animal", social scientist and author Brian Klaas provides a captivating description of our narrative-addicted minds.
 
-The number of tropical storms per year kept increasing in the 1990's with an average of `r storms_per_decade[2,2]`. @cr-plot3
+At the end of page 135, Brian writes: [@cr-prose1]{scale-by="2"}
 
-:::{#cr-plot3}
-```{r barchart3}
-# version 3: storms in 1990s
-colors2 = c(rep(lowcolor, 10), rep(medcolor, 10), rep("#90909000", 23))
+Aha! the key word: _story_ [@cr-prose1]{scale-by="2" highlight="cr-story"}
 
-barchart3 = storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors2) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  scale_y_continuous(breaks = c(10, 20, 30), labels = c("10", "20", "")) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
+And the main question: [@cr-prose1]{scale-by="2" highlight="cr-question"}
 
-barchart3
-```
+:::{#cr-prose1}
+| Our beliefs are most easily swayed 
+| [when ideas are put into a story]{#cr-story}. 
+| Generation after generation, 
+| from our earliest days, 
+| humans accumulated wisdom 
+| to make sense of the world. 
+| But how could that wisdom
+| [reverberate between generations?]{#cr-question}
 :::
 
+To answer that question, Klaas quotes neuroscientist Antonio Damasio: [@cr-prose2]{scale-by="2"}
 
-The year 1995 saw a record number of `r storms_per_decade[2,"max"]` storms. @cr-plot3max
+Storytelling! [@cr-prose2]{scale-by="2" highlight="cr-answer"}
 
-:::{#cr-plot3max}
-```{r barchart3max}
-barchart3 +
-  geom_col(data = filter(storms_per_decade, decade == 1990), 
-           aes(x = year, y = max), fill = maxcolor)
-```
+:::{#cr-prose2}
+| "The problem of how to make 
+| all this wisdom understandable, 
+| transmittable, persuasive, enforceable
+| ---of how to make it stick---
+| was faced and a solution found. 
+| [Storytelling was the solution."]{#cr-answer}
 :::
 
+Of course. [@cr-prose2]{scale-by="2"}
 
+A few lines later, Brian continues: [@cr-prose3]{scale-by="2"}
 
-The increasing trend continued during the 2000's, averaging `r storms_per_decade[3,2]` storms per year @cr-plot4
-
-:::{#cr-plot4}
-```{r barchart4}
-# version 4: storms in 2000s
-colors3 = c(rep(lowcolor, 20), rep(medcolor, 10), rep("#90909000", 13))
-
-barchart4 = storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors3) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-
-barchart4
-```
+:::{#cr-prose3}
+| Our brains are so attuned to narrative 
+| that we will connect the dots into a story 
+| even when the dots aren't connected, 
+| which is called _narrative bias_. 
+| When we are given a snippet 
+| of incomplete information, 
+| the pattern-processing networks 
+| within our skulls fill in the gaps.
 :::
 
+Our brains crave for narrative! We are wired to form and create stories 
+even when there are none.
 
-With a jaw dropping record of `r storms_per_decade[3,"max"]` storms in 2005! @cr-plot4max
+Later on, in the same page, Brian quotes Barbara Hardy: [@cr-prose4]{scale-by="2"}
 
-:::{#cr-plot4max}
-```{r barchart4max}
-barchart4 +
-  geom_col(data = filter(storms_per_decade, decade == 2000), 
-           aes(x = year, y = max), fill = maxcolor) 
-```
+:::{#cr-prose4}
+| We "dream in narrative, 
+| daydream in narrative, 
+| remember, anticipate, 
+| hope, despair, 
+| believe, doubt, 
+| plan, revise, 
+| criticize, construct, 
+| gossip, learn,
+| hate and live by narrative."
 :::
 
+Basically, we are narrative-driven creatures; whether it is talking to others or to ourselves, or also listening to others or to our inner voice; whether it is while we are awake or also while we sleep.
 
-In the 2010's the trend seemed to slow down a bit with an average number of storms per year of `r storms_per_decade[4,2]` ...  @cr-plot5
+And finally, Brian cites Jonathan Gottschall and his famous _storytelling animal_ [@cr-prose5]{scale-by="2"}
 
-:::{#cr-plot5}
-```{r barchart5}
-# version 5: storms in 2010s
-colors4 = c(rep(lowcolor, 30), rep(medcolor, 10), rep("#90909000", 3))
-
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors4) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
+:::{#cr-prose5}
+| We are ... [a storytelling animal.]{#cr-animal} 
+| "The storytelling mind 
+| is allergic to uncertainty,
+| randomness, and coincidence.
+| It is addicted to meaning."
 :::
 
+That's what we are. [@cr-prose5]{scale-by="2" highlight="cr-animal"} 
 
-... only to go up again @cr-plot6
-
-:::{#cr-plot6}
-```{r barchart6}
-# version 6: storms in 2020-2022
-colors5 = c(rep(lowcolor, 40), rep(medcolor, 3))
-
-barchart6 = storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = colors5) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-
-barchart6
-```
-:::
-
-
-reaching a new all time high of `r storms_per_decade[5,"max"]` storms in 2020. @cr-plot6max
-
-:::{#cr-plot6max}
-```{r barchart6max}
-barchart6 +
-  geom_col(data = filter(storms_per_decade, decade == 2020), 
-           aes(x = year, y = max), fill = maxcolor)
-```
-:::
-
-
-So what was the overall trend between 1980 and 2022? @cr-plot7
-
-:::{#cr-plot7}
-```{r barchart7}
-# version 7: all storms
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = lowcolor) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
-
-An increasing trend as you can tell. @cr-plot8
-
-:::{#cr-plot8}
-```{r barchart8, message=FALSE}
-# version 8: all storms with fitted line
-storms_per_year |> 
-  ggplot(aes(x = year, y = count)) +
-  geom_col(fill = lowcolor) +
-  geom_smooth(se = FALSE, linewidth = 1.4, color = medcolor) +
-  scale_x_continuous(breaks = seq(1980, 2020, by = 5)) +
-  theme_minimal() +
-  labs(title = "Number of Storms per Year in the North Atlantic",
-       x = "")
-```
-:::
-
+In essence, that's what makes us humans. [@cr-prose5]{scale-by="2"}
 
 ::::
+
+

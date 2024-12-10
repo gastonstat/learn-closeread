@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mapping Storms in the North Atlantic</title>
+<title>Storms in the North Atlantic</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,17 +128,18 @@ ul.task-list li input[type="checkbox"] {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-text-color-sidebar: black;
---cr-narrative-font-size: 2em;
---cr-narrative-background-color-sidebar: #fcf7f0;
+          --cr-narrative-text-color-overlay: white;
+--cr-narrative-overlay-max-width: 700px;
 --cr-section-background-color: white;
+--cr-narrative-background-color-overlay: #7c7c7cdd;
+--cr-narrative-font-size: 2em;
         }
       </style>
     
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mapping Storms in the North Atlantic</h1>
+<h1 class="title">Storms in the North Atlantic</h1>
 </div>
 
 
@@ -155,118 +156,187 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cr-section cr-column-screen sidebar-left">
+<div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
-<div class="trigger new-trigger" data-focus-on="cr-map1">
+<div class="trigger new-trigger" data-focus-on="cr-plot1">
 <div class="narrative">
-<p>Tropical Storms in the North Atlantic, 2010 season.</p>
+<p>What can the analysis of the <strong>dplyr::storms</strong> data set reveal about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022?</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms1">
+<div class="trigger">
 <div class="narrative">
-<p>The season started in June with 1 storm: Alex</p>
+<p>Let’s take a look decade by decade.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms2">
+<div class="trigger new-trigger" data-focus-on="cr-plot2">
 <div class="narrative">
-<p>The month of July saw the starting of 2</p>
+<p>In the 1980’s the average number of tropical storms per year was 9.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms3">
+<div class="trigger new-trigger" data-focus-on="cr-plot3">
 <div class="narrative">
-<p>The month of August saw the starting of 5 storms</p>
+<p>The number of tropical storms per year kept increasing in the 1990’s with an average of 12.7.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms4">
+<div class="trigger new-trigger" data-focus-on="cr-plot3max">
 <div class="narrative">
-<p>The month of September saw the starting of 8 storms</p>
+<p>The year 1995 saw a record number of 21 storms.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms5">
+<div class="trigger new-trigger" data-focus-on="cr-plot4">
 <div class="narrative">
-<p>The month of October saw the starting of 5 storms</p>
+<p>The increasing trend continued during the 2000’s, averaging 16.9 storms per year</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-storms">
+<div class="trigger new-trigger" data-focus-on="cr-plot4max">
 <div class="narrative">
-<p>The 2010 season saw a total of 21 storms.</p>
+<p>With a jaw dropping record of 29 storms in 2005!</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot5">
+<div class="narrative">
+<p>In the 2010’s the trend seemed to slow down a bit with an average number of storms per year of 16.3</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot6">
+<div class="narrative">
+<p>Only to go up again</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot6max">
+<div class="narrative">
+<p>reaching a new all time high of 30 storms in 2020.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot7">
+<div class="narrative">
+<p>So what was the overall trend between 1980 and 2022?</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot8">
+<div class="narrative">
+<p>An increasing trend as you can tell.</p>
 </div>
 </div>
 </div>
 <div class="sticky-col">
 <div class="sticky-col-stack">
-<div id="cr-map1" class="sticky">
+<div id="cr-plot1" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/map1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms1" class="sticky">
+<div id="cr-plot2" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms2" class="sticky">
+<div id="cr-plot3" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms3" class="sticky">
+<div id="cr-plot3max" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart3max-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms4" class="sticky">
+<div id="cr-plot4" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms5" class="sticky">
+<div id="cr-plot4max" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart4max-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="cr-storms" class="sticky">
+<div id="cr-plot5" class="sticky">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/storms-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/barchart5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-plot6" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/barchart6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-plot6max" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/barchart6max-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-plot7" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/barchart7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-plot8" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/barchart8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
