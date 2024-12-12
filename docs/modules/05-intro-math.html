@@ -239,7 +239,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a>
+  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
+  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on">What’s going on?</a>
   <ul class="collapse">
   <li><a href="#take-a-look" id="toc-take-a-look" class="nav-link" data-scroll-target="#take-a-look">Take a look</a></li>
   </ul></li>
@@ -268,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>So far we’ve introduced a couple of basic Closeread documents. Our first example used only text. Our second example involved text and images. But what about including some code in our scrollytelling story? In this module, we show you a third basic example that involves text and some R code.</p>
+<p>So far we’ve introduced a couple of basic Closeread documents. Our first example used only text. Our second example involved text and images. But what about including some math equations in our scrollytelling story? In this module, I show you a third basic example that involves text and some math equations written with LaTeX.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -296,7 +297,7 @@ Reminder
 <pre><strong>example4.qmd</strong></pre>
 </div>
 <div class="sourceCode" id="cb2" data-filename="example4.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> My first closeread document</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> My third closeread document</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> closeread-html</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -362,6 +363,54 @@ Reminder
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="whats-going-on" class="level2">
+<h2 class="anchored" data-anchor-id="whats-going-on">What’s going on?</h2>
+<p>Let’s briefly discuss the content of <code>example4.qmd</code> focusing on the stickies and the triggers.</p>
+<section id="sticky-elements" class="level4">
+<h4 class="anchored" data-anchor-id="sticky-elements">Sticky Elements</h4>
+<p>Compared to the previous examples, the current one has four <strong>sticky</strong> components. After careful inspection, you should be able to notice that all the stickies consists of LaTeX math equations.</p>
+<p>The first sticky, <code>#cr-fv</code>, introduces the equation to calculate the Future Value (FV):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-fv}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>FV = P \times (1 + r)^n</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The second sticky, <code>#cr-investment</code>, introduces the symbols and values to be used in the equation of the Future Value (FV):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-investment}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>P &amp;= 10,000 <span class="sc">\\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>r &amp;= 0.07 <span class="sc">\\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>n &amp;= 10</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The third sticky, <code>#cr-math</code>, is dedicated to do the actual math involved in the FV equation:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-math}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   &amp;</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And the fourth and last sticky, provides the final answer with the computed future value:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-answer}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>   &amp;= 19,671.51</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="narrative-and-triggers" class="level4">
+<h4 class="anchored" data-anchor-id="narrative-and-triggers">Narrative and Triggers</h4>
+<p>As for the narrative and the triggers, we encounter several paragraphs. The first paragraph (i.e.&nbsp;1st paragraph inside the cr-section) is the introductory text and it has no trigger.</p>
+<p>The next paragraph poses the main question, and it also has no trigger.</p>
+<p>In turn, the third paragraph introduces the equation fo the Future Value, and consequently comes with the first trigger <code>@cr-fv</code>.</p>
+<p>The following lines of text are one-line paragraphs listing the terms of the FV equation, none of them with triggers.</p>
+<p>After that, we have another paragraph with the second trigger <code>@cr-investment</code>.</p>
+<p>Then there is one more paragraph with the third trigger <code>@cr-math</code>.</p>
+<p>And finally there is the last paragraph with the fourth trigger <code>@cr-answer</code>.</p>
+</section>
 <section id="take-a-look" class="level3">
 <h3 class="anchored" data-anchor-id="take-a-look">Take a look</h3>
 <p>You can take a look at this example <a href="../examples/example4/index.html" target="_blank">here</a>.</p>

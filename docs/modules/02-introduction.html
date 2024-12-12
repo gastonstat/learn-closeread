@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -248,14 +282,39 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>When the output format is <code>html</code>, rendering this file gives you an output in the form of an HTML document (as in the right hand side of the above figure). There is nothing particularly special about this output. As you can tell there is the title, followed by three paragraphs, followed by a numbered list with three items.</p>
-<p>Now, what if we are interested in turning the current document into a scrollytelling story, albeit a very short one?</p>
-<p>To make <code>document.qmd</code> into a closeread document, we need to make some changes, namely:</p>
+<p>Now, what if we are interested in turning the current document into a scrollytelling story, albeit a very short and simple one?</p>
+<p>To make <code>document.qmd</code> into a Closeread document, we need to make some changes, namely:</p>
 <ol type="1">
-<li><p>Change the <span style="color:magenta;"><strong>format</strong></span> output in the yaml header.</p></li>
-<li><p>Specify what part of the content will constitute a closeread <span style="color:red;"><strong>section</strong></span>.</p></li>
-<li><p>Indicate what elements will become the <span style="color:blue;"><strong>sticky</strong></span> item (i.e.&nbsp;the component that will get stuck as we scroll through the page).</p></li>
-<li><p>Include a <span style="color:orange;"><strong>trigger</strong></span> among the narrative to cause the sticky to appear.</p></li>
+<li><p>Change the <span style="color:magenta;"><strong>format</strong></span> output in the yaml header to <code>closeread-html</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Hello Closeread</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> closeread-html</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li><p>Specify what part of the content will constitute a Closeread <span style="color:red;"><strong>section</strong></span>, using a <a href="https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans">fenced div</a> and a <code>cr-section</code> class, which will have the following appearance:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::::{.cr-section} </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  &lt;content&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p><br>
+</p>
+<ol start="3" type="1">
+<li><p>Indicate what elements (e.g.&nbsp;text, images, code) will become the <span style="color:blue;"><strong>sticky</strong></span> item (i.e.&nbsp;the component that will get stuck as we scroll through the page). You do this by wrapping the element(s) in a fenced div and provide an identifier that is prefixed with <code>cr-</code>, for example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-photo}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="al">![](path-to-photo.jpg)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p><br>
+</p>
+<ol start="4" type="1">
+<li><p>Include a <span style="color:orange;"><strong>trigger</strong></span> among the narrative to cause the sticky to appear. The way you do this is by using Quarto’s cross-referencing syntax: <code>@cr-sticky</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Narrative with trigger @cr-sticky</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p><br>
+</p>
 <p>Here’s an example of what <code>document.qmd</code> would look like if we adapt its content with the necessary building blocks of a Closeread document. Notice the colored text associated with the four components listed above.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
@@ -289,7 +348,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sticky-element" class="level3">
 <h3 class="anchored" data-anchor-id="sticky-element">Sticky Element</h3>
-<p>Inside a section you define one or more <strong>sticky</strong> components, or <em>stickies</em> in Closeread parlance. They also need to be surrounded by a div of <code>:::</code> and a label or name such as <code>{#cr-sticky}</code> or <code>{#cr-components}</code> like in our working example.</p>
+<p>Inside a section you define one or more <strong>sticky</strong> components, or <em>stickies</em> in Closeread parlance. They also need to be surrounded by a fenced div of <code>:::</code> and a label or name such as <code>{#cr-sticky}</code> or <code>{#cr-components}</code> like in our working example.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/closeread-format-labeled3.svg" class="img-fluid figure-img" style="width:75.0%"></p>
@@ -307,7 +366,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do not confuse the syntax of a <strong>cr-section</strong> with the syntax of a <strong>sticky</strong>.</p>
+<p>Do not confuse the syntax for naming a <strong>cr-section</strong> with the syntax for naming a <strong>sticky</strong>.</p>
 <ul>
 <li><p>This is the syntax of a section: <code>{.cr-section}</code></p></li>
 <li><p>This is the syntax of a sticky: <code>{#cr-sticky}</code></p></li>
@@ -317,7 +376,7 @@ Important
 </section>
 <section id="trigger" class="level3">
 <h3 class="anchored" data-anchor-id="trigger">Trigger</h3>
-<p>The next major component is a closeread <strong>trigger</strong>. This type of component is part of the narrative and it is defined with the syntax <code>@cr-sticky</code>. In other words, a trigger refers to a sticky by pre-appending <code>@</code> to the name of the sticky. Note that the trigger is not wrapped inside curly braces.</p>
+<p>The next major component is a <strong>trigger</strong>. This type of component is part of the narrative and it is defined with the syntax <code>@cr-sticky</code>. In other words, a trigger refers to a sticky by pre-appending <code>@</code> to the name of the sticky. Note that the trigger is <strong>not</strong> wrapped inside curly braces.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/closeread-format-labeled4.svg" class="img-fluid figure-img" style="width:75.0%"></p>
