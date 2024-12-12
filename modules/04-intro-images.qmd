@@ -30,38 +30,43 @@ R logo, shown below.
 ![Quarto logo](https://quarto.org/quarto.png){fig-align="left"}
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![R logo](https://www.r-project.org/Rlogo.png){width=26% fig-align="left"}
 :::
 
 ::::
 
-The files with the images of the logos are available in the URLs listed below:
+The PNG files with the images of the logos are available in the URLs listed below:
 
 - <https://quarto.org/quarto.png>
 
 - <https://www.r-project.org/Rlogo.png>
 
-With the URL of the image, you can insert the logo in a quarto document with the 
-following markdown syntax:
+\
+
+__Insert Image.__ With the URL of the image, you can insert the logo in a quarto document with the following markdown syntax:
 
 ```{.markdown}
 ![](https://quarto.org/quarto.png)
 ```
 
 Alternatively, you can download the PNG file of the logo into your working
-directory, and insert it into a quarto document with a similar syntax, 
+directory, and then insert it into a quarto document with a similar syntax, 
 for example:
 
 ```{.markdown}
 ![](quarto.png)
 ```
 
-__Caption.__ Inside the brackets, you can add an optional caption:
+\
+
+__Adding Caption.__ Inside the brackets, you can add an optional caption:
 
 ```{.markdown}
 ![Some caption](quarto.png)
 ```
+
+\
 
 __Figure Dimensions.__ Likewise, you can modify the size of the image by 
 appending attributes `width` and/or `height` inside curly braces:
@@ -69,6 +74,8 @@ appending attributes `width` and/or `height` inside curly braces:
 ```{.markdown}
 ![Some caption](quarto.png){width=50%}
 ```
+
+\
 
 __Figure Alignment.__ You can also change the alignment with the attribute `fig-align` which takes
 values `"left"`, `"center"`, and `"right"`
