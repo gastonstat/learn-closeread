@@ -4,8 +4,7 @@ title: "5) Scrollytelling with Equations"
 
 So far we've introduced a couple of basic Closeread documents. Our first
 example used only text. Our second example involved text and images. But
-what about including some code in our scrollytelling story? In this module, 
-we show you a third basic example that involves text and some R code.
+what about including some math equations in our scrollytelling story? In this module, I show you a third basic example that involves text and some math equations written with LaTeX.
 
 :::{.callout-note}
 ## Reminder
@@ -26,7 +25,7 @@ qmd document so that you can preview it or render it in all its Closeread glory.
 
 ```{.markdown filename="example4.qmd"}
 ---
-title: My first closeread document
+title: My third closeread document
 format: closeread-html
 ---
 
@@ -92,6 +91,83 @@ FV &= 10,000 \times (1 + 0.07)^{10} \\
 
 ::::
 ```
+
+
+## What's going on?
+
+Let's briefly discuss the content of `example4.qmd` focusing on the stickies
+and the triggers.
+
+
+#### Sticky Elements
+
+Compared to the previous examples, the current one has four __sticky__ components. After careful inspection, you should be able to notice that all the stickies consists of LaTeX math equations.
+
+The first sticky, `#cr-fv`, introduces the equation to calculate the Future Value (FV):
+
+```{.markdown}
+:::{#cr-fv}
+$$
+FV = P \times (1 + r)^n
+$$
+:::
+```
+
+
+The second sticky, `#cr-investment`, introduces the symbols and values to be used in the equation of the Future Value (FV):
+
+```{.markdown}
+:::{#cr-investment}
+\begin{align*}
+P &= 10,000 \\
+& \\
+r &= 0.07 \\
+& \\
+n &= 10
+\end{align*}
+:::
+```
+
+
+The third sticky, `#cr-math`, is dedicated to do the actual math involved in the FV equation:
+
+```{.markdown}
+:::{#cr-math}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &
+\end{align*}
+:::
+```
+
+
+And the fourth and last sticky, provides the final answer with the computed future value:
+
+```{.markdown}
+:::{#cr-answer}
+\begin{align*}
+FV &= 10,000 \times (1 + 0.07)^{10} \\
+   &= 19,671.51
+\end{align*}
+:::
+```
+
+
+#### Narrative and Triggers
+
+As for the narrative and the triggers, we encounter several paragraphs. The first paragraph (i.e. 1st paragraph inside the cr-section) is the introductory text and it has no trigger. 
+
+The next paragraph poses the main question, and it also has no trigger.
+
+In turn, the third paragraph introduces the equation fo the Future Value, and consequently comes with the first trigger `@cr-fv`.
+
+The following lines of text are one-line paragraphs listing the terms of the FV equation, none of them with triggers.
+
+After that, we have another paragraph with the second trigger `@cr-investment`.
+
+Then there is one more paragraph with the third trigger `@cr-math`.
+
+And finally there is the last paragraph with the fourth trigger `@cr-answer`.
 
 
 ### Take a look
