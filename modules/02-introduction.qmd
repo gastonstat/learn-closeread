@@ -23,21 +23,54 @@ is the title, followed by three paragraphs, followed by a numbered list with
 three items.
 
 Now, what if we are interested in turning the current document into a 
-scrollytelling story, albeit a very short one?
+scrollytelling story, albeit a very short and simple one?
 
-To make `document.qmd` into a closeread document, we need to make some changes,
+To make `document.qmd` into a Closeread document, we need to make some changes,
 namely:
 
 1) Change the <span style="color:magenta;">__format__</span> output in the yaml 
-header.
+header to `closeread-html`.
 
-2) Specify what part of the content will constitute a closeread 
-<span style="color:red;">__section__</span>.
+    ```yaml
+    ---
+    title: Hello Closeread
+    format: closeread-html
+    ---
+    ```
 
-3) Indicate what elements will become the <span style="color:blue;">__sticky__</span> 
+\
+
+2) Specify what part of the content will constitute a Closeread 
+<span style="color:red;">__section__</span>, using a [fenced div](https://quarto.org/docs/authoring/markdown-basics.html#sec-divs-and-spans) and a `cr-section` class, which will have the following appearance:
+
+    ```{.markdown}
+    ::::{.cr-section} 
+      <content>
+    ::::
+    ```
+
+\
+
+3) Indicate what elements (e.g. text, images, code) will become the <span style="color:blue;">__sticky__</span> 
 item (i.e. the component that will get stuck as we scroll through the page).
+You do this by wrapping the element(s) in a fenced div and provide an identifier that is prefixed with `cr-`, for example:
 
-4) Include a <span style="color:orange;">__trigger__</span> among the narrative to cause the sticky to appear.
+    ```{.markdown}
+    :::{#cr-photo}
+    ![](path-to-photo.jpg)
+    :::
+    ```
+
+\
+
+4) Include a <span style="color:orange;">__trigger__</span> among the narrative to cause the sticky to appear. The way you do this is by using Quarto's cross-referencing syntax: `@cr-sticky`.
+
+    ```{.markdown}
+    Narrative with trigger @cr-sticky
+    ```
+
+
+\
 
 Here's an example of what `document.qmd` would look like if we adapt its content
 with the necessary building blocks of a Closeread document. Notice the 
@@ -84,7 +117,7 @@ or `{.cr-introduction}`. The important thing is the use of `{ }`, the prefix
 ### Sticky Element
 
 Inside a section you define one or more __sticky__ components, or _stickies_
-in Closeread parlance. They also need to be surrounded by a div of `:::`
+in Closeread parlance. They also need to be surrounded by a fenced div of `:::`
 and a label or name such as `{#cr-sticky}` or `{#cr-components}` like in our
 working example.
 
@@ -94,7 +127,7 @@ A _sticky_, as the name indicates, is the element (e.g. text, code, image)
 that will get __stuck__ as you scroll through the HTML document.
 
 :::{.callout-important}
-Do not confuse the syntax of a __cr-section__ with the syntax of a __sticky__. 
+Do not confuse the syntax for naming a __cr-section__ with the syntax for naming a __sticky__. 
 
 - This is the syntax of a section: `{.cr-section}`
 
@@ -104,10 +137,10 @@ Do not confuse the syntax of a __cr-section__ with the syntax of a __sticky__.
 
 ### Trigger
 
-The next major component is a closeread __trigger__. This type of component
+The next major component is a __trigger__. This type of component
 is part of the narrative and it is defined with the syntax `@cr-sticky`. 
 In other words, a trigger refers to a sticky by pre-appending `@` to the name 
-of the sticky. Note that the trigger is not wrapped inside curly braces.
+of the sticky. Note that the trigger is __not__ wrapped inside curly braces.
 
 ![Figure 2.6](images/closeread-format-labeled4.svg){width=75% fig-align="left"}
 
