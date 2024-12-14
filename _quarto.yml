@@ -34,6 +34,9 @@ website:
           - modules/07-default-layout.qmd
           - modules/08-layout-options.qmd
           - modules/09-style-formatting.qmd
+          - modules/10-story-guide2phd.qmd
+          - modules/11-story-photo.qmd
+          - modules/14-sharing.qmd
 
   page-footer: 
     left: 

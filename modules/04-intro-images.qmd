@@ -1,5 +1,5 @@
 ---
-title: "4) Scrollytelling with Images"
+title: "4) Minimal Closeread with Images"
 ---
 
 In the preceding modules, you got introduced to the main components of a 

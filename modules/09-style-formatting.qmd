@@ -69,6 +69,7 @@ what elements can be affected by them.
 
 ![Figure 9.1](images/style-sidebar.svg){width="75%"}
 
+- `section-background-color`: the background color used for Closeread sections.
 
 - `narrative-background-color-sidebar`: the background color used for the narrative column (in sidebar layouts).
 
@@ -82,8 +83,27 @@ what elements can be affected by them.
 
 - `poem-font-family`: the font(s) used for lineblock poems (i.e. in sticky elements).
 
-- `section-background-color`: the background color used for Closeread sections.
 
+Here's a hypothetical example of what the yaml header of a `qmd` file could look 
+like if you were to customize all the formatting options listed above:
+
+```yaml
+---
+title: "Hello Closeread"
+format:
+  closeread-html:
+    cr-style:
+      section-background-color: "#f7f6f5"
+      narrative-background-color-sidebar: "#525252"
+      narrative-sidebar-width: minmax(400px, 1fr)
+      narrative-text-color-sidebar: "#ffffff"
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 2em
+      poem-font-family: 'Georgia, "Times New Roman", Times, serif'
+---
+```
+
+\
 
 ## Styling Overlay Layouts
 
@@ -95,15 +115,15 @@ what elements can be affected by them.
 
 
 
-- `narrative-background-color-overlay`: the background color used for narrative text blocks (in overlay layouts).
+- `narrative-background-color-overlay`: the background color used for narrative text blocks (of overlay layouts).
 
-- `narrative-text-color-overlay`: the color of narrative text (in overlay layouts).
+- `narrative-text-color-overlay`: the color of narrative text (for overlay layouts).
 
-- `narrative-border-radius`: the border radius of narrative text blocks (in overlay layouts).
+- `narrative-border-radius`: the border radius of narrative text blocks (for overlay layouts).
 
-- `narrative-overlay-max-width`: the maximum width of narrative text blocks (in overlay layouts).
+- `narrative-overlay-max-width`: the maximum width of narrative text blocks (for overlay layouts).
 
-- `narrative-overlay-min-width`: the minimum width of narrative text blocks (in 
+- `narrative-overlay-min-width`: the minimum width of narrative text blocks (for 
 overlay layouts). The recommendation is to leave this one alone because setting 
 it can cause mobile layout issues.
 
@@ -115,4 +135,24 @@ it can cause mobile layout issues.
 
 - `section-background-color`: the background color used for Closeread sections.
 
+
+Here's a hypothetical example of what the yaml header of a `qmd` file could look 
+like if you were to customize all the formatting options listed above:
+
+```yaml
+---
+title: "Hello Closeread"
+format:
+  closeread-html:
+    cr-style:
+      section-background-color: "#f7f6f5"
+      narrative-background-color-overlay: "#525252"
+      narrative-overlay-min-width: "300px"
+      narrative-overlay-max-width: "600px"
+      narrative-outer-margin: "#ffffff"
+      narrative-font-family: 'Arial, sans-serif'
+      narrative-font-size: 2em
+      poem-font-family: ', "Times New Roman", Times, serif'
+---
+```
 

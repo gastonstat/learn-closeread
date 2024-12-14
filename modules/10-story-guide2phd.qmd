@@ -5,9 +5,9 @@ title: "10) Story with Illustrations"
 This module is associated with the example [The Illustrated Guide to a Ph.D.](../examples/example4)
 
 The example in the above link is a Closeread story based on one of my favorite 
-blog posts written by Matt Might: The illustrated guide to a Ph.D.
+blog posts written by <a href="https://matt.might.net/" target="_blank">Matt Might</a>: The illustrated guide to a Ph.D.
 
-![Fig 10.1) Screenshot of Matt Might's famous post.](images/cr-story-phd1.png){width="80%"}
+![Fig 10.1) Screenshot of Matt Might's famous post.](images/cr-story-phd1.png){width="70%" fig-align="left"}
 
 In the process of learning and experimenting with Closeread, I was looking for
 a simple, yet captivating, example of a story with a highly visual nature. 
@@ -23,6 +23,7 @@ including it here so that you can have a bird's eye view of the entire story.
 
 ![Fig 10.2) The 12 images and sentences of an illustrated guide to a Ph.D.](images/cr-story-phd2.png)
 
+Notice how clean and neat this narrative is.
 As you can tell, the illustrated guide to a Ph.D. is a beautifully distilled 
 series of 12 illustrations and sentences explaining what a Ph.D. is all about.
 
@@ -37,7 +38,7 @@ Let me tell you a bit about my shameless cloning adventure. First, I downloaded
 the 12 images (i.e. the associated 12 JPG files) to the same directory of the 
 `qmd` file that I used for this Closeread story.
 
-Then I frenetically typed---including copied-and-pasted---the content of the 
+Then I frenetically typed---meaning copied-and-pasted---the content of the 
 story, and specified the structure of the closeread components (e.g. section, 
 stickies, and triggers).
 
@@ -88,9 +89,9 @@ With a bachelor's degree, you gain a specialty. @cr-phd4
 All the first 7 images have the same dimensions, and visually they all 
 correspond to the circle that contains all of human knowledge.
 
-Compared to the first 7 images, illustrations 8 to 11 are different. These 
+Compared to the first 7 illustrations, images 8 to 11 are different. These 
 images depict zooming-in to the frontier of human knowledge (i.e. the border of 
-the circle). Because these images have different dimensions that the first 
+the circle). Because these images have different dimensions than the first 
 seven diagrams, I had to modify their `width` and `height` dimensions. The 
 following snippet shows the 8th sentence and the 8th sticky. Notice the 
 dimension attributes of the image.

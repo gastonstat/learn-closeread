@@ -120,6 +120,10 @@ Also, you will be able to see a handful of files:
 You will need to replace the content of `index.qmd` with the content of your
 Closeread story.
 
+Also, assuming that all you want is to publish your Closeread story and nothing
+else, then you will need to delete the `about.qmd` file, as well as customize 
+the content of the yaml file `_quarto.yml`
+
 __Previewing the website__. In the Terminal, you can use the `quarto preview` command to see a preview
 of the website.
 

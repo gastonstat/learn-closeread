@@ -1,5 +1,5 @@
 ---
-title: "3) Scrollytelling with Text"
+title: "3) Minimal Closeread with Text"
 ---
 
 In the preceding module, you got introduced to the main components of a 

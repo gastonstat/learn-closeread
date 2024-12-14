@@ -4,7 +4,7 @@ listing:
   - id: modules-listings
     sort-ui: false
     filter-ui: false
-    sort: "title"
+    sort: "filename"
     type: table
     fields: [title]
     field-display-names:

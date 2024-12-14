@@ -73,7 +73,7 @@ marks the separation of the sidebar from the section of the sticky components.
 Keep in mind that these auxiliary visuals won't show up in the actual rendered
 HTML document.
 
-![Figure 8.1](images/layout-sidebars.svg)
+![Figure 8.1) Sidebar layouts](images/layout-sidebars.svg)
 
 
 

@@ -7,7 +7,6 @@ format:
     css: ../../styles.css
     cr-style:
       section-background-color: white
-      #narrative-background-color-sidebar: "#f1e0cc"
       narrative-background-color-sidebar: "#ede2cf"
       narrative-text-color-sidebar: black
       narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
@@ -16,18 +15,18 @@ format:
 
 ::::{.cr-section}
 
-On a cloudy Spring day of 2013, walking down the narrow streets of _Ile Saint-Louis_ in Paris, I stumbled upon an eye-catching bicycle. It was begging me to take a picture of it. @cr-bike
+On a cloudy Spring day in 2013, wandering around the cobblestone streets of _Ile Saint-Louis_ in Paris, I stumbled upon a very eye-catching bicycle. Parked in front of a store, the bike was there almost as if it were intentionally posing for me to photograph it. @cr-bike
 
 
 :::{#cr-bike}
 ![](bicycle.JPG){width="70%" fig-align="center"}
 :::
 
-I had never seen such a colorful bicycle, so originally decorated, with a distinctive personality of its own. [@cr-bike]{scale-by="1.4"}
+I had never seen such a strange and colorful bicycle, so originally decorated, with a distinctive personality of its own. [@cr-bike]{scale-by="1.4"}
 
 The shape and size of the <span style="color:#fe964c">__orange__</span> panniers---with their <span style="color:#f8566c">__pink__</span> straps---reminded me of my childhood years and the leather bags I used to carry when I was in kindergarten. [@cr-bike]{pan-to="10%,20%" scale-by="1.8"}
 
-The frame of the bike was very interesting. Its exposed parts (the chain and seat stays) showed the pass of time with <span style="color:#a03a08">__rusted__</span> areas, and what I assume was its original <span style="color:#426245">__dark green__</span> color. [@cr-bike]{pan-to="-5%,25%" scale-by="1.9"}
+The frame of the bike was very interesting. Its exposed parts (the chain and seat stays) showed the pass of time with <span style="color:#a03a08">__rusted__</span> areas, and what I assume was its original <span style="color:#426245">__dark green__</span> color. Not to mention the worn saddle with scars everywhere. [@cr-bike]{pan-to="-5%,25%" scale-by="1.9"}
 
 The rest of the frame was wrapped around various threads of colorful yarns: 
 <br>
@@ -41,7 +40,10 @@ The rest of the frame was wrapped around various threads of colorful yarns:
 - a <strong><span style="color:#e1553e">mul</span><span style="color:#e19c85">ti</span><span style="color:#c0293b">co</span><span style="color:#e1553e">lor</span></strong> yarn around both the down and the head tubes. 
 
 
-The handle bar was wrapped in <span style="color:#f48653">__orange__</span>, and the headset section in <span style="color:#17b6c3">__aquamarine__</span>. Hanging from its right handle, it even had a <span style="color:#fb6457">__coral__</span> mesh bag containing more balls of yarn.
+The handle bar was wrapped in <span style="color:#f48653">__orange__</span>, and the headset section in <span style="color:#17b6c3">__aquamarine__</span>. 
+<br>
+<br>
+Hanging from its right handle, it even had a <span style="color:#fb6457">__coral__</span> mesh bag containing more balls of yarn.
 <br>
 <br>
 Likewise, it also had a headlight mounted on the front fender. [@cr-bike]{pan-to="-15%,30%" scale-by="2"}

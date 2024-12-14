@@ -3,7 +3,7 @@ title: "The Storytelling Animal"
 format: 
   closeread-html:
     theme: cosmo
-    #css: ../../styles.css
+    css: ../../styles.css
     remove-header-space: true
     cr-style:
       section-background-color: white
@@ -36,7 +36,9 @@ format:
 ::::{.cr-section}
 
 :::{focus-on="cr-fluke"}
-# The Storytelling Animal
+# On The Storytelling Animal
+
+Fluke, by Brian Klaas
 :::
 
 :::{#cr-fluke}
@@ -49,7 +51,7 @@ At the end of page 135, Brian writes: [@cr-prose1]{scale-by="2"}
 
 Aha! the key word: _story_ [@cr-prose1]{scale-by="2" highlight="cr-story"}
 
-And the main question: [@cr-prose1]{scale-by="2" highlight="cr-question"}
+And the main question: [@cr-prose1]{scale-by="2" highlight="7-8"}
 
 :::{#cr-prose1}
 | Our beliefs are most easily swayed 
@@ -59,7 +61,7 @@ And the main question: [@cr-prose1]{scale-by="2" highlight="cr-question"}
 | humans accumulated wisdom 
 | to make sense of the world. 
 | But how could that wisdom
-| [reverberate between generations?]{#cr-question}
+| reverberate between generations?
 :::
 
 To answer that question, Klaas quotes neuroscientist Antonio Damasio: [@cr-prose2]{scale-by="2"}

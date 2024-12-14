@@ -1,5 +1,5 @@
 ---
-title: "5) Scrollytelling with Equations"
+title: "5) Minimal Closeread with Equations"
 ---
 
 So far we've introduced a couple of basic Closeread documents. Our first

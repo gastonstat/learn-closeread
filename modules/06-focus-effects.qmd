@@ -48,7 +48,7 @@ no particular order of importance we have:
 
 - __Zooming__: the `zoom-to` effect is used to zoom-in (or out) into a code block or line of text or math equation.
 
-- __Highlighting__: the `highlight` effect is used to highlight parts of text or code of a sticky.
+- __Highlighting__: the `highlight` effect is used to highlight certain parts of text or code of a sticky, while de-emphasizing the other parts of the sticky.
 
 - *__Scale to fill__: this is an additional effect that you attach to a sticky
 instead of a trigger to stretch the sticky in a way that it fills the viewport.
@@ -61,8 +61,10 @@ Let's describe the syntax behind each of these effects.
 
 ## Scaling
 
-To shrink or enlarge a sticky element you use the `scale-by` effect. This 
-attribute takes non-negative values. The figure below depicts the
+To shrink or enlarge a sticky element you use the `scale-by` effect, e.g. 
+`[@cr-sticky]{scale-by="2"}`
+
+This attribute takes non-negative values. The figure below depicts the
 resulting effect of `scale-by` when used on text and images:
 
 ![Figure 6.1 ](images/effect-scale-by.svg){width="80%" fig-align="left"}
@@ -87,10 +89,13 @@ Normal size again @cr-sticky
 
 ## Panning
 
-To move a sticky element you use the `pan-to` effect. This attribute takes a 
-pair of `x` and `y` values that control the horizontal and vertical panning,
-respectively. The figure below depicts the resulting effect of `pan-to`---using 
-different units---when applied on an image (but you cal also apply it on text):
+To move a sticky element you use the `pan-to` effect, e.g. 
+`[@cr-sticky]{pan-to="10%,0%"}`
+
+This attribute takes a pair of `x` and `y` values that control the horizontal 
+and vertical panning, respectively. The figure below depicts the resulting 
+effect of `pan-to`---using different units---when applied on an image (but you 
+can also apply it on text):
 
 
 ![Figure 6.2](images/effect-pan-to-simple.svg)
@@ -149,19 +154,27 @@ Normal position again @cr-sticky
 ## Highlighting
 
 To highlight certain lines of text in a sticky element you use the `highlight` 
-effect. The way `highlight` works is by emphasizing certain parts of text
+effect, e.g. `[@cr-sticky]{highlight="1"}`
+
+The way `highlight` works is by emphasizing certain parts of text
 (e.g. a certain line or certain words) while de-emphasizing the rest of the
 text, as illustrated in the following diagram:
 
 ![Figure 6.4](images/effect-highlight-text.svg){width="80%" fig-align="left"}
 
+As you can tell from the above figure, to highlight the first line of text
+of a sticky _poem_ with label `#cr-sticky`, you use `[@cr-sticky]{highlight="1"}`. In turn, to highlight the second line of the _poem_, you use 
+`[@cr-sticky]{highlight="2"}`. 
+
+It turns out that you can highlight several lines of a sticky poem as well. One option is to provide a numeric range of values, say `[@cr-sticky]{highlight="2-4"}` which will highlight lines 2, 3, and 4. Likewise, you can also provide multiple non-consecutive numbers, separated by comma, for instance: `[@cr-sticky]{highlight="2,4"}` which will highlight lines 2 and 4, skipping line 3.
+
+
 Since code is also considered to be text, you can also highlight lines of code:
 
 ![Figure 6.5](images/effect-highlight-code.svg){width="80%" fig-align="left"}
 
-The scaling effect works on text (including math equations, and code) and 
-images. Keep in mind that you include this focus effect by attaching it to
-a trigger, for example:
+Keep in mind that the highlighting effect only works on text (including code) 
+but not on images. 
 
 ```{.markdown filename="Highlighting Effect"}
 Normal text @cr-sticky
@@ -187,7 +200,7 @@ __span highlighting__ effect, as shown in the next figure:
 
 Let's discuss what's going on in this highlighting example. There is one 
 sticky component `#cr-sticky` involving four lines of text; notice that each 
-line of text starts with the vertical bar `|` in order to render the text line 
+line of text starts with the vertical bar `|` in order to render the text, line 
 by line. Another thing to notice is the __named span__ `[fox]{#cr-fox}` defined
 within the sticky. This is a kind of "sub-sticky" or "inner sticky" that only
 affects the word `fox`. Regarding the triggers, we have a first
