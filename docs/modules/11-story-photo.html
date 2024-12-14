@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4) Minimal Closeread with Images</title>
+<title>11) Photo-based Story</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modules/05-intro-math.html" rel="next">
-<link href="../modules/03-intro-text.html" rel="prev">
+<link href="../modules/14-sharing.html" rel="next">
+<link href="../modules/10-story-guide2phd.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -152,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-intro-images.html">4) Minimal Closeread with Images</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/11-story-photo.html">11) Photo-based Story</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -193,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/04-intro-images.html" class="sidebar-item-text sidebar-link active">
+  <a href="../modules/04-intro-images.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4) Minimal Closeread with Images</span></a>
   </div>
 </li>
@@ -227,6 +193,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">9) Style Formatting</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/10-story-guide2phd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10) Story with Illustrations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/11-story-photo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">11) Photo-based Story</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/14-sharing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14) Sharing Your Closeread Stories</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -239,11 +223,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#working-with-images" id="toc-working-with-images" class="nav-link active" data-scroll-target="#working-with-images">Working with Images</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on">What’s going on?</a>
+  <li><a href="#deciding-the-visual-journey" id="toc-deciding-the-visual-journey" class="nav-link active" data-scroll-target="#deciding-the-visual-journey">Deciding the Visual Journey</a>
   <ul class="collapse">
-  <li><a href="#take-a-look" id="toc-take-a-look" class="nav-link" data-scroll-target="#take-a-look">Take a look</a></li>
+  <li><a href="#focal-points" id="toc-focal-points" class="nav-link" data-scroll-target="#focal-points">Focal Points</a></li>
+  <li><a href="#panning-order" id="toc-panning-order" class="nav-link" data-scroll-target="#panning-order">Panning Order</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -251,9 +234,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/04-intro-images.html">4) Minimal Closeread with Images</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/11-story-photo.html">11) Photo-based Story</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">4) Minimal Closeread with Images</h1>
+<h1 class="title">11) Photo-based Story</h1>
 </div>
 
 
@@ -270,173 +253,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In the preceding modules, you got introduced to the main components of a Closeread document using two simple examples containing only text. In this module, we continue our introductory journey with another basic document, this time containing text and images.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Reminder
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recall that you need to have installed the quarto Closeread extension in your working directory. Run the following command in your Terminal:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto add qmd-lab/closeread</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-<section id="working-with-images" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-images">Working with Images</h2>
-<p>For our next example, we’ll use a couple of images: the Quarto logo, and the R logo, shown below.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
+<p>This module is associated with the example <a href="../examples/example5">A Bicycle Like No Other</a></p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://quarto.org/quarto.png" class="img-fluid figure-img"></p>
-<figcaption>Quarto logo</figcaption>
+<p><img src="../examples/example5/bicycle.JPG" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Fig 11.1) I bet you’ve never seen a bicycle like this before.</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:40%;">
+<p>You can use Closeread to tell a photo-based story. And this is precisely what I did for the above example.</p>
+<p>Searching among my collection of digital albums, I dug up this old photo of a unique bicycle that I took more than a decade ago when I spent a year living in France.</p>
+<section id="deciding-the-visual-journey" class="level2">
+<h2 class="anchored" data-anchor-id="deciding-the-visual-journey">Deciding the Visual Journey</h2>
+<p>I wanted to take the viewer through a visual journey, traversing some of the parts in the bicycle that I found interesting. To be more precise, I wanted to concentrate on the colorful elements of the bike.</p>
+<section id="focal-points" class="level3">
+<h3 class="anchored" data-anchor-id="focal-points">Focal Points</h3>
+<p>After some careful inspection of the bike structure, and the way its elements were decorated, I decided to choose about 10 parts, which are highlighted in yellow polygons in the figure below. They were basically:</p>
+<ul>
+<li>the panniers</li>
+<li>the various parts of the frame, especially those wrapped in yarns</li>
+<li>the headlight</li>
+<li>the saddle</li>
+<li>and the kickstand</li>
+</ul>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://www.r-project.org/Rlogo.png" class="img-fluid figure-img" style="width:26.0%"></p>
-<figcaption>R logo</figcaption>
+<p><img src="images/cr-bike-parts.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Fig 11.2) The focal points of my story.</figcaption>
 </figure>
 </div>
-</div>
-</div>
-<p>The PNG files with the images of the logos are available in the URLs listed below:</p>
-<ul>
-<li><p><a href="https://quarto.org/quarto.png" class="uri">https://quarto.org/quarto.png</a></p></li>
-<li><p><a href="https://www.r-project.org/Rlogo.png" class="uri">https://www.r-project.org/Rlogo.png</a></p></li>
-</ul>
-<p><br>
-</p>
-<p><strong>Insert Image.</strong> With the URL of the image, you can insert the logo in a quarto document with the following markdown syntax:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://quarto.org/quarto.png)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Alternatively, you can download the PNG file of the logo into your working directory, and then insert it into a quarto document with a similar syntax, for example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](quarto.png)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br>
-</p>
-<p><strong>Adding Caption.</strong> Inside the brackets, you can add an optional caption:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Some caption](quarto.png)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br>
-</p>
-<p><strong>Figure Dimensions.</strong> Likewise, you can modify the size of the image by appending attributes <code>width</code> and/or <code>height</code> inside curly braces:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Some caption](quarto.png)</span>{width=50%}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br>
-</p>
-<p><strong>Figure Alignment.</strong> You can also change the alignment with the attribute <code>fig-align</code> which takes values <code>"left"</code>, <code>"center"</code>, and <code>"right"</code></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Some caption](quarto.png)</span>{width=50% fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Images in Quarto docs
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To know more about figures in Quarto documents, take a look at: <a href="https://quarto.org/docs/authoring/figures.html" target="_blank">https://quarto.org/docs/authoring/figures.html</a></p>
-</div>
-</div>
 </section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>Below is an example of a qmd file with some content. Copy and paste it into a qmd document so that you can preview it or render it in all its Closeread glory.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>example2.qmd</strong></pre>
+<section id="panning-order" class="level3">
+<h3 class="anchored" data-anchor-id="panning-order">Panning Order</h3>
+<p>Given the angle and perspective in which I took the photo, and also the position in which the bicycle is standing, I also opted for a lateral movement from left to right. This required using focus effect <code>pan-to</code>.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/cr-bike-pans.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Fig 11.3) Panning order.</figcaption>
+</figure>
 </div>
-<div class="sourceCode" id="cb7" data-filename="example2.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> My second closeread document</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> closeread-html</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>::::{.cr-section}</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>What is __Quarto__? What is __R__?</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>:::{#cr-quarto}</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://quarto.org/quarto.png)</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>Quarto is an open-source scientific and </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>technical publishing system. @cr-quarto</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>Quarto lets you author documents using </span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>plain text markdown in your favorite editor.</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>You can use quarto documents with R. @cr-rlogo</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>:::{#cr-rlogo}</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://www.r-project.org/Rlogo.png)</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>R is a free software environment for </span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>statistical computing and graphics. </span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>R is available on Unix, MacOS, and Windows.</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="whats-going-on" class="level2">
-<h2 class="anchored" data-anchor-id="whats-going-on">What’s going on?</h2>
-<p>Let’s review the content of <code>example2.qmd</code> describing the primary Closeread components:</p>
-<ul>
-<li><p>yaml header format</p></li>
-<li><p>closeread section</p></li>
-<li><p>sticky element</p></li>
-<li><p>trigger action</p></li>
-</ul>
-<section id="yaml-header-format" class="level4">
-<h4 class="anchored" data-anchor-id="yaml-header-format">YAML header format</h4>
-<p>As you know, in the yaml header we specify the <code>format</code> of the qmd document to <code>closeread-html</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> My second closeread document</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> closeread-html</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="closeread-section" class="level4">
-<h4 class="anchored" data-anchor-id="closeread-section">Closeread Section</h4>
-<p>The next thing to notice is the <strong>closeread section</strong> defined by the four consecutive colons, and the curly braces containing the id <code>.cr-section</code>.</p>
-<div class="sourceCode" id="cb9" data-highlight="1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>::::{.cr-section}</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="sticky-elements" class="level4">
-<h4 class="anchored" data-anchor-id="sticky-elements">Sticky Elements</h4>
-<p>Inside the cr-section we are defining two <strong>sticky</strong> components. Remember that every sticky is surrounded by a div <code>:::</code> and a label or name.</p>
-<p>The first sticky, <code>#cr-quarto</code>, is dedicated to the quarto logo. To be more specific, this sticky corresponds to the markdown element that inserts the <code>png</code> image of Quarto’s logo.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-quarto}</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://quarto.org/quarto.png)</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The second sticky, <code>#cr-rlogo</code>, is dedicated to the R logo.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-rlogo}</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://www.r-project.org/Rlogo.png)</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="narrative-and-triggers" class="level4">
-<h4 class="anchored" data-anchor-id="narrative-and-triggers">Narrative and Triggers</h4>
-<p>Having established the cr-section as well as the stickies, the next step involves specifying the <strong>narrative</strong> and the triggers to launch the stickies.</p>
-<p>In this example we have 2 triggers, one for each sticky.</p>
-<p>The first trigger, <code>@cr-quarto</code>, is the one that will make the Quarto logo to get stuck until the next trigger gets activated. This first trigger is located at the end of the second paragraph:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Quarto is an open-source scientific and </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>technical publishing system. @cr-quarto</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The second trigger, <code>@cr-rlogo</code>, is the one that will make the R logo to get stuck. This trigger is located at the end of the fourth paragraph:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>You can use quarto documents with R. @cr-rlogo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="take-a-look" class="level3">
-<h3 class="anchored" data-anchor-id="take-a-look">Take a look</h3>
-<p>You can take a look at this first example <a href="../examples/example2/index.html" target="_blank">here</a>.</p>
 
 
 </section>
@@ -865,13 +719,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/03-intro-text.html" class="pagination-link" aria-label="3) Minimal Closeread with Text">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3) Minimal Closeread with Text</span>
+      <a href="../modules/10-story-guide2phd.html" class="pagination-link" aria-label="10) Story with Illustrations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">10) Story with Illustrations</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modules/05-intro-math.html" class="pagination-link" aria-label="5) Minimal Closeread with Equations">
-        <span class="nav-page-text">5) Minimal Closeread with Equations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modules/14-sharing.html" class="pagination-link" aria-label="14) Sharing Your Closeread Stories">
+        <span class="nav-page-text">14) Sharing Your Closeread Stories</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

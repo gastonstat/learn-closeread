@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4802cb0978903613ce0bc2fb343dca47.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7d4d77ebace1d2cdbb25a93f93cc11a3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -188,19 +188,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/03-intro-text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3) Scrollytelling with Text</span></a>
+ <span class="menu-text">3) Minimal Closeread with Text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/04-intro-images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4) Scrollytelling with Images</span></a>
+ <span class="menu-text">4) Minimal Closeread with Images</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/05-intro-math.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5) Scrollytelling with Equations</span></a>
+ <span class="menu-text">5) Minimal Closeread with Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Scaling</strong>: the <code>scale-by</code> effect is used to shrink or enlarge the size of a sticky (e.g.&nbsp;text, equations, images, code).</p></li>
 <li><p><strong>Panning</strong>: the <code>pan-to</code> effect is used to move a sticky up-down, and left-right, or if you prefer north-south, east-west (e.g.&nbsp;text, equations, images, code).</p></li>
 <li><p><strong>Zooming</strong>: the <code>zoom-to</code> effect is used to zoom-in (or out) into a code block or line of text or math equation.</p></li>
-<li><p><strong>Highlighting</strong>: the <code>highlight</code> effect is used to highlight parts of text or code of a sticky.</p></li>
+<li><p><strong>Highlighting</strong>: the <code>highlight</code> effect is used to highlight certain parts of text or code of a sticky, while de-emphasizing the other parts of the sticky.</p></li>
 <li><p>*<strong>Scale to fill</strong>: this is an additional effect that you attach to a sticky instead of a trigger to stretch the sticky in a way that it fills the viewport.</p></li>
 </ul>
 <p>Let’s describe the syntax behind each of these effects.</p>
@@ -312,7 +312,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="scaling" class="level2">
 <h2 class="anchored" data-anchor-id="scaling">Scaling</h2>
-<p>To shrink or enlarge a sticky element you use the <code>scale-by</code> effect. This attribute takes non-negative values. The figure below depicts the resulting effect of <code>scale-by</code> when used on text and images:</p>
+<p>To shrink or enlarge a sticky element you use the <code>scale-by</code> effect, e.g.&nbsp; <code>[@cr-sticky]{scale-by="2"}</code></p>
+<p>This attribute takes non-negative values. The figure below depicts the resulting effect of <code>scale-by</code> when used on text and images:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/effect-scale-by.svg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -337,7 +338,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="panning" class="level2">
 <h2 class="anchored" data-anchor-id="panning">Panning</h2>
-<p>To move a sticky element you use the <code>pan-to</code> effect. This attribute takes a pair of <code>x</code> and <code>y</code> values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of <code>pan-to</code>—using different units—when applied on an image (but you cal also apply it on text):</p>
+<p>To move a sticky element you use the <code>pan-to</code> effect, e.g.&nbsp; <code>[@cr-sticky]{pan-to="10%,0%"}</code></p>
+<p>This attribute takes a pair of <code>x</code> and <code>y</code> values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of <code>pan-to</code>—using different units—when applied on an image (but you can also apply it on text):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/effect-pan-to-simple.svg" class="img-fluid figure-img"></p>
@@ -391,13 +393,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="highlighting" class="level2">
 <h2 class="anchored" data-anchor-id="highlighting">Highlighting</h2>
-<p>To highlight certain lines of text in a sticky element you use the <code>highlight</code> effect. The way <code>highlight</code> works is by emphasizing certain parts of text (e.g.&nbsp;a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:</p>
+<p>To highlight certain lines of text in a sticky element you use the <code>highlight</code> effect, e.g.&nbsp;<code>[@cr-sticky]{highlight="1"}</code></p>
+<p>The way <code>highlight</code> works is by emphasizing certain parts of text (e.g.&nbsp;a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="images/effect-highlight-text.svg" class="img-fluid figure-img" style="width:80.0%"></p>
 <figcaption>Figure 6.4</figcaption>
 </figure>
 </div>
+<p>As you can tell from the above figure, to highlight the first line of text of a sticky <em>poem</em> with label <code>#cr-sticky</code>, you use <code>[@cr-sticky]{highlight="1"}</code>. In turn, to highlight the second line of the <em>poem</em>, you use <code>[@cr-sticky]{highlight="2"}</code>.</p>
+<p>It turns out that you can highlight several lines of a sticky poem as well. One option is to provide a numeric range of values, say <code>[@cr-sticky]{highlight="2-4"}</code> which will highlight lines 2, 3, and 4. Likewise, you can also provide multiple non-consecutive numbers, separated by comma, for instance: <code>[@cr-sticky]{highlight="2,4"}</code> which will highlight lines 2 and 4, skipping line 3.</p>
 <p>Since code is also considered to be text, you can also highlight lines of code:</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
@@ -405,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Figure 6.5</figcaption>
 </figure>
 </div>
-<p>The scaling effect works on text (including math equations, and code) and images. Keep in mind that you include this focus effect by attaching it to a trigger, for example:</p>
+<p>Keep in mind that the highlighting effect only works on text (including code) but not on images.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Highlighting Effect</strong></pre>
@@ -427,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Figure 6.6</figcaption>
 </figure>
 </div>
-<p>Let’s discuss what’s going on in this highlighting example. There is one sticky component <code>#cr-sticky</code> involving four lines of text; notice that each line of text starts with the vertical bar <code>|</code> in order to render the text line by line. Another thing to notice is the <strong>named span</strong> <code>[fox]{#cr-fox}</code> defined within the sticky. This is a kind of “sub-sticky” or “inner sticky” that only affects the word <code>fox</code>. Regarding the triggers, we have a first trigger <code>@cr-sticky</code> that will make the sticky appear, and then we have a second trigger <code>[@cr-sticky]{highlight="cr-fox"}</code> which will cause the highlighting effect on the named span which in this case corresponds to the word <strong>fox</strong>.</p>
+<p>Let’s discuss what’s going on in this highlighting example. There is one sticky component <code>#cr-sticky</code> involving four lines of text; notice that each line of text starts with the vertical bar <code>|</code> in order to render the text, line by line. Another thing to notice is the <strong>named span</strong> <code>[fox]{#cr-fox}</code> defined within the sticky. This is a kind of “sub-sticky” or “inner sticky” that only affects the word <code>fox</code>. Regarding the triggers, we have a first trigger <code>@cr-sticky</code> that will make the sticky appear, and then we have a second trigger <code>[@cr-sticky]{highlight="cr-fox"}</code> which will cause the highlighting effect on the named span which in this case corresponds to the word <strong>fox</strong>.</p>
 <p><br>
 </p>
 </section>
@@ -901,8 +906,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/05-intro-math.html" class="pagination-link" aria-label="5) Scrollytelling with Equations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5) Scrollytelling with Equations</span>
+      <a href="../modules/05-intro-math.html" class="pagination-link" aria-label="5) Minimal Closeread with Equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5) Minimal Closeread with Equations</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

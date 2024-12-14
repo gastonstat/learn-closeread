@@ -125,7 +125,7 @@
     "href": "modules/08-layout-options.html#sidebar-layouts",
     "title": "8) Layout Options",
     "section": "Sidebar Layouts",
-    "text": "Sidebar Layouts\nCloseread provides two flavors of sidebar layout: sidebar left and sidebar right. As a matter of fact, the default layout is the sidebar left.\nThe following diagram shows the appearance of both types of sidebar layouts. For sake of clarity I’ve added a couple of auxiliary boxes (in sky-blue and mint-green) to indicate the narrative texts, as well as a dashed line that marks the separation of the sidebar from the section of the sticky components. Keep in mind that these auxiliary visuals won’t show up in the actual rendered HTML document.\n\n\n\nFigure 8.1",
+    "text": "Sidebar Layouts\nCloseread provides two flavors of sidebar layout: sidebar left and sidebar right. As a matter of fact, the default layout is the sidebar left.\nThe following diagram shows the appearance of both types of sidebar layouts. For sake of clarity I’ve added a couple of auxiliary boxes (in sky-blue and mint-green) to indicate the narrative texts, as well as a dashed line that marks the separation of the sidebar from the section of the sticky components. Keep in mind that these auxiliary visuals won’t show up in the actual rendered HTML document.\n\n\n\nFigure 8.1) Sidebar layouts",
     "crumbs": [
       "Modules",
       "8) Layout Options"
@@ -154,47 +154,80 @@
     ]
   },
   {
-    "objectID": "modules/09-style-formatting.html",
-    "href": "modules/09-style-formatting.html",
-    "title": "9) Style Formatting",
+    "objectID": "modules/10-story-guide2phd.html",
+    "href": "modules/10-story-guide2phd.html",
+    "title": "10) Story with Illustrations",
     "section": "",
-    "text": "In this module, you’ll learn about the style formatting or guidelines that dictate how a Closeread document should look. The goal is to describe the different formatting options available in Closeread to customize the visual appearance of elements such as the background of a cr-section, the font of the text in stickies, as well as the format of the narrative elements.",
+    "text": "This module is associated with the example The Illustrated Guide to a Ph.D.\nThe example in the above link is a Closeread story based on one of my favorite blog posts written by Matt Might: The illustrated guide to a Ph.D.\n\n\n\nFig 10.1) Screenshot of Matt Might’s famous post.\n\n\nIn the process of learning and experimenting with Closeread, I was looking for a simple, yet captivating, example of a story with a highly visual nature. And that’s when my brain, somewhat unexpectedly, was able to remember Matt’s illustrated guide to a Ph.D. \nThe original post is in the following link which, if you haven’t visited before, I highly encourage you to do it right now: matt.might.net/articles/phd-school-in-pictures/\nThe figure below doesn’t do justice to the actual aspect of Matt’s post, but I’m including it here so that you can have a bird’s eye view of the entire story.\n\n\n\nFig 10.2) The 12 images and sentences of an illustrated guide to a Ph.D.\n\n\nNotice how clean and neat this narrative is. As you can tell, the illustrated guide to a Ph.D. is a beautifully distilled series of 12 illustrations and sentences explaining what a Ph.D. is all about.\nAs soon as I went back to check Matt’s post, I knew immediately that this was a perfect fit to test Closeread’s features, and therefore I decided to clone it as my first Closeread proof-of-concept.\n\nA Visual Story in 12 Images\nLet me tell you a bit about my shameless cloning adventure. First, I downloaded the 12 images (i.e. the associated 12 JPG files) to the same directory of the qmd file that I used for this Closeread story.\nThen I frenetically typed—meaning copied-and-pasted—the content of the story, and specified the structure of the closeread components (e.g. section, stickies, and triggers).\nThe content of the qmd file is fairly simple. Below is an excerpt of the closeread-section with the first four sentences, the first four triggers, and the corresponding first four stickies. As you can tell, each sticky involves a JPG image.\n::::{.cr-section}\n\nImagine a circle that contains all of human knowledge. @cr-phd1\n\n:::{#cr-phd1}\n![](phd_001.jpg)\n:::\n\n\nBy the time you finish elementary school, you know a little. @cr-phd2\n\n:::{#cr-phd2}\n![](phd_002.jpg)\n:::\n\n\nBy the time you finish high school, you know a bit more. @cr-phd3\n\n:::{#cr-phd3}\n![](phd_003.jpg)\n:::\n\n\nWith a bachelor's degree, you gain a specialty. @cr-phd4\n\n:::{#cr-phd4}\n![](phd_004.jpg)\n:::\n\n&lt;ETC&gt;\n\n::::\n\n\nAdapting dimensions of some images\nAll the first 7 images have the same dimensions, and visually they all correspond to the circle that contains all of human knowledge.\nCompared to the first 7 illustrations, images 8 to 11 are different. These images depict zooming-in to the frontier of human knowledge (i.e. the border of the circle). Because these images have different dimensions than the first seven diagrams, I had to modify their width and height dimensions. The following snippet shows the 8th sentence and the 8th sticky. Notice the dimension attributes of the image.\nYou push at the boundary for a few years. @cr-phd8\n\n:::{#cr-phd8}\n![](phd_008.jpg){width=\"120%\" height=\"120%\"}\n:::\n\n\nLayout and Format\nThe layout of this Closeread story is the default one: layout: sidebar-left.\nHowever, there are some non-default formatting styles:\n\nthe background color of the cr-section is white,\nthe background color of the sidebar is black,\nthe color of the narrative text is white,\nthe font-size of the narrative text is set to 1.8em,\nthe font-family of the narrative text uses a serif font.\n\nAll of these formatting details are specified in the yaml header:\n---\ntitle: \"The Illustrated Guide to a Ph.D.\"\nsubtitle: 'by &lt;a href=\"http://matt.might.net/\"&gt;Matt Might&lt;/a&gt;'\nformat: \n  closeread-html:\n    theme: cosmo\n    cr-style:\n      section-background-color: white\n      narrative-background-color-sidebar: \"#000000\"\n      narrative-text-color-sidebar: white\n      narrative-font-family: 'Georgia, \"Times New Roman\", Times, serif'\n      narrative-font-size: 1.8rem\n      narrative-sidebar-width: minmax(420px, 1fr)\n---\n\n\nTake a look\nYou can take a look at the illustrated guide to a Ph.D. here.",
     "crumbs": [
       "Modules",
-      "9) Style Formatting"
+      "10) Story with Illustrations"
     ]
   },
   {
-    "objectID": "modules/09-style-formatting.html#introduction",
-    "href": "modules/09-style-formatting.html#introduction",
-    "title": "9) Style Formatting",
-    "section": "Introduction",
-    "text": "Introduction\nAs you know, Closeread documents come with default settings that give them a rudimentary look. Personally, I find the default format to be quite limited, and I don’t think I would ever create a Closeread document without tuning its overall look.\nThe good news is that you can customize various aspects of the main components in a Closeread document. I should say that the catalog of customization styles is rather narrow, but the provided options can take you very far if you understand their roles and the values they can take.\nCurrently, there is about a dozen of formatting options available in Closeread, and most of them have to do with styling of narrative components, which in turn depend on the type of layout (e.g. sidebar or overlay).\nOne important thing to keep in mind is that a Closeread document will generally follow the Quarto theme you use. If you don’t specify a theme, then the default theme will be used. To further customize your Closeread document, you can always add your own CSS or SCSS stylesheets.\n\nHow to customize formatting styles\nCustomizing formatting options is a fairly straightforward process. All you have to do is specify the desired option in the cr-style key, in the yaml header (or frontmatter).\nFor example, say we are using a sidebar layout (default layout) and we want to change the background color of the sidebar to black, and also set the color of the narrative text to white—expressed in hexadecimal notation #ffffff. This is done as follows:\n---\ntitle: \"Hello Closeread\"\nformat:\n  closeread-html:\n    cr-style:\n      narrative-background-color-sidebar: black\n      narrative-text-color-sidebar: \"#ffffff\"\n---\nI’ve found it easy to describe the different formatting options depending on what type of layout you are using: sidebar -vs- overlay. This is why I’ve decided to describe them in their own sections—see sections below—based on the chosen layout.",
+    "objectID": "modules/06-focus-effects.html",
+    "href": "modules/06-focus-effects.html",
+    "title": "6) Focus Effects",
+    "section": "",
+    "text": "Now that we’ve seen various introductory examples, we should take the next step and discuss the so-called focus effects.\nSimply put, focus effects are what you use to guide your readers’ attention to certain aspects of your stickies.\nTechnically speaking, focus effects are specified together with a trigger: you attach the effect to a trigger.\nThe code below shows an abstract example of a narrative in which there is a trigger with no focus effect, followed by another trigger that comes with a focus effect.\nThe reason why an effect is attached to a trigger is because a trigger is what Closeread uses to decide what to do with a sticky.",
     "crumbs": [
       "Modules",
-      "9) Style Formatting"
+      "6) Focus Effects"
     ]
   },
   {
-    "objectID": "modules/09-style-formatting.html#styling-sidebar-layouts",
-    "href": "modules/09-style-formatting.html#styling-sidebar-layouts",
-    "title": "9) Style Formatting",
-    "section": "Styling Sidebar Layouts",
-    "text": "Styling Sidebar Layouts\nThe following figure illustrates the appearance of a rendered document using sidebar layout. I’ve superimposed the different formatting options to indicate what elements can be affected by them.\n\n\n\nFigure 9.1\n\n\n\nnarrative-background-color-sidebar: the background color used for the narrative column (in sidebar layouts).\nnarrative-text-color-sidebar: the color of narrative text (in sidebar layouts).\nnarrative-sidebar-width: the width of the sidebar. Defaults to 1fr: the sticky content is 2fr in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different fr value, a fixed value, or a combination of the two using minmax().\nnarrative-font-family: the font(s) used for narrative content (regardless of the chosen layout).\nnarrative-font-size: the font size used for narrative content (regardless of the chosen layout).\npoem-font-family: the font(s) used for lineblock poems (i.e. in sticky elements).\nsection-background-color: the background color used for Closeread sections.",
+    "objectID": "modules/06-focus-effects.html#scaling",
+    "href": "modules/06-focus-effects.html#scaling",
+    "title": "6) Focus Effects",
+    "section": "Scaling",
+    "text": "Scaling\nTo shrink or enlarge a sticky element you use the scale-by effect, e.g.  [@cr-sticky]{scale-by=\"2\"}\nThis attribute takes non-negative values. The figure below depicts the resulting effect of scale-by when used on text and images:\n\n\n\nFigure 6.1\n\n\nThe scaling effect works on text (including math equations, and code) and images. Keep in mind that you include this focus effect by attaching it to a trigger, for example:\n\n\nScaling Effect\n\nNormal scale @cr-sticky\n\nShrinking effect [@cr-sticky]{scale-by=\"0.5\"}\n\nEnlarging effect [@cr-sticky]{scale-by=\"2\"}\n\nNormal size again @cr-sticky",
     "crumbs": [
       "Modules",
-      "9) Style Formatting"
+      "6) Focus Effects"
     ]
   },
   {
-    "objectID": "modules/09-style-formatting.html#styling-overlay-layouts",
-    "href": "modules/09-style-formatting.html#styling-overlay-layouts",
-    "title": "9) Style Formatting",
-    "section": "Styling Overlay Layouts",
-    "text": "Styling Overlay Layouts\nThe following figure illustrates the appearance of a rendered document using overlay layout. I’ve superimposed the different formatting options to indicate what elements can be affected by them.\n\n\n\nFigure 9.2\n\n\n\nnarrative-background-color-overlay: the background color used for narrative text blocks (in overlay layouts).\nnarrative-text-color-overlay: the color of narrative text (in overlay layouts).\nnarrative-border-radius: the border radius of narrative text blocks (in overlay layouts).\nnarrative-overlay-max-width: the maximum width of narrative text blocks (in overlay layouts).\nnarrative-overlay-min-width: the minimum width of narrative text blocks (in overlay layouts). The recommendation is to leave this one alone because setting it can cause mobile layout issues.\nnarrative-outer-margin: the margin pushing narrative content in from the left (on overlay-left layouts) or right edge (on overlay-right)\nnarrative-font-size: the font size used for narrative content (regardless of the chosen layout).\npoem-font-family: the font(s) used for lineblock poems (i.e. in sticky elements).\nsection-background-color: the background color used for Closeread sections.",
+    "objectID": "modules/06-focus-effects.html#panning",
+    "href": "modules/06-focus-effects.html#panning",
+    "title": "6) Focus Effects",
+    "section": "Panning",
+    "text": "Panning\nTo move a sticky element you use the pan-to effect, e.g.  [@cr-sticky]{pan-to=\"10%,0%\"}\nThis attribute takes a pair of x and y values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of pan-to—using different units—when applied on an image (but you can also apply it on text):\n\n\n\nFigure 6.2\n\n\nNotice that the value given to pan-to consists of two values separated by a comma: e.g. pan-to=\"20px,0px\". The first value is the x-value that controls the amount of horizontal movement. The second value is the y-value that determines the amount of vertical movement.\nx-component:\n\nnegative values: west (or left)\npositive values: east (or right)\n\ny-component:\n\nnegative values: north (or up)\npositive values: south (or down)\n\nInterestingly, x and y values can be provided in a variety of units:\n\npixels: pan-to=\"20px,0px\"\npercentages: pan-to=\"10%,0%\"\nmillimeters: pan-to=\"5mm,0mm\"\ninches: pan-to=\"0.5in,0in\"\ncentimeters: pan-to=\"2cm,0cm\"\ncharacters: pan-to=5ch,0ch\"\nother units of measurement in HTML and CSS such as em, ex, rem\n\nIn fact, values of pan-to can be any of the options in the analogous translate() CSS function.\nOf course, you can give x-and-y values different from zero to simultaneously move up-down and left-right, for instance:\n\n\n\nFigure 6.3\n\n\nThe panning effect also works on text (including a math equation, and code) and images. Again, you include this focus effect by attaching it to a trigger, for example:\n\n\nPanning Effect\n\nNormal position @cr-sticky\n\nPanning to the left [@cr-sticky]{pan-to=\"-10px,0px\"}\n\nPanning to the right [@cr-sticky]{pan-to=\"0px,10px\"}\n\nNormal position again @cr-sticky",
     "crumbs": [
       "Modules",
-      "9) Style Formatting"
+      "6) Focus Effects"
+    ]
+  },
+  {
+    "objectID": "modules/06-focus-effects.html#highlighting",
+    "href": "modules/06-focus-effects.html#highlighting",
+    "title": "6) Focus Effects",
+    "section": "Highlighting",
+    "text": "Highlighting\nTo highlight certain lines of text in a sticky element you use the highlight effect, e.g. [@cr-sticky]{highlight=\"1\"}\nThe way highlight works is by emphasizing certain parts of text (e.g. a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:\n\n\n\nFigure 6.4\n\n\nAs you can tell from the above figure, to highlight the first line of text of a sticky poem with label #cr-sticky, you use [@cr-sticky]{highlight=\"1\"}. In turn, to highlight the second line of the poem, you use [@cr-sticky]{highlight=\"2\"}.\nIt turns out that you can highlight several lines of a sticky poem as well. One option is to provide a numeric range of values, say [@cr-sticky]{highlight=\"2-4\"} which will highlight lines 2, 3, and 4. Likewise, you can also provide multiple non-consecutive numbers, separated by comma, for instance: [@cr-sticky]{highlight=\"2,4\"} which will highlight lines 2 and 4, skipping line 3.\nSince code is also considered to be text, you can also highlight lines of code:\n\n\n\nFigure 6.5\n\n\nKeep in mind that the highlighting effect only works on text (including code) but not on images.\n\n\nHighlighting Effect\n\nNormal text @cr-sticky\n\nHighlighting first line [@cr-sticky]{highlight=\"1\"}\n\nHighlighting lines 2-4 [@cr-sticky]{highlight=\"2-4\"}\n\nNormal text again @cr-sticky\n\n\nHighlighting certain parts (or words)\nWhen you provide a numeric value to the highlight effect, e.g.  [@cr-sticky]{highlight=\"1\"}, the entire line of text will be highlighted. Often, though, you may be interested in highlighting just a single word, or some part of a line of text. To obtain this type of highlighting you have to use a special type of sticky referred to as a named span and its corresponding span highlighting effect, as shown in the next figure:\n\n\n\nFigure 6.6\n\n\nLet’s discuss what’s going on in this highlighting example. There is one sticky component #cr-sticky involving four lines of text; notice that each line of text starts with the vertical bar | in order to render the text, line by line. Another thing to notice is the named span [fox]{#cr-fox} defined within the sticky. This is a kind of “sub-sticky” or “inner sticky” that only affects the word fox. Regarding the triggers, we have a first trigger @cr-sticky that will make the sticky appear, and then we have a second trigger [@cr-sticky]{highlight=\"cr-fox\"} which will cause the highlighting effect on the named span which in this case corresponds to the word fox.",
+    "crumbs": [
+      "Modules",
+      "6) Focus Effects"
+    ]
+  },
+  {
+    "objectID": "modules/06-focus-effects.html#zooming",
+    "href": "modules/06-focus-effects.html#zooming",
+    "title": "6) Focus Effects",
+    "section": "Zooming",
+    "text": "Zooming\nWith stickies consisting of text or code, in addition to all the previous effects, you scan also focus the view on a line number or named span with zoom-to\n\n\nZooming Effect\n\nNormal text @cr-sticky\n\nZooming to first line [@cr-sticky]{zoom-to=\"1\"}\n\nZooming to named span [@cr-sticky]{zoom-to=\"cr-fox\"}\n\nNormal text again @cr-sticky",
+    "crumbs": [
+      "Modules",
+      "6) Focus Effects"
+    ]
+  },
+  {
+    "objectID": "modules/06-focus-effects.html#scale-to-fill",
+    "href": "modules/06-focus-effects.html#scale-to-fill",
+    "title": "6) Focus Effects",
+    "section": "Scale to Fill",
+    "text": "Scale to Fill\nIn addition to the four focus effects previously described, there is an extra effect called scale-to-fill. The purpose of this effect is to stretch a sticky (e.g. text or image) in a way that fills the entire region containing such sticky, as depicted in the next figure.\n\n\n\nFigure 6.7\n\n\nscale-to-fill is a special kind of effect because instead of attaching it to a trigger, you attach it as an attribute when defining a sticky, for example:\n\n\nScale to fill\n\nTriggering text @cr-sticky\n\n:::{#cr-sticky .scale-to-fill}\n| The quick\n| brown fox\n| jumps over\n| the lazy dog\n:::\n\nWhile scale-to-fill has some resemblance to scale-by, they are not the same. Unlike scale_by, when scale-to-fill is triggered, the sticky will fade in and transform such that it fills the viewport.",
+    "crumbs": [
+      "Modules",
+      "6) Focus Effects"
     ]
   },
   {
@@ -230,7 +263,7 @@
     "href": "examples/example4/index.html",
     "title": "The Illustrated Guide to a Ph.D.",
     "section": "",
-    "text": "Imagine a circle that contains all of human knowledge.\n\n\n\n\nBy the time you finish elementary school, you know a little.\n\n\n\n\nBy the time you finish high school, you know a bit more.\n\n\n\n\nWith a bachelor’s degree, you gain a specialty.\n\n\n\n\nA master’s degree deepens that specialty.\n\n\n\n\nReading research papers takes you to the edge of human knowledge.\n\n\n\n\nOnce you’re at the boundary, you focus.\n\n\n\n\nYou push at the boundary for a few years.\n\n\n\n\nUntil one day, the boundary gives way.\n\n\n\n\nAnd, that dent you’ve made is called a Ph.D.\n\n\n\n\nOf course, the world looks different to you now.\n\n\n\n\nSo, don’t forget the bigger picture.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOriginal Work: https://matt.might.net/articles/phd-school-in-pictures/\nLicense: CC BY-NC 2.5\nCode: github repo"
+    "text": "Imagine a circle that contains all of human knowledge.\n\n\n\n\nBy the time you finish elementary school, you know a little.\n\n\n\n\nBy the time you finish high school, you know a bit more.\n\n\n\n\nWith a bachelor’s degree, you gain a specialty.\n\n\n\n\nA master’s degree deepens that specialty.\n\n\n\n\nReading research papers takes you to the edge of human knowledge.\n\n\n\n\nOnce you’re at the boundary, you focus.\n\n\n\n\nYou push at the boundary for a few years.\n\n\n\n\nUntil one day, the boundary gives way.\n\n\n\n\nAnd, that dent you’ve made is called a Ph.D.\n\n\n\n\nOf course, the world looks different to you now.\n\n\n\n\nSo, don’t forget the bigger picture.\n\n\n\n\nKeep pushing.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOriginal Work: https://matt.might.net/articles/phd-school-in-pictures/\nLicense: CC BY-NC 2.5\nCode: github repo"
   },
   {
     "objectID": "examples/example2/index.html",
@@ -279,7 +312,7 @@
     "href": "examples/example5/index.html",
     "title": "A Bicycle Like No Other",
     "section": "",
-    "text": "On a cloudy Spring day of 2013, walking down the narrow streets of Ile Saint-Louis in Paris, I stumbled upon an eye-catching bicycle. It was begging me to take a picture of it.\n\n\n\n\nI had never seen such a colorful bicycle, so originally decorated, with a distinctive personality of its own.\n\n\n\n\nThe shape and size of the orange panniers—with their pink straps—reminded me of my childhood years and the leather bags I used to carry when I was in kindergarten.\n\n\n\n\nThe frame of the bike was very interesting. Its exposed parts (the chain and seat stays) showed the pass of time with rusted areas, and what I assume was its original dark green color.\n\n\n\n\nThe rest of the frame was wrapped around various threads of colorful yarns:   - pink in the section under the saddle,   - a fluffy green surrounding the top tube,   - a multicolor yarn around both the down and the head tubes.\n\n\n\n\nThe handle bar was wrapped in orange, and the headset section in aquamarine. Hanging from its right handle, it even had a coral mesh bag containing more balls of yarn.   Likewise, it also had a headlight mounted on the front fender.\n\n\n\n\nThe whole thing was supported on its kickstand.\n\n\n\n\nWhat a whimsical bicycle and—in my humble opinion—a wonderful piece of street Parisian art."
+    "text": "On a cloudy Spring day in 2013, wandering around the cobblestone streets of Ile Saint-Louis in Paris, I stumbled upon a very eye-catching bicycle. Parked in front of a store, the bike was there almost as if it were intentionally posing for me to photograph it.\n\n\n\n\nI had never seen such a strange and colorful bicycle, so originally decorated, with a distinctive personality of its own.\n\n\n\n\nThe shape and size of the orange panniers—with their pink straps—reminded me of my childhood years and the leather bags I used to carry when I was in kindergarten.\n\n\n\n\nThe frame of the bike was very interesting. Its exposed parts (the chain and seat stays) showed the pass of time with rusted areas, and what I assume was its original dark green color. Not to mention the worn saddle with scars everywhere.\n\n\n\n\nThe rest of the frame was wrapped around various threads of colorful yarns:   - pink in the section under the saddle,   - a fluffy green surrounding the top tube,   - a multicolor yarn around both the down and the head tubes.\n\n\n\n\nThe handle bar was wrapped in orange, and the headset section in aquamarine.   Hanging from its right handle, it even had a coral mesh bag containing more balls of yarn.   Likewise, it also had a headlight mounted on the front fender.\n\n\n\n\nThe whole thing was supported on its kickstand.\n\n\n\n\nWhat a whimsical bicycle and—in my humble opinion—a wonderful piece of street Parisian art."
   },
   {
     "objectID": "examples/example3/index.html",
@@ -293,7 +326,7 @@
     "href": "examples/example6/index.html",
     "title": "The Storytelling Animal",
     "section": "",
-    "text": "The Storytelling Animal\n\n\n\n\nIn his book Fluke, chapter-7 “The Storytelling Animal”, social scientist and author Brian Klaas provides a captivating description of our narrative-addicted minds.\n\n\n\n\nAt the end of page 135, Brian writes:\n\n\n\n\nAha! the key word: story\n\n\n\n\nAnd the main question:\n\n\n\n\nTo answer that question, Klaas quotes neuroscientist Antonio Damasio:\n\n\n\n\nStorytelling!\n\n\n\n\nOf course.\n\n\n\n\nA few lines later, Brian continues:\n\n\n\n\nOur brains crave for narrative! We are wired to form and create stories even when there are none.\n\n\n\n\nLater on, in the same page, Brian quotes Barbara Hardy:\n\n\n\n\nBasically, we are narrative-driven creatures; whether it is talking to others or to ourselves, or also listening to others or to our inner voice; whether it is while we are awake or also while we sleep.\n\n\n\n\nAnd finally, Brian cites Jonathan Gottschall and his famous storytelling animal\n\n\n\n\nThat’s what we are.\n\n\n\n\nIn essence, that’s what makes us humans.\n\n\n\n\n\n\n\n\n\n\n\n\n\nOur beliefs are most easily swayed\nwhen ideas are put into a story.\nGeneration after generation,\nfrom our earliest days,\nhumans accumulated wisdom\nto make sense of the world.\nBut how could that wisdom\nreverberate between generations?\n\n\n“The problem of how to make\nall this wisdom understandable,\ntransmittable, persuasive, enforceable\n—of how to make it stick—\nwas faced and a solution found.\nStorytelling was the solution.”\n\n\nOur brains are so attuned to narrative\nthat we will connect the dots into a story\neven when the dots aren’t connected,\nwhich is called narrative bias.\nWhen we are given a snippet\nof incomplete information,\nthe pattern-processing networks\nwithin our skulls fill in the gaps.\n\n\nWe “dream in narrative,\ndaydream in narrative,\nremember, anticipate,\nhope, despair,\nbelieve, doubt,\nplan, revise,\ncriticize, construct,\ngossip, learn,\nhate and live by narrative.”\n\n\nWe are … a storytelling animal.\n“The storytelling mind\nis allergic to uncertainty,\nrandomness, and coincidence.\nIt is addicted to meaning.”"
+    "text": "On The Storytelling Animal\nFluke, by Brian Klaas\n\n\n\n\nIn his book Fluke, chapter-7 “The Storytelling Animal”, social scientist and author Brian Klaas provides a captivating description of our narrative-addicted minds.\n\n\n\n\nAt the end of page 135, Brian writes:\n\n\n\n\nAha! the key word: story\n\n\n\n\nAnd the main question:\n\n\n\n\nTo answer that question, Klaas quotes neuroscientist Antonio Damasio:\n\n\n\n\nStorytelling!\n\n\n\n\nOf course.\n\n\n\n\nA few lines later, Brian continues:\n\n\n\n\nOur brains crave for narrative! We are wired to form and create stories even when there are none.\n\n\n\n\nLater on, in the same page, Brian quotes Barbara Hardy:\n\n\n\n\nBasically, we are narrative-driven creatures; whether it is talking to others or to ourselves, or also listening to others or to our inner voice; whether it is while we are awake or also while we sleep.\n\n\n\n\nAnd finally, Brian cites Jonathan Gottschall and his famous storytelling animal\n\n\n\n\nThat’s what we are.\n\n\n\n\nIn essence, that’s what makes us humans.\n\n\n\n\n\n\n\n\n\n\n\n\n\nOur beliefs are most easily swayed\nwhen ideas are put into a story.\nGeneration after generation,\nfrom our earliest days,\nhumans accumulated wisdom\nto make sense of the world.\nBut how could that wisdom\nreverberate between generations?\n\n\n“The problem of how to make\nall this wisdom understandable,\ntransmittable, persuasive, enforceable\n—of how to make it stick—\nwas faced and a solution found.\nStorytelling was the solution.”\n\n\nOur brains are so attuned to narrative\nthat we will connect the dots into a story\neven when the dots aren’t connected,\nwhich is called narrative bias.\nWhen we are given a snippet\nof incomplete information,\nthe pattern-processing networks\nwithin our skulls fill in the gaps.\n\n\nWe “dream in narrative,\ndaydream in narrative,\nremember, anticipate,\nhope, despair,\nbelieve, doubt,\nplan, revise,\ncriticize, construct,\ngossip, learn,\nhate and live by narrative.”\n\n\nWe are … a storytelling animal.\n“The storytelling mind\nis allergic to uncertainty,\nrandomness, and coincidence.\nIt is addicted to meaning.”"
   },
   {
     "objectID": "examples/example8/index.html",
@@ -310,69 +343,68 @@
     "text": "What can the analysis of the dplyr::storms data set reveal about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022?\n\n\n\n\nLet’s take a look decade by decade.\n\n\n\n\nIn the 1980’s the average number of tropical storms per year was 9.\n\n\n\n\nThe number of tropical storms per year kept increasing in the 1990’s with an average of 12.7.\n\n\n\n\nThe year 1995 saw a record number of 21 storms.\n\n\n\n\nThe increasing trend continued during the 2000’s, averaging 16.9 storms per year\n\n\n\n\nWith a jaw dropping record of 29 storms in 2005!\n\n\n\n\nIn the 2010’s the trend seemed to slow down a bit with an average number of storms per year of 16.3 …\n\n\n\n\n… only to go up again\n\n\n\n\nreaching a new all time high of 30 storms in 2020.\n\n\n\n\nSo what was the overall trend between 1980 and 2022?\n\n\n\n\nAn increasing trend as you can tell."
   },
   {
-    "objectID": "modules/06-focus-effects.html",
-    "href": "modules/06-focus-effects.html",
-    "title": "6) Focus Effects",
+    "objectID": "modules/14-sharing.html",
+    "href": "modules/14-sharing.html",
+    "title": "14) Sharing Your Closeread Stories",
     "section": "",
-    "text": "Now that we’ve seen various introductory examples, we should take the next step and discuss the so-called focus effects.\nSimply put, focus effects are what you use to guide your readers’ attention to certain aspects of your stickies.\nTechnically speaking, focus effects are specified together with a trigger: you attach the effect to a trigger.\nThe code below shows an abstract example of a narrative in which there is a trigger with no focus effect, followed by another trigger that comes with a focus effect.\nThe reason why an effect is attached to a trigger is because a trigger is what Closeread uses to decide what to do with a sticky.",
+    "text": "So far we’ve covered a long way. But what about sharing your Closeread stories?\nIn this module I will describe a couple of options to share your stories. Please keep in mind that this is by no means an exhaustive list about the various ways in which you can share your stories."
+  },
+  {
+    "objectID": "modules/14-sharing.html#share-your-html-document",
+    "href": "modules/14-sharing.html#share-your-html-document",
+    "title": "14) Sharing Your Closeread Stories",
+    "section": "Share your HTML document",
+    "text": "Share your HTML document\nPerhaps the simplest way to share your story is by sharing its rendered HTML document.\nWhile the rendered HTML document may look and work perfectly while served locally in your computer, it is not quite ready to be shared with others, say, via email or through a file sharing service (e.g. google drive, Dropbox).\nIn order to share your HTML file(s), you have to add embed-resources: true to the yaml header, for example:\n---\ntitle: \"Hello Closeread\"\nembed-resources: true\nformat:\n  closeread-html:\n    cr-style:\n      section-background-color: \"#f7f6f5\"\n      narrative-background-color-overlay: \"#525252\"\n      narrative-font-family: 'Arial, sans-serif'\n      narrative-font-size: 2em\n      poem-font-family: ', \"Times New Roman\", Times, serif'\n---\nThe embed-resources produces a stand-alone HTML file with no external dependencies. The resulting file should be “self-contained” in the sense that it needs no external files and no net access to be displayed properly by a browser. Which is what other viewers need to enjoy your story."
+  },
+  {
+    "objectID": "modules/14-sharing.html#sharing-through-quarto-pub",
+    "href": "modules/14-sharing.html#sharing-through-quarto-pub",
+    "title": "14) Sharing Your Closeread Stories",
+    "section": "Sharing through Quarto Pub",
+    "text": "Sharing through Quarto Pub\nAnother interesting option to share your Closered stories is by publishing them to Quarto Pub.\n\nQuarto Pub is a free publishing service for content created with Quarto. In fact, Quarto Pub is ideal not just for sharing a Closeread story but also for blogs, course or project websites, books, presentations, and personal hobby sites.\nTo use Quarto Pub you need to create a free account. This is a straightforward process that can be completed by visiting Quarto Pub’s website (link below) and following the Sign Up instructions :\nhttps://quartopub.com/\nI should mention that all documents and sites published to Quarto Pub are publicly visible. So you should only publish content you wish to share publicly. In addition, Quarto Pub sites can be no larger than 100 MB and have a soft limit of 10 GB of bandwidth per month.\nThere are a couple of ways to publish content to Quarto Pub. Here I will describe just one of them: using the quarto publish command. You can learn about the other option that uses a GitHub Action and it assumed that you are familiar with GitHub.\n\nUsing a Quarto Website\n\n\n\n\n\n\nNote\n\n\n\nBefore attempting your first publish, be sure that you have created a free Quarto Pub account.\n\n\nAssuming that you have a Quarto Pub account, my recommendation is to use a Quarto Website to host your Closeread story. Follow the steps listed below to create this kind of website from scratch.\nStep 1) In RStudio, go to the File tab in the menu bar and select New Project…\n\n\n\nStep 2) Choose the type of directory that will contain your project. Assuming that you are starting from scratch, then choose New Directory.\n\n\n\nStep 3) The next step asks you to choose the type of project, in this case we are going to use a Quarto Website.\n\n\n\nStep 4) Next you have to choose a name, and location, for the directory of your Quarto website:\n\n\n\nStep 5) When you click on the button Create, RStudio will start a new session, in which the working directory will be the specified directory of your website. Also, you will be able to see a handful of files:\n\nYou will need to replace the content of index.qmd with the content of your Closeread story.\nAlso, assuming that all you want is to publish your Closeread story and nothing else, then you will need to delete the about.qmd file, as well as customize the content of the yaml file _quarto.yml\nPreviewing the website. In the Terminal, you can use the quarto preview command to see a preview of the website.\n\n\nTerminal\n\n# to preview website\nquarto preview\n\nRendering the website. To render the website, use the quarto render command.\n\n\nTerminal\n\n# to render website\nquarto render\n\nPublishing the website. Use the quarto publish command to publish content rendered on your local machine.\n\n\nTerminal\n\n# to publish website to Quarto Pub\nquarto publish quarto-pub\n\n\n\nMore about the command quarto publish\nThe quarto publish command is the easiest way to publish locally rendered content. From the directory where your project is located, execute the quarto publish command for Quarto Pub. This is super simple, just run the following command in the terminal (assuming the working directory is the one where your project is located)\n\n\nTerminal\n\nquarto publish quarto-pub\n\nIf you haven’t published to Quarto Pub before, the publish command will prompt you to authenticate. After confirming that you want to publish, your content will be rendered and deployed, and then a browser opened to view your site.\n_publish.yml file. The publication process will create a special yaml file called _publish.yml. The _publish.yml file is used to specify the publishing destination. This file is automatically created (or updated) whenever you execute the quarto publish command, and is located within the project or document directory."
+  },
+  {
+    "objectID": "modules/09-style-formatting.html",
+    "href": "modules/09-style-formatting.html",
+    "title": "9) Style Formatting",
+    "section": "",
+    "text": "In this module, you’ll learn about the style formatting or guidelines that dictate how a Closeread document should look. The goal is to describe the different formatting options available in Closeread to customize the visual appearance of elements such as the background of a cr-section, the font of the text in stickies, as well as the format of the narrative elements.",
     "crumbs": [
       "Modules",
-      "6) Focus Effects"
+      "9) Style Formatting"
     ]
   },
   {
-    "objectID": "modules/06-focus-effects.html#scaling",
-    "href": "modules/06-focus-effects.html#scaling",
-    "title": "6) Focus Effects",
-    "section": "Scaling",
-    "text": "Scaling\nTo shrink or enlarge a sticky element you use the scale-by effect. This attribute takes non-negative values. The figure below depicts the resulting effect of scale-by when used on text and images:\n\n\n\nFigure 6.1\n\n\nThe scaling effect works on text (including math equations, and code) and images. Keep in mind that you include this focus effect by attaching it to a trigger, for example:\n\n\nScaling Effect\n\nNormal scale @cr-sticky\n\nShrinking effect [@cr-sticky]{scale-by=\"0.5\"}\n\nEnlarging effect [@cr-sticky]{scale-by=\"2\"}\n\nNormal size again @cr-sticky",
+    "objectID": "modules/09-style-formatting.html#introduction",
+    "href": "modules/09-style-formatting.html#introduction",
+    "title": "9) Style Formatting",
+    "section": "Introduction",
+    "text": "Introduction\nAs you know, Closeread documents come with default settings that give them a rudimentary look. Personally, I find the default format to be quite limited, and I don’t think I would ever create a Closeread document without tuning its overall look.\nThe good news is that you can customize various aspects of the main components in a Closeread document. I should say that the catalog of customization styles is rather narrow, but the provided options can take you very far if you understand their roles and the values they can take.\nCurrently, there is about a dozen of formatting options available in Closeread, and most of them have to do with styling of narrative components, which in turn depend on the type of layout (e.g. sidebar or overlay).\nOne important thing to keep in mind is that a Closeread document will generally follow the Quarto theme you use. If you don’t specify a theme, then the default theme will be used. To further customize your Closeread document, you can always add your own CSS or SCSS stylesheets.\n\nHow to customize formatting styles\nCustomizing formatting options is a fairly straightforward process. All you have to do is specify the desired option in the cr-style key, in the yaml header (or frontmatter).\nFor example, say we are using a sidebar layout (default layout) and we want to change the background color of the sidebar to black, and also set the color of the narrative text to white—expressed in hexadecimal notation #ffffff. This is done as follows:\n---\ntitle: \"Hello Closeread\"\nformat:\n  closeread-html:\n    cr-style:\n      narrative-background-color-sidebar: black\n      narrative-text-color-sidebar: \"#ffffff\"\n---\nI’ve found it easy to describe the different formatting options depending on what type of layout you are using: sidebar -vs- overlay. This is why I’ve decided to describe them in their own sections—see sections below—based on the chosen layout.",
     "crumbs": [
       "Modules",
-      "6) Focus Effects"
+      "9) Style Formatting"
     ]
   },
   {
-    "objectID": "modules/06-focus-effects.html#panning",
-    "href": "modules/06-focus-effects.html#panning",
-    "title": "6) Focus Effects",
-    "section": "Panning",
-    "text": "Panning\nTo move a sticky element you use the pan-to effect. This attribute takes a pair of x and y values that control the horizontal and vertical panning, respectively. The figure below depicts the resulting effect of pan-to—using different units—when applied on an image (but you cal also apply it on text):\n\n\n\nFigure 6.2\n\n\nNotice that the value given to pan-to consists of two values separated by a comma: e.g. pan-to=\"20px,0px\". The first value is the x-value that controls the amount of horizontal movement. The second value is the y-value that determines the amount of vertical movement.\nx-component:\n\nnegative values: west (or left)\npositive values: east (or right)\n\ny-component:\n\nnegative values: north (or up)\npositive values: south (or down)\n\nInterestingly, x and y values can be provided in a variety of units:\n\npixels: pan-to=\"20px,0px\"\npercentages: pan-to=\"10%,0%\"\nmillimeters: pan-to=\"5mm,0mm\"\ninches: pan-to=\"0.5in,0in\"\ncentimeters: pan-to=\"2cm,0cm\"\ncharacters: pan-to=5ch,0ch\"\nother units of measurement in HTML and CSS such as em, ex, rem\n\nIn fact, values of pan-to can be any of the options in the analogous translate() CSS function.\nOf course, you can give x-and-y values different from zero to simultaneously move up-down and left-right, for instance:\n\n\n\nFigure 6.3\n\n\nThe panning effect also works on text (including a math equation, and code) and images. Again, you include this focus effect by attaching it to a trigger, for example:\n\n\nPanning Effect\n\nNormal position @cr-sticky\n\nPanning to the left [@cr-sticky]{pan-to=\"-10px,0px\"}\n\nPanning to the right [@cr-sticky]{pan-to=\"0px,10px\"}\n\nNormal position again @cr-sticky",
+    "objectID": "modules/09-style-formatting.html#styling-sidebar-layouts",
+    "href": "modules/09-style-formatting.html#styling-sidebar-layouts",
+    "title": "9) Style Formatting",
+    "section": "Styling Sidebar Layouts",
+    "text": "Styling Sidebar Layouts\nThe following figure illustrates the appearance of a rendered document using sidebar layout. I’ve superimposed the different formatting options to indicate what elements can be affected by them.\n\n\n\nFigure 9.1\n\n\n\nsection-background-color: the background color used for Closeread sections.\nnarrative-background-color-sidebar: the background color used for the narrative column (in sidebar layouts).\nnarrative-text-color-sidebar: the color of narrative text (in sidebar layouts).\nnarrative-sidebar-width: the width of the sidebar. Defaults to 1fr: the sticky content is 2fr in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different fr value, a fixed value, or a combination of the two using minmax().\nnarrative-font-family: the font(s) used for narrative content (regardless of the chosen layout).\nnarrative-font-size: the font size used for narrative content (regardless of the chosen layout).\npoem-font-family: the font(s) used for lineblock poems (i.e. in sticky elements).\n\nHere’s a hypothetical example of what the yaml header of a qmd file could look like if you were to customize all the formatting options listed above:\n---\ntitle: \"Hello Closeread\"\nformat:\n  closeread-html:\n    cr-style:\n      section-background-color: \"#f7f6f5\"\n      narrative-background-color-sidebar: \"#525252\"\n      narrative-sidebar-width: minmax(400px, 1fr)\n      narrative-text-color-sidebar: \"#ffffff\"\n      narrative-font-family: 'Georgia, \"Times New Roman\", Times, serif'\n      narrative-font-size: 2em\n      poem-font-family: 'Georgia, \"Times New Roman\", Times, serif'\n---",
     "crumbs": [
       "Modules",
-      "6) Focus Effects"
+      "9) Style Formatting"
     ]
   },
   {
-    "objectID": "modules/06-focus-effects.html#highlighting",
-    "href": "modules/06-focus-effects.html#highlighting",
-    "title": "6) Focus Effects",
-    "section": "Highlighting",
-    "text": "Highlighting\nTo highlight certain lines of text in a sticky element you use the highlight effect. The way highlight works is by emphasizing certain parts of text (e.g. a certain line or certain words) while de-emphasizing the rest of the text, as illustrated in the following diagram:\n\n\n\nFigure 6.4\n\n\nSince code is also considered to be text, you can also highlight lines of code:\n\n\n\nFigure 6.5\n\n\nThe scaling effect works on text (including math equations, and code) and images. Keep in mind that you include this focus effect by attaching it to a trigger, for example:\n\n\nHighlighting Effect\n\nNormal text @cr-sticky\n\nHighlighting first line [@cr-sticky]{highlight=\"1\"}\n\nHighlighting lines 2-4 [@cr-sticky]{highlight=\"2-4\"}\n\nNormal text again @cr-sticky\n\n\nHighlighting certain parts (or words)\nWhen you provide a numeric value to the highlight effect, e.g.  [@cr-sticky]{highlight=\"1\"}, the entire line of text will be highlighted. Often, though, you may be interested in highlighting just a single word, or some part of a line of text. To obtain this type of highlighting you have to use a special type of sticky referred to as a named span and its corresponding span highlighting effect, as shown in the next figure:\n\n\n\nFigure 6.6\n\n\nLet’s discuss what’s going on in this highlighting example. There is one sticky component #cr-sticky involving four lines of text; notice that each line of text starts with the vertical bar | in order to render the text line by line. Another thing to notice is the named span [fox]{#cr-fox} defined within the sticky. This is a kind of “sub-sticky” or “inner sticky” that only affects the word fox. Regarding the triggers, we have a first trigger @cr-sticky that will make the sticky appear, and then we have a second trigger [@cr-sticky]{highlight=\"cr-fox\"} which will cause the highlighting effect on the named span which in this case corresponds to the word fox.",
+    "objectID": "modules/09-style-formatting.html#styling-overlay-layouts",
+    "href": "modules/09-style-formatting.html#styling-overlay-layouts",
+    "title": "9) Style Formatting",
+    "section": "Styling Overlay Layouts",
+    "text": "Styling Overlay Layouts\nThe following figure illustrates the appearance of a rendered document using overlay layout. I’ve superimposed the different formatting options to indicate what elements can be affected by them.\n\n\n\nFigure 9.2\n\n\n\nnarrative-background-color-overlay: the background color used for narrative text blocks (of overlay layouts).\nnarrative-text-color-overlay: the color of narrative text (for overlay layouts).\nnarrative-border-radius: the border radius of narrative text blocks (for overlay layouts).\nnarrative-overlay-max-width: the maximum width of narrative text blocks (for overlay layouts).\nnarrative-overlay-min-width: the minimum width of narrative text blocks (for overlay layouts). The recommendation is to leave this one alone because setting it can cause mobile layout issues.\nnarrative-outer-margin: the margin pushing narrative content in from the left (on overlay-left layouts) or right edge (on overlay-right)\nnarrative-font-size: the font size used for narrative content (regardless of the chosen layout).\npoem-font-family: the font(s) used for lineblock poems (i.e. in sticky elements).\nsection-background-color: the background color used for Closeread sections.\n\nHere’s a hypothetical example of what the yaml header of a qmd file could look like if you were to customize all the formatting options listed above:\n---\ntitle: \"Hello Closeread\"\nformat:\n  closeread-html:\n    cr-style:\n      section-background-color: \"#f7f6f5\"\n      narrative-background-color-overlay: \"#525252\"\n      narrative-overlay-min-width: \"300px\"\n      narrative-overlay-max-width: \"600px\"\n      narrative-outer-margin: \"#ffffff\"\n      narrative-font-family: 'Arial, sans-serif'\n      narrative-font-size: 2em\n      poem-font-family: ', \"Times New Roman\", Times, serif'\n---",
     "crumbs": [
       "Modules",
-      "6) Focus Effects"
-    ]
-  },
-  {
-    "objectID": "modules/06-focus-effects.html#zooming",
-    "href": "modules/06-focus-effects.html#zooming",
-    "title": "6) Focus Effects",
-    "section": "Zooming",
-    "text": "Zooming\nWith stickies consisting of text or code, in addition to all the previous effects, you scan also focus the view on a line number or named span with zoom-to\n\n\nZooming Effect\n\nNormal text @cr-sticky\n\nZooming to first line [@cr-sticky]{zoom-to=\"1\"}\n\nZooming to named span [@cr-sticky]{zoom-to=\"cr-fox\"}\n\nNormal text again @cr-sticky",
-    "crumbs": [
-      "Modules",
-      "6) Focus Effects"
-    ]
-  },
-  {
-    "objectID": "modules/06-focus-effects.html#scale-to-fill",
-    "href": "modules/06-focus-effects.html#scale-to-fill",
-    "title": "6) Focus Effects",
-    "section": "Scale to Fill",
-    "text": "Scale to Fill\nIn addition to the four focus effects previously described, there is an extra effect called scale-to-fill. The purpose of this effect is to stretch a sticky (e.g. text or image) in a way that fills the entire region containing such sticky, as depicted in the next figure.\n\n\n\nFigure 6.7\n\n\nscale-to-fill is a special kind of effect because instead of attaching it to a trigger, you attach it as an attribute when defining a sticky, for example:\n\n\nScale to fill\n\nTriggering text @cr-sticky\n\n:::{#cr-sticky .scale-to-fill}\n| The quick\n| brown fox\n| jumps over\n| the lazy dog\n:::\n\nWhile scale-to-fill has some resemblance to scale-by, they are not the same. Unlike scale_by, when scale-to-fill is triggered, the sticky will fade in and transform such that it fills the viewport.",
-    "crumbs": [
-      "Modules",
-      "6) Focus Effects"
+      "9) Style Formatting"
     ]
   },
   {
@@ -380,7 +412,7 @@
     "href": "modules/index.html",
     "title": "Modules",
     "section": "",
-    "text": "Table of Contents\n\n\n\n\n\n\n1) Setup\n\n\n\n\n2) Introduction\n\n\n\n\n3) Scrollytelling with Text\n\n\n\n\n4) Scrollytelling with Images\n\n\n\n\n5) Scrollytelling with Equations\n\n\n\n\n6) Focus Effects\n\n\n\n\n7) Default Layout\n\n\n\n\n8) Layout Options\n\n\n\n\n9) Style Formatting\n\n\n\n\n\nNo matching items",
+    "text": "Table of Contents\n\n\n\n\n\n\n1) Setup\n\n\n\n\n2) Introduction\n\n\n\n\n3) Minimal Closeread with Text\n\n\n\n\n4) Minimal Closeread with Images\n\n\n\n\n5) Minimal Closeread with Equations\n\n\n\n\n6) Focus Effects\n\n\n\n\n7) Default Layout\n\n\n\n\n8) Layout Options\n\n\n\n\n9) Style Formatting\n\n\n\n\n10) Story with Illustrations\n\n\n\n\n14) Sharing Your Closeread Stories\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Modules"
     ]
@@ -388,111 +420,140 @@
   {
     "objectID": "modules/03-intro-text.html",
     "href": "modules/03-intro-text.html",
-    "title": "3) Scrollytelling with Text",
+    "title": "3) Minimal Closeread with Text",
     "section": "",
     "text": "In the preceding module, you got introduced to the main components of a Closeread document using a minimalist example. In this module, we provide another basic example of a text-only scrollytelling story.",
     "crumbs": [
       "Modules",
-      "3) Scrollytelling with Text"
+      "3) Minimal Closeread with Text"
     ]
   },
   {
     "objectID": "modules/03-intro-text.html#example",
     "href": "modules/03-intro-text.html#example",
-    "title": "3) Scrollytelling with Text",
+    "title": "3) Minimal Closeread with Text",
     "section": "Example",
     "text": "Example\nBelow is an example of a qmd file with some content. Copy and paste it into a qmd document so that you can preview it or render it in all its Closeread glory.\n\n\nexample1.qmd\n\n---\ntitle: My first closeread document\nformat: closeread-html\n---\n\n::::{.cr-section}\n\nSection with content to be handled by closeread.\n\n:::{#cr-sticky}\nText that will be treated as the sticky element.\n\nThis text will be _stuck_ as you scroll up and down.\n:::\n\nText that triggers the sticky element. @cr-sticky\n\nMore text that will appear next to the sticky element \nas you scroll down.\n\nLast sentence that will show up next to the sticky element.\n\n::::\n\n\n\nTo render the document of example1.qmd, type the following command in your Terminal:\n\n\nTerminal\n\nquarto render\n\nAlternatively, you can preview the output by running the following command in your terminal:\n\n\nTerminal\n\nquarto preview\n\nAssuming that you are using RStudio, you can also click the Render button (see figure below).",
     "crumbs": [
       "Modules",
-      "3) Scrollytelling with Text"
+      "3) Minimal Closeread with Text"
     ]
   },
   {
     "objectID": "modules/03-intro-text.html#whats-going-on",
     "href": "modules/03-intro-text.html#whats-going-on",
-    "title": "3) Scrollytelling with Text",
+    "title": "3) Minimal Closeread with Text",
     "section": "What’s going on?",
     "text": "What’s going on?\nLet’s review the content of example1.qmd to gain a basic understanding of the primary Closeread components. Specifically, we are going to describe the following parts:\n\nyaml header format\ncloseread section\nsticky element\ntrigger action\n\n\nYAML header format\nThe first thing to notice involves the yaml header. To be more precise, the specified format of the qmd document must be declared as closeread-html. As you would expect, this is what allows quarto to render the qmd file as a special type of HTML document using the Closeread scrollytelling framework.\n---\ntitle: My first closeread document\nformat: closeread-html\n---\n\n\nCloseread Section\nThe next thing to notice is the closeread section defined by the four consecutive colons, and the curly braces containing the id .cr-section.\n::::{.cr-section}\n\n::::\nSimply put, a cr-section is what Closeread uses to do its magic. Think of this section as setting the boundaries for the content (e.g. text, code, images) that Closeread will take care of.\nAs you can tell, a closeread section, or cr-section for short, is started with an opening div, in this example ::::{.cr-section}, and is finished with a closing div of ::::\nEvery section needs a name, for instance: {.cr-section1} or {.cr-my-section} or {.cr-introduction}. The important thing is the use of { }, the prefix .cr- and the individual (and unique) name of the section.\n\n\nSticky Element\nInside a section you define one or more sticky components, or stickies in Closeread parlance. They also need to be surrounded by a div of ::: and a label or name {#cr-sticky}\n:::{#cr-sticky}\nText that will be treated as the sticky element.\n\nThis text will be _stucked_ as you scroll up and down.\n:::\nA sticky, as the name indicates, is the element (e.g. text, code, image) that will get stucked as you scroll up and down the HTML document.\n\n\n\n\n\n\nImportant\n\n\n\nDo not confuse the syntax of a cr-section with the syntax of a sticky.\n\nThis is the syntax of a section: {.cr-section}\nThis is the syntax of a sticky: {#cr-sticky}\n\n\n\n\n\nTrigger\nThe third major component is a closeread trigger. This type of component is defined with the syntax @cr-sticky. In other words, a trigger refers to a sticky by pre-appending @ to the name of the sticky. Note that the trigger is not wrapped inside curly braces.\nText that triggers the sticky element. @cr-sticky\nWhat is the role of a trigger? A trigger is what Closeread uses to display a sticky. As you scroll through the HTML document, the sticky component will be displayed the moment you hit the text of the trigger. In turn, the sticky will remain stuck until you reach the end of the HTML document or until another trigger calls a different sticky element.\n\n\nTake a look\nYou can take a look at this example here.",
     "crumbs": [
       "Modules",
-      "3) Scrollytelling with Text"
+      "3) Minimal Closeread with Text"
     ]
   },
   {
     "objectID": "modules/04-intro-images.html",
     "href": "modules/04-intro-images.html",
-    "title": "4) Scrollytelling with Images",
+    "title": "4) Minimal Closeread with Images",
     "section": "",
     "text": "In the preceding modules, you got introduced to the main components of a Closeread document using two simple examples containing only text. In this module, we continue our introductory journey with another basic document, this time containing text and images.",
     "crumbs": [
       "Modules",
-      "4) Scrollytelling with Images"
+      "4) Minimal Closeread with Images"
     ]
   },
   {
     "objectID": "modules/04-intro-images.html#working-with-images",
     "href": "modules/04-intro-images.html#working-with-images",
-    "title": "4) Scrollytelling with Images",
+    "title": "4) Minimal Closeread with Images",
     "section": "Working with Images",
     "text": "Working with Images\nFor our next example, we’ll use a couple of images: the Quarto logo, and the R logo, shown below.\n\n\n\n\n\nQuarto logo\n\n\n\n\n\n\nR logo\n\n\n\n\nThe PNG files with the images of the logos are available in the URLs listed below:\n\nhttps://quarto.org/quarto.png\nhttps://www.r-project.org/Rlogo.png\n\n\n\nInsert Image. With the URL of the image, you can insert the logo in a quarto document with the following markdown syntax:\n![](https://quarto.org/quarto.png)\nAlternatively, you can download the PNG file of the logo into your working directory, and then insert it into a quarto document with a similar syntax, for example:\n![](quarto.png)\n\n\nAdding Caption. Inside the brackets, you can add an optional caption:\n![Some caption](quarto.png)\n\n\nFigure Dimensions. Likewise, you can modify the size of the image by appending attributes width and/or height inside curly braces:\n![Some caption](quarto.png){width=50%}\n\n\nFigure Alignment. You can also change the alignment with the attribute fig-align which takes values \"left\", \"center\", and \"right\"\n![Some caption](quarto.png){width=50% fig-align=\"center\"}\n\n\n\n\n\n\nImages in Quarto docs\n\n\n\nTo know more about figures in Quarto documents, take a look at: https://quarto.org/docs/authoring/figures.html",
     "crumbs": [
       "Modules",
-      "4) Scrollytelling with Images"
+      "4) Minimal Closeread with Images"
     ]
   },
   {
     "objectID": "modules/04-intro-images.html#example",
     "href": "modules/04-intro-images.html#example",
-    "title": "4) Scrollytelling with Images",
+    "title": "4) Minimal Closeread with Images",
     "section": "Example",
     "text": "Example\nBelow is an example of a qmd file with some content. Copy and paste it into a qmd document so that you can preview it or render it in all its Closeread glory.\n\n\nexample2.qmd\n\n---\ntitle: My second closeread document\nformat: closeread-html\n---\n\n::::{.cr-section}\n\nWhat is __Quarto__? What is __R__?\n\n:::{#cr-quarto}\n![](https://quarto.org/quarto.png)\n:::\n\nQuarto is an open-source scientific and \ntechnical publishing system. @cr-quarto\n\nQuarto lets you author documents using \nplain text markdown in your favorite editor.\n\nYou can use quarto documents with R. @cr-rlogo\n\n\n:::{#cr-rlogo}\n![](https://www.r-project.org/Rlogo.png)\n:::\n\nR is a free software environment for \nstatistical computing and graphics. \n\nR is available on Unix, MacOS, and Windows.\n\n::::",
     "crumbs": [
       "Modules",
-      "4) Scrollytelling with Images"
+      "4) Minimal Closeread with Images"
     ]
   },
   {
     "objectID": "modules/04-intro-images.html#whats-going-on",
     "href": "modules/04-intro-images.html#whats-going-on",
-    "title": "4) Scrollytelling with Images",
+    "title": "4) Minimal Closeread with Images",
     "section": "What’s going on?",
     "text": "What’s going on?\nLet’s review the content of example2.qmd describing the primary Closeread components:\n\nyaml header format\ncloseread section\nsticky element\ntrigger action\n\n\nYAML header format\nAs you know, in the yaml header we specify the format of the qmd document to closeread-html.\n---\ntitle: My second closeread document\nformat: closeread-html\n---\n\n\nCloseread Section\nThe next thing to notice is the closeread section defined by the four consecutive colons, and the curly braces containing the id .cr-section.\n::::{.cr-section}\n\n::::\n\n\nSticky Elements\nInside the cr-section we are defining two sticky components. Remember that every sticky is surrounded by a div ::: and a label or name.\nThe first sticky, #cr-quarto, is dedicated to the quarto logo. To be more specific, this sticky corresponds to the markdown element that inserts the png image of Quarto’s logo.\n:::{#cr-quarto}\n![](https://quarto.org/quarto.png)\n:::\nThe second sticky, #cr-rlogo, is dedicated to the R logo.\n:::{#cr-rlogo}\n![](https://www.r-project.org/Rlogo.png)\n:::\n\n\nNarrative and Triggers\nHaving established the cr-section as well as the stickies, the next step involves specifying the narrative and the triggers to launch the stickies.\nIn this example we have 2 triggers, one for each sticky.\nThe first trigger, @cr-quarto, is the one that will make the Quarto logo to get stuck until the next trigger gets activated. This first trigger is located at the end of the second paragraph:\nQuarto is an open-source scientific and \ntechnical publishing system. @cr-quarto\nThe second trigger, @cr-rlogo, is the one that will make the R logo to get stuck. This trigger is located at the end of the fourth paragraph:\nYou can use quarto documents with R. @cr-rlogo\n\n\nTake a look\nYou can take a look at this first example here.",
     "crumbs": [
       "Modules",
-      "4) Scrollytelling with Images"
+      "4) Minimal Closeread with Images"
     ]
   },
   {
     "objectID": "modules/05-intro-math.html",
     "href": "modules/05-intro-math.html",
-    "title": "5) Scrollytelling with Equations",
+    "title": "5) Minimal Closeread with Equations",
     "section": "",
     "text": "So far we’ve introduced a couple of basic Closeread documents. Our first example used only text. Our second example involved text and images. But what about including some math equations in our scrollytelling story? In this module, I show you a third basic example that involves text and some math equations written with LaTeX.",
     "crumbs": [
       "Modules",
-      "5) Scrollytelling with Equations"
+      "5) Minimal Closeread with Equations"
     ]
   },
   {
     "objectID": "modules/05-intro-math.html#example",
     "href": "modules/05-intro-math.html#example",
-    "title": "5) Scrollytelling with Equations",
+    "title": "5) Minimal Closeread with Equations",
     "section": "Example",
     "text": "Example\nBelow is an example of a qmd file with some content. Copy and paste it into a qmd document so that you can preview it or render it in all its Closeread glory.\n\n\nexample4.qmd\n\n---\ntitle: My third closeread document\nformat: closeread-html\n---\n\nThis is a scrollytelling story containing \nsome math equations written with LaTeX.\n\n::::{.cr-section}\n\nSuppose you have some amount of money $P$, \nand you'll invest it for $n$ \nyears, obtaining an annual return $r$.\n\nHow much money will you have $n$ years from now?\n\nTo find the answer you have to calculate the __Future Value__ \ngiven by the following formula: @cr-fv\n\n:::{#cr-fv}\n$$\nFV = P \\times (1 + r)^n\n$$\n:::\n\n$FV$ is the Future Value\n\n$P$ is the Principal, the amount of money you'll invest.\n\n$r$ is the annual interest rate, or rate of return.\n\n$n$ is the number of years.\n\n\nWhat would be the future value of $10,000 invested for 10 years, \nassuming an annual return of 7%? @cr-investment\n\n:::{#cr-investment}\n\\begin{align*}\nP &= 10,000 \\\\\n& \\\\\nr &= 0.07 \\\\\n& \\\\\nn &= 10\n\\end{align*}\n:::\n\nLet's do the math: @cr-math\n\n:::{#cr-math}\n\\begin{align*}\nFV &= 10,000 \\times (1 + 0.07)^{10} \\\\\n   &\n\\end{align*}\n:::\n\nThe answer is: @cr-answer\n\n:::{#cr-answer}\n\\begin{align*}\nFV &= 10,000 \\times (1 + 0.07)^{10} \\\\\n   &= 19,671.51\n\\end{align*}\n:::\n\n::::",
     "crumbs": [
       "Modules",
-      "5) Scrollytelling with Equations"
+      "5) Minimal Closeread with Equations"
     ]
   },
   {
     "objectID": "modules/05-intro-math.html#whats-going-on",
     "href": "modules/05-intro-math.html#whats-going-on",
-    "title": "5) Scrollytelling with Equations",
+    "title": "5) Minimal Closeread with Equations",
     "section": "What’s going on?",
     "text": "What’s going on?\nLet’s briefly discuss the content of example4.qmd focusing on the stickies and the triggers.\n\nSticky Elements\nCompared to the previous examples, the current one has four sticky components. After careful inspection, you should be able to notice that all the stickies consists of LaTeX math equations.\nThe first sticky, #cr-fv, introduces the equation to calculate the Future Value (FV):\n:::{#cr-fv}\n$$\nFV = P \\times (1 + r)^n\n$$\n:::\nThe second sticky, #cr-investment, introduces the symbols and values to be used in the equation of the Future Value (FV):\n:::{#cr-investment}\n\\begin{align*}\nP &= 10,000 \\\\\n& \\\\\nr &= 0.07 \\\\\n& \\\\\nn &= 10\n\\end{align*}\n:::\nThe third sticky, #cr-math, is dedicated to do the actual math involved in the FV equation:\n:::{#cr-math}\n\\begin{align*}\nFV &= 10,000 \\times (1 + 0.07)^{10} \\\\\n   &\n\\end{align*}\n:::\nAnd the fourth and last sticky, provides the final answer with the computed future value:\n:::{#cr-answer}\n\\begin{align*}\nFV &= 10,000 \\times (1 + 0.07)^{10} \\\\\n   &= 19,671.51\n\\end{align*}\n:::\n\n\nNarrative and Triggers\nAs for the narrative and the triggers, we encounter several paragraphs. The first paragraph (i.e. 1st paragraph inside the cr-section) is the introductory text and it has no trigger.\nThe next paragraph poses the main question, and it also has no trigger.\nIn turn, the third paragraph introduces the equation fo the Future Value, and consequently comes with the first trigger @cr-fv.\nThe following lines of text are one-line paragraphs listing the terms of the FV equation, none of them with triggers.\nAfter that, we have another paragraph with the second trigger @cr-investment.\nThen there is one more paragraph with the third trigger @cr-math.\nAnd finally there is the last paragraph with the fourth trigger @cr-answer.\n\n\nTake a look\nYou can take a look at this example here.",
     "crumbs": [
       "Modules",
-      "5) Scrollytelling with Equations"
+      "5) Minimal Closeread with Equations"
+    ]
+  },
+  {
+    "objectID": "modules/11-story-photo.html",
+    "href": "modules/11-story-photo.html",
+    "title": "11) Photo-based Story",
+    "section": "",
+    "text": "This module is associated with the example A Bicycle Like No Other\nYou can use Closeread to tell a photo-based story. And this is precisely what I did for the above example.\nSearching among my collection of digital albums, I dug up this old photo of a unique bicycle that I took more than a decade ago when I spent a year living in France.",
+    "crumbs": [
+      "Modules",
+      "11) Photo-based Story"
+    ]
+  },
+  {
+    "objectID": "modules/11-story-photo.html#journey",
+    "href": "modules/11-story-photo.html#journey",
+    "title": "11) Photo-based Story",
+    "section": "Journey",
+    "text": "Journey\nI wanted to take the viewer through a visual journey, traversing some of the parts in the bicycle that I found interesting. To be more precise, I wanted to concentrate on the colorful elements of the bike.\nAfter some careful inspection of the bike structure, and the way its elements were decorated, I decided to choose about 10 parts, which are highlighted in yellow polygons in the figure below.\n\n\n\nFig 11.2) Focal points"
+  },
+  {
+    "objectID": "modules/11-story-photo.html#deciding-the-visual-journey",
+    "href": "modules/11-story-photo.html#deciding-the-visual-journey",
+    "title": "11) Photo-based Story",
+    "section": "Deciding the Visual Journey",
+    "text": "Deciding the Visual Journey\nI wanted to take the viewer through a visual journey, traversing some of the parts in the bicycle that I found interesting. To be more precise, I wanted to concentrate on the colorful elements of the bike.\n\nFocal Points\nAfter some careful inspection of the bike structure, and the way its elements were decorated, I decided to choose about 10 parts, which are highlighted in yellow polygons in the figure below. They were basically:\n\nthe panniers\nthe various parts of the frame, especially those wrapped in yarns\nthe headlight\nthe saddle\nand the kickstand\n\n\n\n\nFig 11.2) The focal points of my story.\n\n\n\n\nPanning Order\nGiven the angle and perspective in which I took the photo, and also the position in which the bicycle is standing, I also opted for a lateral movement from left to right. This required using focus effect pan-to.\n\n\n\nFig 11.3) Panning order.",
+    "crumbs": [
+      "Modules",
+      "11) Photo-based Story"
     ]
   }
 ]

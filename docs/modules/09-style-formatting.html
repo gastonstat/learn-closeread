@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-79bb3942e891885f9f7af119cd221462.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4802cb0978903613ce0bc2fb343dca47.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7d4d77ebace1d2cdbb25a93f93cc11a3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -187,19 +187,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/03-intro-text.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3) Scrollytelling with Text</span></a>
+ <span class="menu-text">3) Minimal Closeread with Text</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/04-intro-images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4) Scrollytelling with Images</span></a>
+ <span class="menu-text">4) Minimal Closeread with Images</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../modules/05-intro-math.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5) Scrollytelling with Equations</span></a>
+ <span class="menu-text">5) Minimal Closeread with Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -301,14 +301,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ul>
+<li><p><code>section-background-color</code>: the background color used for Closeread sections.</p></li>
 <li><p><code>narrative-background-color-sidebar</code>: the background color used for the narrative column (in sidebar layouts).</p></li>
 <li><p><code>narrative-text-color-sidebar</code>: the color of narrative text (in sidebar layouts).</p></li>
 <li><p><code>narrative-sidebar-width</code>: the width of the sidebar. Defaults to <code>1fr</code>: the sticky content is <code>2fr</code> in sidebar layouts, dividing the page 1:2 by default. You can adjust this ratio with a different <code>fr</code> value, a fixed value, or a combination of the two using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax"><code>minmax()</code></a>.</p></li>
 <li><p><code>narrative-font-family</code>: the font(s) used for narrative content (regardless of the chosen layout).</p></li>
 <li><p><code>narrative-font-size</code>: the font size used for narrative content (regardless of the chosen layout).</p></li>
 <li><p><code>poem-font-family</code>: the font(s) used for lineblock poems (i.e.&nbsp;in sticky elements).</p></li>
-<li><p><code>section-background-color</code>: the background color used for Closeread sections.</p></li>
 </ul>
+<p>Here’s a hypothetical example of what the yaml header of a <code>qmd</code> file could look like if you were to customize all the formatting options listed above:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hello Closeread"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">closeread-html</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cr-style</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">section-background-color</span><span class="kw">:</span><span class="at"> </span><span class="st">"#f7f6f5"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-background-color-sidebar</span><span class="kw">:</span><span class="at"> </span><span class="st">"#525252"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-sidebar-width</span><span class="kw">:</span><span class="at"> minmax(400px, 1fr)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-text-color-sidebar</span><span class="kw">:</span><span class="at"> </span><span class="st">"#ffffff"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-font-family</span><span class="kw">:</span><span class="at"> </span><span class="st">'Georgia, "Times New Roman", Times, serif'</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-font-size</span><span class="kw">:</span><span class="at"> 2em</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">poem-font-family</span><span class="kw">:</span><span class="at"> </span><span class="st">'Georgia, "Times New Roman", Times, serif'</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
 </section>
 <section id="styling-overlay-layouts" class="level2">
 <h2 class="anchored" data-anchor-id="styling-overlay-layouts">Styling Overlay Layouts</h2>
@@ -320,16 +336,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <ul>
-<li><p><code>narrative-background-color-overlay</code>: the background color used for narrative text blocks (in overlay layouts).</p></li>
-<li><p><code>narrative-text-color-overlay</code>: the color of narrative text (in overlay layouts).</p></li>
-<li><p><code>narrative-border-radius</code>: the border radius of narrative text blocks (in overlay layouts).</p></li>
-<li><p><code>narrative-overlay-max-width</code>: the maximum width of narrative text blocks (in overlay layouts).</p></li>
-<li><p><code>narrative-overlay-min-width</code>: the minimum width of narrative text blocks (in overlay layouts). The recommendation is to leave this one alone because setting it can cause mobile layout issues.</p></li>
+<li><p><code>narrative-background-color-overlay</code>: the background color used for narrative text blocks (of overlay layouts).</p></li>
+<li><p><code>narrative-text-color-overlay</code>: the color of narrative text (for overlay layouts).</p></li>
+<li><p><code>narrative-border-radius</code>: the border radius of narrative text blocks (for overlay layouts).</p></li>
+<li><p><code>narrative-overlay-max-width</code>: the maximum width of narrative text blocks (for overlay layouts).</p></li>
+<li><p><code>narrative-overlay-min-width</code>: the minimum width of narrative text blocks (for overlay layouts). The recommendation is to leave this one alone because setting it can cause mobile layout issues.</p></li>
 <li><p><code>narrative-outer-margin</code>: the margin pushing narrative content in from the left (on overlay-left layouts) or right edge (on overlay-right)</p></li>
 <li><p><code>narrative-font-size</code>: the font size used for narrative content (regardless of the chosen layout).</p></li>
 <li><p><code>poem-font-family</code>: the font(s) used for lineblock poems (i.e.&nbsp;in sticky elements).</p></li>
 <li><p><code>section-background-color</code>: the background color used for Closeread sections.</p></li>
 </ul>
+<p>Here’s a hypothetical example of what the yaml header of a <code>qmd</code> file could look like if you were to customize all the formatting options listed above:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hello Closeread"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">closeread-html</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cr-style</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">section-background-color</span><span class="kw">:</span><span class="at"> </span><span class="st">"#f7f6f5"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-background-color-overlay</span><span class="kw">:</span><span class="at"> </span><span class="st">"#525252"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-overlay-min-width</span><span class="kw">:</span><span class="at"> </span><span class="st">"300px"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-overlay-max-width</span><span class="kw">:</span><span class="at"> </span><span class="st">"600px"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-outer-margin</span><span class="kw">:</span><span class="at"> </span><span class="st">"#ffffff"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-font-family</span><span class="kw">:</span><span class="at"> </span><span class="st">'Arial, sans-serif'</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">narrative-font-size</span><span class="kw">:</span><span class="at"> 2em</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">poem-font-family</span><span class="kw">:</span><span class="at"> </span><span class="st">', "Times New Roman", Times, serif'</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
