@@ -1,0 +1,128 @@
+---
+title: "11) Photo-based Story"
+---
+
+This module is associated with the example [A Bicycle Like No Other](../examples/example5)
+
+![Fig 11.1) I bet you've never seen a bicycle like this one.](../examples/example5/bicycle.JPG){width="80%" fig-align="left"}
+
+You can use Closeread to tell a photo-based story. And this is precisely what I 
+did for the above example.
+
+Searching among my collection of digital albums, I dug up this old photo of
+a unique bicycle that I took more than a decade ago when I spent a year living
+in France.
+
+
+## Deciding the Visual Journey
+
+I wanted to take the viewer through a visual journey, traversing some of the
+parts in the bicycle that I found interesting. To be more precise, I wanted
+to concentrate on the colorful elements of the bike.
+
+
+### Focal Points
+
+After some careful inspection of the bike structure, and the way its elements
+were decorated, I decided to choose about 10 parts, which are highlighted 
+in yellow polygons in the figure below. They were basically:
+
+- the panniers
+- the various parts of the frame, especially those wrapped in yarns
+- the saddle
+- the headlight
+- and the kickstand
+
+![Fig 11.2) The focal points of my story.](images/cr-bike-parts.jpg){width="80%" fig-align="left"}
+
+
+### Panning Order
+
+Given the angle and perspective in which I took the photo, and also the position
+in which the bicycle is standing, I also opted for a lateral movement from
+left to right (1, 2, and 3), and then a small down-backward movement to the 
+kickstand (4). All of this required the use and combination of various 
+`pan-to` and `scale-by` focus effects.
+
+![Fig 11.3) Deciding the panning order.](images/cr-bike-pans.jpg){width="80%" fig-align="left"}
+
+
+### Some touches of color in the narrative
+
+As I was working on this story, having written the main text of the narrative, 
+and having assembled the closeread components (section, stickies, triggers),
+the voice of my inner visual designer kept murmuring that there was something
+missing. In particular, it was about the visual appearance of the narrative text. 
+I felt that the color of the text was missing some connection with all the 
+colors in the photo. 
+
+The main question I faced was: How can I or what can I do 
+to visually tighten the narrative with the specific colored parts of the bike 
+that I want the viewer to draw their attention to?
+
+I found the answer to this question by adding color to the words naming the
+colors. For example, when talking about "the __orange__ panniers" I colored
+the word _orange_, so that text looked 
+"the <span style="color:#fe964c">__orange__</span> panniers." Similarly with 
+the "pink straps" I colored _pink_ so that it looked as 
+"<span style="color:#f8566c">__pink__</span> straps."
+
+To change the color of a given word or set of characters I used a bit of HTML
+syntax with `<span>` marks and specifying a color to the attribute `style`:
+
+```html
+the <span style="color:#fe964c">__orange__</span> panniers
+```
+
+Notice the use of hexadecimal values, e.g. `#fe964c`, when specifying the 
+name of a color. You can also use standard names such as `red`, `blue`, or
+`green`, but I prefer to use hex-colors.
+
+
+### Layout and Format
+
+The layout of this Closeread story is the default one: `layout: sidebar-left`.
+
+However, there are some non-default formatting styles:
+
+- the background color of the cr-section is white,
+
+- the background color of the sidebar is `"#ede2cf"`,
+
+- the color of the narrative text is black,
+
+- the font-size of the narrative text is set to 1.8em,
+
+- the font-family of the narrative text uses a serif font.
+
+In particular, the background color of the sidebar that I chose was intentional:
+I wanted to have a color that matched the sand tones of the cobblestones in the 
+ground as well as the blocks of the wall.
+
+
+All of these formatting details are specified in the yaml header:
+
+```yaml
+---
+title: "A Bicycle Like No Other"
+subtitle: "by Gaston Sanchez" 
+format: 
+  closeread-html:
+    theme: cosmo
+    cr-style:
+      section-background-color: white
+      narrative-background-color-sidebar: "#ede2cf"
+      narrative-text-color-sidebar: black
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 1.8rem
+---
+```
+
+
+
+
+
+### Take a look
+
+You can take a look at the story of A Bicycle Like No Other
+<a href="../examples/example5/index.html" target="_blank">here</a>.
