@@ -1,0 +1,172 @@
+---
+title: "14) Sharing Your Closeread Stories"
+---
+
+So far we've covered a long way. But what about sharing your Closeread
+stories?
+
+In this module I will describe a couple of options to share your stories. 
+Please keep in mind that this is by no means an exhaustive list about the 
+various ways in which you can share your stories.
+
+
+## Share your HTML document
+
+Perhaps the simplest way to share your story is by sharing its rendered 
+HTML document. 
+
+While the rendered HTML document may look and work perfectly while served 
+locally in your computer, it is not quite ready to be shared with others,
+say, via email or through a file sharing service (e.g. google drive, Dropbox).
+
+In order to share your HTML file(s), you have to add `embed-resources: true`
+to the yaml header, for example:
+
+```yaml
+---
+title: "Hello Closeread"
+embed-resources: true
+format:
+  closeread-html:
+    cr-style:
+      section-background-color: "#f7f6f5"
+      narrative-background-color-overlay: "#525252"
+      narrative-font-family: 'Arial, sans-serif'
+      narrative-font-size: 2em
+      poem-font-family: ', "Times New Roman", Times, serif'
+---
+```
+
+The `embed-resources` produces a stand-alone HTML file with no external 
+dependencies. The resulting file should be "self-contained" in the sense that 
+it needs no external files and no net access to be displayed properly by a 
+browser. Which is what other viewers need to enjoy your story.
+
+
+## Sharing through Quarto Pub
+
+Another interesting option to share your Closered stories is by publishing 
+them to <a href="https://quartopub.com/" target="_blank">Quarto Pub</a>.
+
+![](images/share0-quarto-pub.png){width="80%"}
+
+_Quarto Pub_ is a free publishing service for content created with Quarto.
+In fact, _Quarto Pub_ is ideal not just for sharing a Closeread story but also
+for blogs, course or project websites, books, presentations, 
+and personal hobby sites.
+
+To use _Quarto Pub_ you need to create a free account. This is a straightforward
+process that can be completed by visiting _Quarto Pub_'s website (link below) 
+and following the __Sign Up__ instructions :
+
+<https://quartopub.com/>
+
+I should mention that all documents and sites published to _Quarto Pub_ are 
+__publicly visible__. So you should only publish content you wish to share 
+publicly. In addition, _Quarto Pub_ sites can be no larger than 100 MB and 
+have a _soft_ limit of 10 GB of bandwidth per month.
+
+There are a couple of ways to publish content to _Quarto Pub_. Here I will
+describe just one of them: using the `quarto publish` command. You can learn
+about the other option that uses a [GitHub Action](https://quarto.org/docs/publishing/quarto-pub.html#github-action) and 
+it assumed that you are familiar with GitHub.
+
+
+### Using a Quarto Website
+
+:::{.callout-note}
+Before attempting your first publish, be sure that you have created a free 
+_Quarto Pub_ account.
+:::
+
+Assuming that you have a _Quarto Pub_ account, my recommendation is to use a 
+Quarto Website to host your Closeread story. Follow the steps listed below
+to create this kind of website from scratch.
+
+__Step 1)__ In RStudio, go to the __File__ tab in the menu bar and select __New Project...__
+
+![](images/share1-new-project.png){width="60%"}
+
+\
+
+__Step 2)__ Choose the type of directory that will contain your project. Assuming that 
+you are starting from scratch, then choose __New Directory__.
+
+![](images/share2-create-project.png){width="60%"}
+
+\
+
+__Step 3)__ The next step asks you to choose the type of project, in this case we are 
+going to use a __Quarto Website__.
+
+![](images/share3-quarto-website.png){width="50%"}
+
+\
+
+__Step 4)__ Next you have to choose a name, and location, for the directory of your
+Quarto website:
+
+![](images/share4-website-name.png){width="50%"}
+
+\
+
+__Step 5)__ When you click on the button __Create__, RStudio will start a new session,
+in which the working directory will be the specified directory of your website.
+Also, you will be able to see a handful of files:
+
+![](images/share5-website-files.png){width="60%"}
+
+
+You will need to replace the content of `index.qmd` with the content of your
+Closeread story.
+
+__Previewing the website__. In the Terminal, you can use the `quarto preview` command to see a preview
+of the website.
+
+```{.markdown filename="Terminal"}
+# to preview website
+quarto preview
+```
+
+
+__Rendering the website__. To render the website, use the `quarto render` command.
+
+```{.markdown filename="Terminal"}
+# to render website
+quarto render
+```
+
+
+__Publishing the website__. Use the `quarto publish` command to publish content 
+rendered on your local machine.
+
+```{.markdown filename="Terminal"}
+# to publish website to Quarto Pub
+quarto publish quarto-pub
+```
+
+
+
+### More about the command `quarto publish`
+
+The quarto publish command is the easiest way to publish locally rendered content. 
+From the directory where your project is located, execute the `quarto publish` 
+command for _Quarto Pub_. This is super simple, just run the following command 
+in the terminal (assuming the working directory is the one where your project
+is located)
+
+```{.markdown filename="Terminal"}
+quarto publish quarto-pub
+```
+
+If you haven't published to _Quarto Pub_ before, the publish command will prompt 
+you to authenticate. After confirming that you want to publish, your content 
+will be rendered and deployed, and then a browser opened to view your site.
+
+__`_publish.yml` file.__ The publication process will create a special yaml 
+file called `_publish.yml`. The `_publish.yml` file is used to specify the 
+publishing destination. This file is automatically created (or updated) whenever 
+you execute the quarto publish command, and is located within the project or 
+document directory.
+
+
