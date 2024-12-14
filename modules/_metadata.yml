@@ -1,0 +1,5 @@
+format:
+  html:
+    toc: true
+    grid:
+      body-width: 700px
