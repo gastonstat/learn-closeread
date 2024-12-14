@@ -1,0 +1,147 @@
+---
+title: "10) Story with Illustrations"
+---
+
+This module is associated with the example [The Illustrated Guide to a Ph.D.](../examples/example4)
+
+The example in the above link is a Closeread story based on one of my favorite 
+blog posts written by Matt Might: The illustrated guide to a Ph.D.
+
+![Fig 10.1) Screenshot of Matt Might's famous post.](images/cr-story-phd1.png){width="80%"}
+
+In the process of learning and experimenting with Closeread, I was looking for
+a simple, yet captivating, example of a story with a highly visual nature. 
+And that's when my brain, somewhat unexpectedly, was able to remember 
+Matt's illustrated guide to a Ph.D. 
+
+The original post is in the following link which, if you haven't visited before,
+I highly encourage you to do it right now:
+<a href="https://matt.might.net/articles/phd-school-in-pictures/" target="_blank">matt.might.net/articles/phd-school-in-pictures/</a>
+
+The figure below doesn't do justice to the actual aspect of Matt's post, but I'm
+including it here so that you can have a bird's eye view of the entire story.
+
+![Fig 10.2) The 12 images and sentences of an illustrated guide to a Ph.D.](images/cr-story-phd2.png)
+
+As you can tell, the illustrated guide to a Ph.D. is a beautifully distilled 
+series of 12 illustrations and sentences explaining what a Ph.D. is all about.
+
+As soon as I went back to check Matt's post, I knew immediately that this was 
+a perfect fit to test Closeread's features, and therefore I decided to clone 
+it as my first Closeread proof-of-concept.
+
+
+### A Visual Story in 12 Images 
+
+Let me tell you a bit about my shameless cloning adventure. First, I downloaded 
+the 12 images (i.e. the associated 12 JPG files) to the same directory of the 
+`qmd` file that I used for this Closeread story.
+
+Then I frenetically typed---including copied-and-pasted---the content of the 
+story, and specified the structure of the closeread components (e.g. section, 
+stickies, and triggers).
+
+The content of the `qmd` file is fairly simple. Below is an excerpt of the
+closeread-section with the first four sentences, the first four triggers,
+and the corresponding first four stickies. As you can tell, each sticky 
+involves a JPG image.
+
+
+```{.markdown}
+::::{.cr-section}
+
+Imagine a circle that contains all of human knowledge. @cr-phd1
+
+:::{#cr-phd1}
+![](phd_001.jpg)
+:::
+
+
+By the time you finish elementary school, you know a little. @cr-phd2
+
+:::{#cr-phd2}
+![](phd_002.jpg)
+:::
+
+
+By the time you finish high school, you know a bit more. @cr-phd3
+
+:::{#cr-phd3}
+![](phd_003.jpg)
+:::
+
+
+With a bachelor's degree, you gain a specialty. @cr-phd4
+
+:::{#cr-phd4}
+![](phd_004.jpg)
+:::
+
+<ETC>
+
+::::
+```
+
+
+### Adapting dimensions of some images
+
+All the first 7 images have the same dimensions, and visually they all 
+correspond to the circle that contains all of human knowledge.
+
+Compared to the first 7 images, illustrations 8 to 11 are different. These 
+images depict zooming-in to the frontier of human knowledge (i.e. the border of 
+the circle). Because these images have different dimensions that the first 
+seven diagrams, I had to modify their `width` and `height` dimensions. The 
+following snippet shows the 8th sentence and the 8th sticky. Notice the 
+dimension attributes of the image.
+
+```{.markdown}
+You push at the boundary for a few years. @cr-phd8
+
+:::{#cr-phd8}
+![](phd_008.jpg){width="120%" height="120%"}
+:::
+```
+
+
+### Layout and Format
+
+The layout of this Closeread story is the default one: `layout: sidebar-left`.
+
+However, there are some non-default formatting styles:
+
+- the background color of the cr-section is white,
+
+- the background color of the sidebar is black,
+
+- the color of the narrative text is white,
+
+- the font-size of the narrative text is set to 1.8em,
+
+- the font-family of the narrative text uses a serif font.
+
+All of these formatting details are specified in the yaml header:
+
+```yaml
+---
+title: "The Illustrated Guide to a Ph.D."
+subtitle: 'by <a href="http://matt.might.net/">Matt Might</a>'
+format: 
+  closeread-html:
+    theme: cosmo
+    cr-style:
+      section-background-color: white
+      narrative-background-color-sidebar: "#000000"
+      narrative-text-color-sidebar: white
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 1.8rem
+      narrative-sidebar-width: minmax(420px, 1fr)
+---
+```
+
+
+
+### Take a look
+
+You can take a look at the illustrated guide to a Ph.D.
+<a href="../examples/example4/index.html" target="_blank">here</a>.
