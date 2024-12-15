@@ -92,8 +92,13 @@ correspond to the circle that contains all of human knowledge.
 Compared to the first 7 illustrations, images 8 to 11 are different. These 
 images depict zooming-in to the frontier of human knowledge (i.e. the border of 
 the circle). Because these images have different dimensions than the first 
-seven diagrams, I had to modify their `width` and `height` dimensions. The 
-following snippet shows the 8th sentence and the 8th sticky. Notice the 
+seven diagrams, I had to modify (enlarge) their `width` and `height` dimensions 
+so that they spanned the entire width of my screen. First I tried using a 
+`scale-to-fill` effect but the issue is that this uses a fade-in effect which
+I didn't like. That's why I opted for directly increasing the width and height 
+dimensions of the inserted image.
+
+The following snippet shows the 8th sentence and the 8th sticky. Notice the 
 dimension attributes of the image.
 
 ```{.markdown}
