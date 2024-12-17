@@ -62,7 +62,7 @@ that I want the viewer to draw their attention to?
 
 I found the answer to this question by adding color to the words naming the
 colors. For example, when talking about "the __orange__ panniers" I colored
-the word _orange_, so that text looked 
+the word _orange_, so that the text looked 
 "the <span style="color:#fe964c">__orange__</span> panniers." Similarly with 
 the "pink straps" I colored _pink_ so that it looked as 
 "<span style="color:#f8566c">__pink__</span> straps."
