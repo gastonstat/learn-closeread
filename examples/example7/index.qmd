@@ -60,7 +60,6 @@ storms_per_year |>
   labs(title = "Number of Storms per Year in the North Atlantic",
        x = "")
 ```
-
 :::
 
 

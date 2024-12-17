@@ -120,8 +120,6 @@ format:
 
 
 
-
-
 ### Take a look
 
 You can take a look at the story of A Bicycle Like No Other

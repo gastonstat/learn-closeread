@@ -60,7 +60,11 @@ ggplot() +
   coord_sf(xlim = c(-110,0), ylim = c(10, 60)) +
   geom_point(data = storms2010, 
              aes(x = long, y = lat), color = "#99999900") +
-  theme(panel.background = element_blank())
+  labs(title = "Storms starting in June") +
+  theme(title = element_text(color = "#99999900"),
+        axis.title.x = element_text(color = "black"),
+        axis.title.y = element_text(color = "black"),
+        panel.background = element_blank())
 ```
 :::
 
