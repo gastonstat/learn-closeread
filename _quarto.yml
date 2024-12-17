@@ -36,6 +36,7 @@ website:
           - modules/09-style-formatting.qmd
           - modules/10-story-guide2phd.qmd
           - modules/11-story-photo.qmd
+          - modules/13-story-storms.qmd
           - modules/14-sharing.qmd
 
   page-footer: 
