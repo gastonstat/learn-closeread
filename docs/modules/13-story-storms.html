@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5) Minimal Closeread with Equations</title>
+<title>13) Plots-based Story</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../modules/06-focus-effects.html" rel="next">
-<link href="../modules/04-intro-images.html" rel="prev">
+<link href="../modules/14-sharing.html" rel="next">
+<link href="../modules/11-story-photo.html" rel="prev">
 <link href="../assets/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/05-intro-math.html">5) Minimal Closeread with Equations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/13-story-storms.html">13) Plots-based Story</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -199,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/05-intro-math.html" class="sidebar-item-text sidebar-link active">
+  <a href="../modules/05-intro-math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">5) Minimal Closeread with Equations</span></a>
   </div>
 </li>
@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/13-story-storms.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/13-story-storms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">13) Plots-based Story</span></a>
   </div>
 </li>
@@ -263,9 +263,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
-  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on">What’s going on?</a>
+  <li><a href="#the-graphic-of-interest" id="toc-the-graphic-of-interest" class="nav-link active" data-scroll-target="#the-graphic-of-interest">The Graphic of Interest</a></li>
+  <li><a href="#storms-data" id="toc-storms-data" class="nav-link" data-scroll-target="#storms-data">Storms Data</a>
   <ul class="collapse">
+  <li><a href="#number-of-storms-per-year" id="toc-number-of-storms-per-year" class="nav-link" data-scroll-target="#number-of-storms-per-year">Number of Storms Per Year</a></li>
+  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart">Bar-chart</a></li>
+  </ul></li>
+  <li><a href="#deciding-the-visual-story" id="toc-deciding-the-visual-story" class="nav-link" data-scroll-target="#deciding-the-visual-story">Deciding the Visual Story</a>
+  <ul class="collapse">
+  <li><a href="#start-with-the-end-in-mind" id="toc-start-with-the-end-in-mind" class="nav-link" data-scroll-target="#start-with-the-end-in-mind">Start With the End in Mind</a></li>
+  <li><a href="#hiding-graphical-elements" id="toc-hiding-graphical-elements" class="nav-link" data-scroll-target="#hiding-graphical-elements">Hiding Graphical Elements</a></li>
   <li><a href="#take-a-look" id="toc-take-a-look" class="nav-link" data-scroll-target="#take-a-look">Take a look</a></li>
   </ul></li>
   </ul>
@@ -274,9 +281,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/05-intro-math.html">5) Minimal Closeread with Equations</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/index.html">Modules</a></li><li class="breadcrumb-item"><a href="../modules/13-story-storms.html">13) Plots-based Story</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">5) Minimal Closeread with Equations</h1>
+<h1 class="title">13) Plots-based Story</h1>
 </div>
 
 
@@ -293,151 +300,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>So far we’ve introduced a couple of basic Closeread documents. Our first example used only text. Our second example involved text and images. But what about including some math equations in our scrollytelling story? In this module, I show you a third basic example that involves text and some math equations written with LaTeX.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Reminder
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recall that you need to have installed the quarto Closeread extension in your working directory. Run the following command in your Terminal:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Terminal"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>quarto add qmd-lab/closeread</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This module is associated with the example <a href="../examples/example7">Storms in the North Atlantic</a>.</p>
+<p>This Closeread story is similar to the illustration-based stories of the <a href="..examples/example4">Illlustrated Guide to a Ph.D.</a> and the story of <a href="../examples/example5">A Bicycle Like No Other</a>, in the sense that there are multiple images. So what makes <em>Storms in the North Atlantic</em> special? It is different from the other stories because the images is in this case are all data visualizations from analyzing storms data.</p>
+<section id="the-graphic-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="the-graphic-of-interest">The Graphic of Interest</h2>
+<p>The motivation for the story in this module is a bar chart depicting the number of storms per year in the North Atlantic, like in the following figure.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="13-story-storms_files/figure-html/barchart-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Fig 13.1) The bar chart of interest.</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>Below is an example of a qmd file with some content. Copy and paste it into a qmd document so that you can preview it or render it in all its Closeread glory.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>example4.qmd</strong></pre>
+<p>Admittedly, this graphic seems to be just another ordinary bar chart. The horizontal axis is associated with the year. The vertical axis represents the counts for the number of storms. And the height of each bar indicates the number of storms that occurred in a given year.</p>
+<p>Some years have a small number of storms, most years have a medium number of storms, and a couple of years have a very large number of storms.</p>
+<p>At first glance, there is not a lot of storytelling juice to be squeezed from such a dull bar chart.</p>
+<p>Or is there?</p>
+</section>
+<section id="storms-data" class="level2">
+<h2 class="anchored" data-anchor-id="storms-data">Storms Data</h2>
+<p>Since the bar chart of interest comes from analyzing data, let me tell you a bit about the data set behind this example.</p>
+<p>The data set is the tibble <code>storms</code> that comes in the <em>tidyverse</em> package <code>"dplyr"</code>. This data is a curated table from the so-called <strong>Hurricane Databases</strong> (HURDAT), which is a collection of databases managed by the National Hurricane Center (NHC).</p>
+<p>In particular, the data <code>storms</code> includes the positions and attributes of tropical systems in the North Atlantic. If you are using a version of <code>"dplyr"</code> greater than or equal to 1.1.4, the storms are from the period 1975 to 2022, measured every six hours during the lifetime of a storm.</p>
+<p>Assuming that you’ve loaded <code>"tidyverse"</code> (or <code>"dplyr"</code>) in R, when you inspect the structure of <code>storms</code>, you’ll get an output like the following one:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(storms, <span class="at">vec.len =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [19,537 × 13] (S3: tbl_df/tbl/data.frame)
+ $ name                        : chr [1:19537] "Amy" "Amy" ...
+ $ year                        : num [1:19537] 1975 1975 ...
+ $ month                       : num [1:19537] 6 6 6 6 6 ...
+ $ day                         : int [1:19537] 27 27 27 27 28 ...
+ $ hour                        : num [1:19537] 0 6 12 18 0 ...
+ $ lat                         : num [1:19537] 27.5 28.5 29.5 30.5 31.5 ...
+ $ long                        : num [1:19537] -79 -79 -79 -79 -78.8 ...
+ $ status                      : Factor w/ 9 levels "disturbance",..: 7 7 7 7 7 ...
+ $ category                    : num [1:19537] NA NA NA NA NA ...
+ $ wind                        : int [1:19537] 25 25 25 25 25 ...
+ $ pressure                    : int [1:19537] 1013 1013 1013 1013 1012 ...
+ $ tropicalstorm_force_diameter: int [1:19537] NA NA NA NA NA ...
+ $ hurricane_force_diameter    : int [1:19537] NA NA NA NA NA ...</code></pre>
 </div>
-<div class="sourceCode" id="cb2" data-filename="example4.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> My third closeread document</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> closeread-html</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>This is a scrollytelling story containing </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>some math equations written with LaTeX.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>::::{.cr-section}</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Suppose you have some amount of money $P$, </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>and you'll invest it for $n$ </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>years, obtaining an annual return $r$.</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>How much money will you have $n$ years from now?</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>To find the answer you have to calculate the __Future Value__ </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>given by the following formula: @cr-fv</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>:::{#cr-fv}</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>FV = P \times (1 + r)^n</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>$FV$ is the Future Value</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>$P$ is the Principal, the amount of money you'll invest.</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>$r$ is the annual interest rate, or rate of return.</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>$n$ is the number of years.</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>What would be the future value of $10,000 invested for 10 years, </span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>assuming an annual return of 7%? @cr-investment</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>:::{#cr-investment}</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>P &amp;= 10,000 <span class="sc">\\</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>r &amp;= 0.07 <span class="sc">\\</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>n &amp;= 10</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>Let's do the math: @cr-math</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>:::{#cr-math}</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>   &amp;</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>The answer is: @cr-answer</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>:::{#cr-answer}</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>   &amp;= 19,671.51</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For the scope of our bar chart, we only focus on the columns <code>name</code> and <code>year</code>:</p>
+<ul>
+<li><p><code>name</code>: Storm name</p></li>
+<li><p><code>year</code>: Year when storm occurred</p></li>
+</ul>
+<p>I encourage you to spend some time inspecting the content of <code>storms</code>. Each row corresponds to the location and attributes of a particular tropical system (i.e.&nbsp;storm). This means that a single storm is described by multiple consecutive rows.</p>
+<p><br>
+</p>
+<section id="number-of-storms-per-year" class="level3">
+<h3 class="anchored" data-anchor-id="number-of-storms-per-year">Number of Storms Per Year</h3>
+<p>To create the bar chart, the first step involves getting the counts of the number of storms per year from 1980 to 2022.</p>
+<p>Conceptually, this counting process shouldn’t be that complicated, except for the fact that the names of storms can be repeated across different years. It turns out that you can have a certain name, say <code>"Gaston"</code>, that appears in multiple years (e.g.&nbsp;2004, 2010, 2016, 2022).</p>
+<p>This is why we need some sort of unique identifier for each storm. My solution is to create—i.e.&nbsp;<code>mutate()</code>—this ID column by <code>paste()</code>ing the <code>name</code> and <code>year</code> for every row, and then proceed by counting the id’s per year, and then counting again the year values:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of storms per year (1980-2022)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>storms_per_year <span class="ot">=</span> storms <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">1980</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">paste0</span>(name, <span class="st">"-"</span>, year)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(year, id, <span class="at">name =</span> <span class="st">"count"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(year, <span class="at">name =</span> <span class="st">"count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This gives you the following table of frequencies which is exactly what we need to make the bar chart we are interested in:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>storms_per_year <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+    year count
+   &lt;dbl&gt; &lt;int&gt;
+ 1  1980    11
+ 2  1981    11
+ 3  1982     5
+ 4  1983     4
+ 5  1984    12
+ 6  1985    11
+ 7  1986     6
+ 8  1987     7
+ 9  1988    12
+10  1989    11</code></pre>
+</div>
 </div>
 </section>
-<section id="whats-going-on" class="level2">
-<h2 class="anchored" data-anchor-id="whats-going-on">What’s going on?</h2>
-<p>Let’s briefly discuss the content of <code>example4.qmd</code> focusing on the stickies and the triggers.</p>
-<section id="sticky-elements" class="level4">
-<h4 class="anchored" data-anchor-id="sticky-elements">Sticky Elements</h4>
-<p>Compared to the previous examples, the current one has four <strong>sticky</strong> components. After careful inspection, you should be able to notice that all the stickies consists of LaTeX math equations.</p>
-<p>The first sticky, <code>#cr-fv</code>, introduces the equation to calculate the Future Value (FV):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-fv}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>FV = P \times (1 + r)^n</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The second sticky, <code>#cr-investment</code>, introduces the symbols and values to be used in the equation of the Future Value (FV):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-investment}</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>P &amp;= 10,000 <span class="sc">\\</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>r &amp;= 0.07 <span class="sc">\\</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>&amp; <span class="sc">\\</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>n &amp;= 10</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The third sticky, <code>#cr-math</code>, is dedicated to do the actual math involved in the FV equation:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-math}</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   &amp;</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>And the fourth and last sticky, provides the final answer with the computed future value:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:::{#cr-answer}</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>FV &amp;= 10,000 \times (1 + 0.07)^{10} <span class="sc">\\</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>   &amp;= 19,671.51</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="bar-chart">Bar-chart</h3>
+<p>Having obtained the counts for the number of storms per year, we can pipe this derived table to <code>ggplot()</code>, adding a <code>geom_col()</code> layer, tuning a few graphical elements here and there, and be able to get a bar-chart:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>storms_per_year <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> count)) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#a0a0a0"</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1980</span>, <span class="dv">2020</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Number of Storms per Year in the North Atlantic"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="13-story-storms_files/figure-html/barchart1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="narrative-and-triggers" class="level4">
-<h4 class="anchored" data-anchor-id="narrative-and-triggers">Narrative and Triggers</h4>
-<p>As for the narrative and the triggers, we encounter several paragraphs. The first paragraph (i.e.&nbsp;1st paragraph inside the cr-section) is the introductory text and it has no trigger.</p>
-<p>The next paragraph poses the main question, and it also has no trigger.</p>
-<p>In turn, the third paragraph introduces the equation fo the Future Value, and consequently comes with the first trigger <code>@cr-fv</code>.</p>
-<p>The following lines of text are one-line paragraphs listing the terms of the FV equation, none of them with triggers.</p>
-<p>After that, we have another paragraph with the second trigger <code>@cr-investment</code>.</p>
-<p>Then there is one more paragraph with the third trigger <code>@cr-math</code>.</p>
-<p>And finally there is the last paragraph with the fourth trigger <code>@cr-answer</code>.</p>
+</section>
+<section id="deciding-the-visual-story" class="level2">
+<h2 class="anchored" data-anchor-id="deciding-the-visual-story">Deciding the Visual Story</h2>
+<p>As you might expect, I wouldn’t be using this example if it didn’t have an interesting narrative. But of course it has: the punchline is the increasing overall trend in the number of storms per year in the North Atlantic during the comprised time period between 1980 and 2022.</p>
+<p>Let me walk you through the main decisions I made in order to take the above bar chart and break it apart into a series of graphics that provide a richer narrative flow.</p>
+<p>I decided to do an analysis decade-by-decade: 1980’s, 1990’s, 2000’s, 2010’s, and finishing in 2022. The following figure shows the 11 graphics that I ended up with.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cr-storms-panoramic.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 13.2) Storms Story</figcaption>
+</figure>
+</div>
+<p>The starting graphic is an empty graphic (i.e.&nbsp;no bars), just the reference grid lines, the title, and a few visual cues for the x-axis and the y-axis.</p>
+<p>The second frame is a partial bar-chart displaying only the bars for the first decade, i.e.&nbsp;1980’s. I know it’s hard to tell from this graphic but there is also a first value in the y-axis scale.</p>
+<p>The third frame involves the bars of the 1980’s decade colored in a desaturated (neutral) hue, plus the bars of the next decade 1990’s colored in a darker and more intense hue.</p>
+<p>Before transitioning to the next decade (2000’s), frame number 4 highlights the tallest bar of the 1990’s which occurs in year 1995.</p>
+<p>The fifth frame involves the bars between 1980-1999 (in a low saturation hue), and the new set of bars for the 2000’s decade (in a darker hue).</p>
+<p>Like frame number 4, frame 6 highlights the bar of year 2005 which is the tallest bar of the 2000’s decade.</p>
+<p>As you can tell, throughout the story I’m revealing certain pieces of information, in a gradual frame-by-frame way. In any given frame I reveal just a few numbers in the x-axis, a few values in the y-axis, show some of the bars, and when appropriate highlight a remarkable fact about the data under description.</p>
+<p>The use of color is important: they different color hues match the progression of the story. I use a low saturation color for the bars in past decades, and a more saturated color for the bars of the current decade. To highlight a specific bar (e.g.&nbsp;reaching a new maximum) I choose a brighter and more vivid color.</p>
+<p>In summary, the storytelling design it’s all about hiding &amp; revealing. Starting with a graphic in which most visual elements are hidden, and then gradually progress to new graphics exposing certain pieces of information, one at a time.</p>
+<p>A question that I often get asked by my students is “How did you do it?”, meaning they want to know how I came up with the entire design. My answer to them is always the same one: You have to spend some time to come up with such design process. It does not occur automatically. I actually step away from the computer and draw some sketches on paper, this is what I call the <em>analog</em> stage of the work. Once I have a good idea of the story and the visuals, I go back to my computer to begin the <em>digital</em> stage.</p>
+<section id="start-with-the-end-in-mind" class="level3">
+<h3 class="anchored" data-anchor-id="start-with-the-end-in-mind">Start With the End in Mind</h3>
+<p>You know the old saying “start with the end in mind.” This is precisely what I recommend doing in this type of story. In other words, start with the graphic that you want to finish your story with, and then apply a <strong>deconstructing</strong> strategy.</p>
+<p>In other words, take the plot or plots that encapsulate the narrative arch or the ultimate message of your story, and then walk backwards to deconstruct it into its different stages according to your desired narrative. At each step you strip some graphical elements from the previous graphic, until you end up with a minimal, mostly empty, graphic.</p>
+</section>
+<section id="hiding-graphical-elements" class="level3">
+<h3 class="anchored" data-anchor-id="hiding-graphical-elements">Hiding Graphical Elements</h3>
+<p>The deconstruction process that I follow involves hiding or making invisible some of the displayed data, which is usually a combination of some of the bars, some of the axis tick marks, sometimes also some of the labels, etc.</p>
+<p>Here’s an example of what I mean. In the following snippet I show the commands to get two versions of the same bar-chart. The difference is that the first set of commands gives you the bar chart in which all its elements are visible. In contrast, the second set of commands give you a bar chart in which most of its graphical elements are hidden by making them transparent.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># graphic with visible elements</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>storms_per_year <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> count)) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#a0a0a0"</span>) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1980</span>, <span class="dv">2020</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Number of Storms per Year in the North Atlantic"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># graphic with most elements invisible (hidden)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>storms_per_year <span class="sc">|&gt;</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> count)) <span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#a0a0a000"</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1980</span>, <span class="dv">2020</span>, <span class="at">by =</span> <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#00000000"</span>)) <span class="sc">+</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Number of Storms per Year in the North Atlantic"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cr-storms-visible-invisible.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 13.3) Visible and Invisible bar charts.</figcaption>
+</figure>
+</div>
 </section>
 <section id="take-a-look" class="level3">
 <h3 class="anchored" data-anchor-id="take-a-look">Take a look</h3>
-<p>You can take a look at this example <a href="../examples/example4/index.html" target="_blank">here</a>.</p>
+<p>You can take a look at the story of the Storms per Year in the North Atlantic available in two versions:</p>
+<ul>
+<li><p><a href="../examples/example7/index.html" target="_blank">layout sidebar-left</a></p></li>
+<li><p><a href="../examples/example7/index.html" target="_blank">layout overlay-center</a></p></li>
+</ul>
 
 
 </section>
@@ -866,13 +899,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/04-intro-images.html" class="pagination-link" aria-label="4) Minimal Closeread with Images">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4) Minimal Closeread with Images</span>
+      <a href="../modules/11-story-photo.html" class="pagination-link" aria-label="11) Photo-based Story">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">11) Photo-based Story</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../modules/06-focus-effects.html" class="pagination-link" aria-label="6) Focus Effects">
-        <span class="nav-page-text">6) Focus Effects</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modules/14-sharing.html" class="pagination-link" aria-label="14) Sharing Your Closeread Stories">
+        <span class="nav-page-text">14) Sharing Your Closeread Stories</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
