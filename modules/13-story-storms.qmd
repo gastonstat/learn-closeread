@@ -22,7 +22,7 @@ This Closeread story is similar to the illustration-based stories of the
 [Illlustrated Guide to a Ph.D.](..examples/example4) and the story of 
 [A Bicycle Like No Other](../examples/example5), in the sense that there are 
 multiple images. So what makes _Storms in the North Atlantic_ special? It is 
-different from the other stories because the images is in this case are all 
+different from the other stories because the images in this case are all 
 data visualizations from analyzing storms data.
 
 
@@ -175,14 +175,18 @@ in a gradual frame-by-frame way. In any given frame I reveal just a few numbers
 in the x-axis, a few values in the y-axis, show some of the bars, and when 
 appropriate highlight a remarkable fact about the data under description.
 
-The use of color is important: they different color hues match the progression 
+The use of color is important: the different color hues match the progression 
 of the story. I use a low saturation color for the bars in past decades, and a 
 more saturated color for the bars of the current decade. To highlight a specific 
 bar (e.g. reaching a new maximum) I choose a brighter and more vivid color.
 
 In summary, the storytelling design it's all about hiding & revealing. Starting 
 with a graphic in which most visual elements are hidden, and then gradually 
-progress to new graphics exposing certain pieces of information, one at a time.
+progressing to new graphics by exposing certain pieces of information, one at a 
+time.
+
+
+### Start With the End in Mind
 
 A question that I often get asked by my students is "How did you do it?", 
 meaning they want to know how I came up with the entire design. My answer to 
@@ -191,9 +195,6 @@ such design process. It does not occur automatically. I actually step away from
 the computer and draw some sketches on paper, this is what I call the _analog_
 stage of the work. Once I have a good idea of the story and the visuals, I go
 back to my computer to begin the _digital_ stage.
-
-
-### Start With the End in Mind
 
 You know the old saying "start with the end in mind." This is precisely what I
 recommend doing in this type of story. In other words, start with the graphic 
@@ -204,20 +205,23 @@ In other words, take the plot or plots that encapsulate the narrative arch
 or the ultimate message of your story, and then walk backwards to deconstruct 
 it into its different stages according to your desired narrative. At each step
 you strip some graphical elements from the previous graphic, until you end
-up with a minimal, mostly empty, graphic.
+up with a minimal, mostly empty, graphic. Then put everything together in
+reverse order, so you end up constructing a nice visual story.
 
 
 ### Hiding Graphical Elements
 
 The deconstruction process that I follow involves hiding or making invisible
-some of the displayed data, which is usually a combination of some of the 
-bars, some of the axis tick marks, sometimes also some of the labels, etc.
+some of the displayed data, which usually involves "hiding" a combination of 
+some of the bars, some of the axis tick marks, sometimes also some of the labels, 
+etc.
 
-Here's an example of what I mean. In the following snippet I show the commands
-to get two versions of the same bar-chart. The difference is that the first 
-set of commands gives you the bar chart in which all its elements are visible.
+Here's an example of what I mean. In the following snippet of code I show the 
+commands to get two versions of the same bar-chart. The difference is that the 
+first set of commands gives you the bar chart in which all its elements are visible.
 In contrast, the second set of commands give you a bar chart in which most of 
-its graphical elements are hidden by making them transparent. 
+its graphical elements are hidden by making them transparent or preventing them
+from being printed. 
 
 ```{r barchart_all, eval = FALSE}
 # graphic with visible elements
@@ -244,10 +248,27 @@ storms_per_year |>
 ![Fig 13.3) Visible and Invisible bar charts.](images/cr-storms-visible-invisible.png)
 
 
+You may be asking "Why is it important to use the same input data and to keep 
+pretty much the same graphical settings in order to create each graphic?"
+
+For a very simple reason: visual consistency among all graphics. Think about it.
+In the rendered Closeread HTML document, you want to transition from one
+graphic to the next one in a way that is as much seamless as possible. By 
+keeping constant all the supporting graphical elements such as the axes, the 
+scales, the grid lines, the ratios, etc, passing from one graph to the next
+one gives you the visual impression of an animation, even though the graphics
+are 100% static plots.
+
+If you are not careful enough, a minor change in the scale and/or text in any of 
+the axes, or the text in the title, or the input data, it could result in a
+plot that is slightly different from the others and eventually disrupt the smooth 
+transitions.
+
+
 
 ### Take a look
 
-You can take a look at the story of the Storms per Year in the North Atlantic
+You can take a look at the story of the Storms in the North Atlantic
 available in two versions:
 
 - <a href="../examples/example7/index.html" target="_blank">layout sidebar-left</a>
