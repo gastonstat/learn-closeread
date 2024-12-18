@@ -145,7 +145,7 @@ bar chart and break it apart into a series of graphics that provide a richer
 narrative flow.
 
 I decided to do an analysis decade-by-decade: 1980's, 1990's, 2000's, 2010's, 
-and finishing in 2022. The following figure shows the 11 graphics that I ended
+and finish in 2022. The following figure shows the 11 graphics that I ended
 up with.
 
 ![Fig 13.2) Storms Story](images/cr-storms-panoramic.png)
