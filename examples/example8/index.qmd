@@ -44,7 +44,8 @@ maxcolor = "#ff9933" # color of maximum
 ::::{.cr-section}
 
 What can the analysis of the __dplyr::storms__ data set reveal
-about the number of tropical storms per year that occurred in the North Atlantic between 1980 and 2022? @cr-plot1
+about the number of tropical storms per year that occurred in the North 
+Atlantic between 1980 and 2022? @cr-plot1
 
 Let's take a look decade by decade.
 
@@ -151,7 +152,8 @@ barchart4 +
 :::
 
 
-In the 2010's the trend seemed to slow down a bit with an average number of storms per year of `r storms_per_decade[4,2]`  @cr-plot5
+In the 2010's the trend seemed to slow down a bit with an average number of 
+storms per year of `r storms_per_decade[4,2]`  @cr-plot5
 
 :::{#cr-plot5}
 ```{r barchart5}
