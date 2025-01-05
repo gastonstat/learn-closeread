@@ -94,7 +94,7 @@ ggplot() +
 :::
 
 
-The month of July saw the starting of `r storms2010_per_month$count[2]` @cr-storms2
+The month of July saw the starting of `r storms2010_per_month$count[2]` storms @cr-storms2
 
 :::{#cr-storms2}
 ```{r storms2}
