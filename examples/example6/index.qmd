@@ -35,23 +35,67 @@ format:
 
 ::::{.cr-section}
 
-:::{focus-on="cr-fluke"}
+:::{focus-on="cr-story"}
 # On The Storytelling Animal
+:::
 
-Fluke, by Brian Klaas
+:::{#cr-story}
+![](Storytelling.jpg){width="40%" fig-align="center"}
+:::
+
+In his book __The Storytelling Animal__, American author and literary scholar Jonathan Gottschall seeks to provide a unified theory of storytelling.
+
+In the preamble, Jonathan writes: [@cr-prose0]{scale-by="2"}
+
+:::{#cr-prose0}
+| While your body is always fixed 
+| at a particular point in space-time, 
+| your mind is always free 
+| to ramble in lands of make-believe.
+:::
+
+Gottschall wants to understand why are humans addicted to stories? How did humans become the storytelling animal?
+
+
+It is worth mentioning that the title of the Gottschall's book comes from the following passage of Graham Swift's 1983 novel _Waterland_ [@cr-waterland]{scale-by="1.5"} 
+
+:::{#cr-waterland}
+| Man---let me offer you a definition---
+| is the storytelling animal.
+| Wherever he goes he wants to leave behind
+| not a chaotic wake, not an empty space,
+| but the comforting maker buoys 
+| and trail signs of stories.
+|
+| _Graham Swift_
+:::
+
+The storytelling animal! [@cr-waterland]{scale-by="2" highlight="1-2"} 
+
+
+
+
+
+:::{focus-on="cr-fluke"}
+Political scientist and author Brian Klaas borrows the notion of the _Storytelling Animal_ in his 2024 book __Fluke__.
+<br>
+<br>
+The main thesis in Fluke is about how small chance events can divert our lives and change everything.
 :::
 
 :::{#cr-fluke}
 ![](fluke.jpg){width="40%" fig-align="center"}
 :::
 
-In his book __Fluke__, chapter-7 "The Storytelling Animal", social scientist and author Brian Klaas provides a captivating description of our narrative-addicted minds.
+
+In chapter-7 "The Storytelling Animal", Klaas provides a captivating description of our narrative-addicted minds.
 
 At the end of page 135, Brian writes: [@cr-prose1]{scale-by="2"}
 
 Aha! the key word: _story_ [@cr-prose1]{scale-by="2" highlight="cr-story"}
 
 And the main question: [@cr-prose1]{scale-by="2" highlight="7-8"}
+
 
 :::{#cr-prose1}
 | Our beliefs are most easily swayed 
@@ -75,6 +119,8 @@ Storytelling! [@cr-prose2]{scale-by="2" highlight="cr-answer"}
 | ---of how to make it stick---
 | was faced and a solution found. 
 | [Storytelling was the solution."]{#cr-answer}
+|
+| _Antonio Damasio_
 :::
 
 Of course. [@cr-prose2]{scale-by="2"}
@@ -107,21 +153,23 @@ Later on, in the same page, Brian quotes Barbara Hardy: [@cr-prose4]{scale-by="2
 | criticize, construct, 
 | gossip, learn,
 | hate and live by narrative."
+|
+| _Barbara Hardy_
 :::
 
 Basically, we are narrative-driven creatures; whether it is talking to others or to ourselves, or also listening to others or to our inner voice; whether it is while we are awake or also while we sleep.
 
-And finally, Brian cites Jonathan Gottschall and his famous _storytelling animal_ [@cr-prose5]{scale-by="2"}
+And finally, Brian Klaas cites Jonathan Gottschall and his famous _storytelling animal_ [@cr-prose5]{scale-by="2"}
 
 :::{#cr-prose5}
-| We are ... [a storytelling animal.]{#cr-animal} 
+| We are ... [a storytelling animal.]{#cr-animal2} 
 | "The storytelling mind 
 | is allergic to uncertainty,
 | randomness, and coincidence.
 | It is addicted to meaning."
 :::
 
-That's what we are. [@cr-prose5]{scale-by="2" highlight="cr-animal"} 
+That's what we are. [@cr-prose5]{scale-by="2" highlight="cr-animal2"} 
 
 In essence, that's what makes us humans. [@cr-prose5]{scale-by="2"}
 
